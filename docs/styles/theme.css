@@ -6,9 +6,35 @@
    ========================================================================== */
 
 /* -------------------------------------------------------------------------
+   FONTS
+   Points at the main website's already-hosted copy (resources/fonts/,
+   see modern-theme.css) via an absolute same-origin URL, rather than
+   shipping our own duplicate. Both sites live under emby.media, so the
+   browser fetches and caches the font file once and reuses it across
+   both instead of downloading/caching it twice. font-display: swap is
+   safe here since same-origin requests aren't subject to the DNS/TLS
+   delay a cross-domain Google Fonts link would have.
+   ------------------------------------------------------------------------- */
+@font-face {
+    font-family: "Inter";
+    src: url("https://emby.media/resources/fonts/InterVariable.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("https://emby.media/resources/fonts/InterVariable-Italic.woff2") format("woff2");
+    font-style: italic;
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+/* -------------------------------------------------------------------------
    COLOR VARIABLES
    `--modern-*` mirror the variables used on the main website
-   (see resources/modern-dark.css) so the two can be kept in sync.
+   (see resources/modern-theme.css) so the two can be kept in sync.
    The legacy `--header-*`/`--highlight-*`/etc. names are still used
    throughout main.css; aliasing them here re-themes those rules too.
    ------------------------------------------------------------------------- */
@@ -51,9 +77,6 @@ html {
 
 body {
     background: var(--modern-bg);
-    /* Matches the main site's stack exactly. Inter isn't loaded via a
-       web font (same as the main site) so there's no font-swap flash;
-       it's only used if a visitor already has it installed locally. */
     font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     -webkit-font-smoothing: antialiased;
 }
@@ -196,7 +219,7 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 }
 
 .site-header .nav-links a:hover,
-.site-header .nav-links a.current,
+.site-header .nav-links a.is-current,
 .site-header .nav-links a.active {
     color: var(--modern-green);
 }
@@ -293,10 +316,15 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 
 .breadcrumpsearch {
     flex: 0 0 auto;
+    /* A bordered input's hard edge reads as "less far right" than plain
+       text's soft glyph edge at the same coordinate, so nudge it past
+       the text/nav-link edge above it to look flush. */
+    margin-right: -5px;
 }
 
 .breadcrumpsearch .navbar-form {
     margin: 0;
+    padding: 0;
 }
 
 .breadcrumpsearch .form-group {
@@ -756,7 +784,7 @@ html[data-theme="light"] .site-header .nav-links a {
 }
 
 html[data-theme="light"] .site-header .nav-links a:hover,
-html[data-theme="light"] .site-header .nav-links a.current,
+html[data-theme="light"] .site-header .nav-links a.is-current,
 html[data-theme="light"] .site-header .nav-links a.active {
     color: var(--modern-green);
 }
