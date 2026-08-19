@@ -141,7 +141,7 @@
 <h2 id="music-images">Music Images</h2>
 <p>Images are supported in both artist and album folders, as well as images embedded within audio files. Below is a table of the supported image file names:</p>
 <p>Supported image extensions are <strong>jpg</strong>, <strong>jpeg</strong>, <strong>png</strong> and <strong>tbn</strong>.</p>
-<p>Several image types support multiple file names. They are listed in the order that they're checked for.</p>
+<p>Several image types support multiple file names.</p>
 <table>
 <thead>
 <tr>
@@ -167,8 +167,28 @@
 <td>default.ext</td>
 </tr>
 <tr>
-<td>Art</td>
-<td>clearart.ext</td>
+<td></td>
+<td>artist.ext</td>
+</tr>
+<tr>
+<td></td>
+<td>artist-cover.ext</td>
+</tr>
+<tr>
+<td></td>
+<td>artist-default.ext</td>
+</tr>
+<tr>
+<td></td>
+<td>default.ext</td>
+</tr>
+<tr>
+<td></td>
+<td>artist-folder.ext</td>
+</tr>
+<tr>
+<td></td>
+<td>artist-poster.ext</td>
 </tr>
 <tr>
 <td>Backdrop</td>
@@ -176,7 +196,7 @@
 </tr>
 <tr>
 <td></td>
-<td>fanart.ext, fanart-X.ext</td>
+<td>fanart.ext, fanartX.ext, fanart-X.ext</td>
 </tr>
 <tr>
 <td></td>
@@ -188,11 +208,23 @@
 </tr>
 <tr>
 <td></td>
-<td>extrafanart (subfolder)/fanartX.ext</td>
+<td>artist-art.ext, artist-artX.ext</td>
 </tr>
 <tr>
-<td>Banner</td>
-<td>banner.ext</td>
+<td></td>
+<td>artist-backdrop.ext, artist-backdropX.ext</td>
+</tr>
+<tr>
+<td></td>
+<td>artist-background.ext, artist-backgroundX.ext</td>
+</tr>
+<tr>
+<td></td>
+<td>artist-fanart.ext, artist-fanartX.ext</td>
+</tr>
+<tr>
+<td></td>
+<td>In subfolder extrafanart:  fanartX.ext, fanart-X.ext</td>
 </tr>
 <tr>
 <td>Disc</td>
@@ -207,12 +239,20 @@
 <td>logo.ext</td>
 </tr>
 <tr>
+<td></td>
+<td>clearlogo.ext</td>
+</tr>
+<tr>
 <td>Thumb</td>
 <td>thumb.ext</td>
 </tr>
 <tr>
 <td></td>
 <td>landscape.ext</td>
+</tr>
+<tr>
+<td></td>
+<td><code>&lt;folder name&gt;.ext</code></td>
 </tr>
 </tbody>
 </table>
@@ -225,6 +265,13 @@
        backdrop3.ext
 
 </code></pre>
+<p>Examples of <code>&lt;folder name&gt;.ext</code></p>
+<p>In artist folder where folder is named &quot;Ed Sheeran&quot;, a jpg thumb file would be &quot;ed sheeran.jpg&quot;
+In album folder for &quot;Pink Floyd&quot; album &quot;The Dark Side of the Moon&quot;, where the album folder name is &quot;Pink Floyd - The Dark Side of the Moon&quot;, a jpg thumb image file would be &quot;Pink Floyd - The Dark Side of the Moon.jpg&quot;.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Support for the &quot;artist.ext&quot; and &quot;artist-xxxx.ext&quot; filenames requires Emby Server 4.10.</p>
+</div>
 <h2 id="tagging-your-tracks">Tagging Your Tracks</h2>
 <p>All music tracks should be tagged with whatever information you want displayed in Emby.  Emby should support all common tags written by Musicbrainz Picard. Other common software used to alter/write tags is Mp3tag and Tagscanner.</p>
 <p>Please make sure to write all tag version or to remove old tags. All tags should be written using unicode format.</p>
