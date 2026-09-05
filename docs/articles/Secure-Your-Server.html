@@ -111,11 +111,10 @@
 <p>Here are some tips to consider.</p>
 <h3 id="server-admin-account">Server Admin Account</h3>
 <ul>
-<li>Avoid having a name for the admin user account for Emby Server as admin or root.</li>
-</ul>
+<li><p>Avoid having a name for the admin user account for Emby Server as admin or root.</p>
 <p>If the user name is already set as that, you can edit it through the server settings / users screen and editing the profile.</p>
 <p><img src="images/server/users26.png" alt=""></p>
-<ul>
+</li>
 <li><p>Separate your admin and normal use of the emby server. Have a separate account for normal use and streaming and keep the account with server admin privilege as a separate account used just for server admin.</p>
 <p>You can control which accounts have the ability to manage the server through this user profile setting</p>
 <p><img src="images/server/users27.png" alt=""></p>
@@ -199,10 +198,10 @@
 <ol start="3">
 <li><p>Select &quot;<strong>DDNS Services</strong>&quot;</p>
 </li>
-<li><p>Click on &quot;<strong>+Add</strong>&quot; to add a domain to the Dynamic DNS Service.</p>
+<li><p>Click on &quot;<strong>+Add</strong>&quot; to add a domain to the Dynamic DNS Service.
+<img src="images/server/hosting24.png" alt=""></p>
 </li>
 </ol>
-<p><img src="images/server/hosting24.png" alt=""></p>
 <p>Next, either choose a free domain name provided by <strong>Dynu</strong>, selecting one of the many Top Level domain names with your hostname as the prefix, or adding a domain you already own.</p>
 <p><img src="images/server/hosting22.png" alt=""></p>
 <p>The following shows examples of available Top Level domain names for a free domain name provided by Dynu.</p>
@@ -223,41 +222,45 @@
 <ol>
 <li><p>Enter your domain on the site. i.e. yourdomain.com and create a free SSL certificate</p>
 </li>
-<li><p>Select Manual Verification (DNS) &gt; Manually verify domain. We now have 2 TXT records (step 2 on the SSL for free website). We will copy back the TXT records to the domain provider. Leave the SSL for free page open. We will come back to it.</p>
-</li>
-</ol>
+<li><p>Select Manual Verification (DNS) &gt; Manually verify domain</p>
+<p>We now have 2 TXT records (step 2 on the SSL for free website). We will copy back the TXT records to the domain provider. Leave the SSL for free page open. We will come back to it.</p>
 <p><img src="images/server/hosting25.jpg" alt=""></p>
-<ol start="3">
-<li>On the domain provider website, select your domain &gt; Manage DNS. Let's create a new TX record. Repeat the steps for both TXT records on SSL for free. Your information should look like this.</li>
-</ol>
+</li>
+<li><p>On the domain provider website, select your domain &gt; Manage DNS</p>
+<p>Let's create a new TX record. Repeat the steps for both TXT records on SSL for free. Your information should look like this.</p>
 <p>For Dynu DNS, login and open the Control Panel and select DDNS Services, then select the domain from the list of domains for your account, and click on <strong>DNS Records</strong> and then fill the template for Adding a DNS Record. In the <strong>Node Name</strong> field replace the preset &quot;www&quot; with <code>_acme-challenge</code>. For the <strong>type</strong> field, open the drop-down and select <strong>&quot;TXT - text&quot;</strong>. In the <strong>&quot;Text&quot;</strong> field, you would enter the text character requested for the certificate domain verification process.</p>
 <p>You should end up with a TXT DNS Record like this - these are just examples:</p>
 <p><strong>Name</strong>: _acme-challenge.{yourdomain.com}</p>
 <p><strong>Type</strong>: TXT.</p>
 <p><strong>TTL</strong>: 300 (if you can set it to the lowest possible value).</p>
 <p><strong>Target</strong>: qariKbGVafpb5MespqHdMaGi933yW-Z2A3shE0wIyZA</p>
-<ol start="4">
-<li><p>You'll notice Type A records in the same section. You can remove the WWW entry. Ensure your external IP is correct. If you have a dynamic IP, you'll need to keep this updated when it changes.</p>
 </li>
-<li><p>Wait about 15 minutes. Let the domain name and changes propagate.</p>
+<li><p>You'll notice Type A records in the same section</p>
+<p>You can remove the WWW entry. Ensure your external IP is correct. If you have a dynamic IP, you'll need to keep this updated when it changes.</p>
 </li>
-<li><p>Back to the <strong>SSL for free</strong> / <strong>ZeroSSL</strong> website. Look at step 3, you'll see a link or two to click. Click them. If it is successful, go ahead and click Download SSL certificate. If it is not successful, wait a little longer and retry.</p>
+<li><p>Wait about 15 minutes</p>
+<p>Let the domain name and changes propagate.</p>
 </li>
-<li><p>After the certificate is created, you should be able to remove the TXT DNS records for the domain</p>
+<li><p>Back to the SSL for free / ZeroSSL website</p>
+<p>Look at step 3, you'll see a link or two to click. Click them. If it is successful, go ahead and click Download SSL certificate. If it is not successful, wait a little longer and retry.</p>
 </li>
-</ol>
+<li><p>After the certificate is created</p>
+<p>You should be able to remove the TXT DNS records for the domain.</p>
 <p>Now you should have a domain and a folder of ssl certificate (ca_bundle.crt, certificate.crt, private.key).</p>
 <p>We are almost done. Your Emby server requires a PKCS #12 certificate (certificate.crt and private.key combined).</p>
-<ol start="8">
-<li><p>You now need to create the PKCS #12 pfx certificate to use with Emby Server. Use this <a href="https://www.sslshopper.com/ssl-converter.html">online certificate converter</a>.</p>
 </li>
-<li><p>Select type to convert to: PKCS #12. This should expand the number of fields. Once completed, you'll get a new .pfx certificate.</p>
+<li><p>You now need to create the PKCS #12 pfx certificate to use with Emby Server</p>
+<p>Use this <a href="https://www.sslshopper.com/ssl-converter.html">online certificate converter</a>.</p>
+</li>
+<li><p>Select type to convert to: PKCS #12</p>
+<p>This should expand the number of fields. Once completed, you'll get a new .pfx certificate.</p>
 <p><strong>Certificate file</strong>: certificate.crt</p>
 <p><strong>Private key</strong>: private.key</p>
 <p><strong>Chain certificate</strong>: The ca_bundle.crt or you can also find it here, Let's Encrypt <a href="https://letsencrypt.org/certs/lets-encrypt-x3-cross-signed.pem.txt">Intermediate certificate</a>. Save the text into a .txt file.</p>
 <p><strong>PFX password</strong>: Since the private key is combined with the certificate, set a password to secure the new ssl certificate. Remember this password, you'll need it in Emby.</p>
 </li>
-<li><p>Copy the pfx file to where you want to keep the Emby Server certificate and you will also need the pfx password. Next go to the following section <a href="#setup-emby-server-with-your-domain-and-ssl-certificate">Setup Emby Server with your domain and SSL certificate</a>.</p>
+<li><p>Copy the pfx file to where you want to keep the Emby Server certificate</p>
+<p>You will also need the pfx password. Next go to the following section <a href="#setup-emby-server-with-your-domain-and-ssl-certificate">Setup Emby Server with your domain and SSL certificate</a>.</p>
 </li>
 </ol>
 <h3 id="lets-encrypt-certificate">Let's Encrypt certificate</h3>

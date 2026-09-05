@@ -112,16 +112,13 @@
 API for video encoding and decoding acceleration using Nvidia GPUs</p>
 </li>
 <li><p><strong><a href="#intel-quicksync-video">Intel QuickSync Video</a></strong><br>
-Intel's brand for its dedicated video encoding and decoding hardware
-core</p>
+Intel's brand for its dedicated video encoding and decoding hardware core</p>
 </li>
 <li><p><strong><a href="#amd-amf">AMD AMF</a></strong><br>
-AMD Advanced Media Framework - multimedia API  AMD hardware for
-real-time processing of multimedia</p>
+AMD Advanced Media Framework - multimedia API  AMD hardware for real-time processing of multimedia</p>
 </li>
 <li><p><strong><a href="#microsoft-dxva">Microsoft DXVA</a></strong><br>
-Microsoft DirectX Video Acceleration API - hardware independent API
-for hardware accelerated video decoding</p>
+Microsoft DirectX Video Acceleration API - hardware independent API for hardware accelerated video decoding</p>
 </li>
 </ul>
 <h2 id="nvidia-nvdec--nvenc">Nvidia NVDEC &amp; NVENC</h2>
@@ -155,16 +152,11 @@ and that not all hardware devices will support all accelerations.</p>
 </li>
 </ul>
 <h4 id="hardware-requirements">Hardware Requirements</h4>
-<p>Hardware acceleration is available for most Nvidia devices starting with GPUs from the
-Kepler generation (e.g. GeForce GT 630) onwards, including both consumer and professional
-devices. Detailed information about supported hardware can be found in Nvidia's
-<a href="https://developer.nvidia.com/video-encode-decode-gpu-support-matrix">GPU Support Matrix</a>.</p>
+<p>Hardware acceleration is available for most Nvidia devices starting with GPUs from the Kepler generation (e.g. GeForce GT 630) onwards, including both consumer and professional devices. Detailed information about supported hardware can be found in Nvidia's <a href="https://developer.nvidia.com/video-encode-decode-gpu-support-matrix">GPU Support Matrix</a>.</p>
 <h4 id="required-setup-steps">Required Setup Steps</h4>
-<p>Install the latest drivers for your Nvidia hardware directly from
-<a href="https://www.nvidia.com/Download/index.aspx">Nvidia Driver Downloads</a> page.
+<p>Install the latest drivers for your Nvidia hardware directly from <a href="https://www.nvidia.com/Download/index.aspx">Nvidia Driver Downloads</a> page.
 It is highly recommended to use these drivers instead of the ones that are
-shipped with Windows.
-The minimum required driver version on Windows is <strong>471.41</strong><br>
+shipped with Windows. The minimum required driver version on Windows is <strong>471.41</strong><br>
 It is not required to install any other tools or SDKs from Nvidia.</p>
 <h4 id="remarks">Remarks</h4>
 <ul>
@@ -209,14 +201,10 @@ and that not all hardware devices will support all accelerations.</p>
 </ul>
 <h4 id="hardware-requirements-1">Hardware Requirements</h4>
 <p>Quick Sync was initially built into some Sandy Bridge CPUs, but not into Sandy Bridge Pentium or Celeron CPUs.<br>
-An overview of acceleration capabilities built into the various CPU generations
-can be found here: <a href="https://en.wikipedia.org/wiki/Intel_Quick_Sync_Video#Hardware_decoding_and_encoding">Hardware decoding and encoding</a>.
-and here <a href="https://en.wikipedia.org/wiki/Intel_Graphics_Technology#Capabilities_(GPU_video_acceleration)">GPU Acceleration Capabilities</a>.</p>
+An overview of acceleration capabilities built into the various CPU generations can be found here: <a href="https://en.wikipedia.org/wiki/Intel_Quick_Sync_Video#Hardware_decoding_and_encoding">Hardware decoding and encoding</a> and here <a href="https://en.wikipedia.org/wiki/Intel_Graphics_Technology#Capabilities_(GPU_video_acceleration)">GPU Acceleration Capabilities</a>.</p>
 <h4 id="required-setup-steps-1">Required Setup Steps</h4>
-<p>Install the latest graphics drivers for your Intel COU with integrated graphics
-directly from Intel's site: <a href="https://downloadcenter.intel.com/">Drivers &amp; Software</a>
-It is highly recommended to use these drivers instead of the ones that are
-shipped with Windows.
+<p>Install the latest graphics drivers for your Intel COU with integrated graphics directly from Intel's site: <a href="https://downloadcenter.intel.com/">Drivers &amp; Software</a>
+It is highly recommended to use these drivers instead of the ones that are shipped with Windows.
 It is not required to install the Intel Media SDK.</p>
 <h4 id="remarks-1">Remarks</h4>
 <ul>
@@ -231,8 +219,7 @@ It is not required to install the Intel Media SDK.</p>
 <p>AMD Advanced Media Framework is a light-weight, portable multimedia framework that abstracts away most of the platform and API-specific details and allows for easy implementation of multimedia applications using a variety of technologies, such as DirectX 11, OpenGL, and OpenCL and facilitates an efficient interoperability between them.</p>
 <h4 id="supported-accelerations-2">Supported Accelerations</h4>
 <p>The following accelerations are currently supported by Emby.
-Please note that Emby may not support all accelerations offered by the hardware
-and that not all hardware devices will support all accelerations.</p>
+Please note that Emby may not support all accelerations offered by the hardware and that not all hardware devices will support all accelerations.</p>
 <ul>
 <li>Encoders
 <ul>
@@ -241,9 +228,8 @@ and that not all hardware devices will support all accelerations.</p>
 </li>
 </ul>
 <h4 id="hardware-requirements-2">Hardware Requirements</h4>
-<p>The AMF framework is compatible with most recent Radeon GPUs starting
-with the Southern Islands family and APUs of the Kabini, Kaveri, Carrizo
-families and newer.</p>
+<p>The AMF framework is compatible with most recent Radeon GPUs starting</p>
+<p>with the Southern Islands family and APUs of the Kabini, Kaveri, Carrizo families and newer.</p>
 <h4 id="required-setup-steps-2">Required Setup Steps</h4>
 <p>Install the latest Radeon Software directly from AMD's website:
 <a href="https://www.amd.com/en/support">AMD Drivers &amp; Support</a>
@@ -260,15 +246,11 @@ The minimum required software version is:
 <a href="https://github.com/GPUOpen-LibrariesAndSDKs/AMF">AMF SDK</a><br>
 <a href="https://www.amd.com/en/support">AMD Drivers &amp; Support</a></p>
 <h2 id="microsoft-dxva">Microsoft DXVA</h2>
-<p>DirectX Video Acceleration (DXVA) is an Microsoft API for using hardware
-acceleration to speed up video processing. Software codecs and software
-video processors can use DXVA to offload certain CPU-intensive operations
-to the GPU.
+<p>DirectX Video Acceleration (DXVA) is an Microsoft API for using hardware acceleration to speed up video processing. Software codecs and software video processors can use DXVA to offload certain CPU-intensive operations to the GPU.
 DXVA supports video decoding only, no encoding.</p>
 <h4 id="supported-accelerations-3">Supported Accelerations</h4>
 <p>The following accelerations are currently supported by Emby.
-Please note that Emby may not support all accelerations offered by the hardware
-and that not all hardware devices will support all accelerations.</p>
+Please note that Emby may not support all accelerations offered by the hardware and that not all hardware devices will support all accelerations.</p>
 <ul>
 <li>Decoders
 <ul>
@@ -282,8 +264,7 @@ and that not all hardware devices will support all accelerations.</p>
 <h4 id="hardware-requirements-3">Hardware Requirements</h4>
 <p>DXVA supports graphics devices from different vendors, including Nvidia, Intel and AMD.</p>
 <h4 id="required-setup-steps-3">Required Setup Steps</h4>
-<p>DXVA is a Windows component, and supposed to work with the drivers that are
-included in Windows.
+<p>DXVA is a Windows component, and supposed to work with the drivers that are included in Windows.
 Installing the latest drivers from the manufacturers' websites might still be a good idea.</p>
 <h4 id="remarks-3">Remarks</h4>
 <ul>

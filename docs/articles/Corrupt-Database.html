@@ -125,11 +125,32 @@
 <h3 id="identify-the-corrupt-database">Identify the corrupt database</h3>
 <p>Emby Server has 4 databases: <code>activitylog.db</code>, <code>authentication.db</code>, <code>library.db</code> and <code>users.db</code>. The main database is the <code>library.db</code> which tends to be the one that may end up with a corruption.</p>
 <p>There would be clues in the <a href="Log-Files.html">embyserver log file</a> as to which database is corrupt. The following maps the internal database names to the actual database filenames:</p>
-<pre><code>SqliteItemRepository			library.db
-SqliteUserRepository			users.db
-AuthenticationRepository		authentication.db
-ActivityRepository			activitylog.db
-</code></pre>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SqliteItemRepository</td>
+<td>library.db</td>
+</tr>
+<tr>
+<td>SqliteUserRepository</td>
+<td>users.db</td>
+</tr>
+<tr>
+<td>AuthenticationRepository</td>
+<td>authentication.db</td>
+</tr>
+<tr>
+<td>ActivityRepository</td>
+<td>activitylog.db</td>
+</tr>
+</tbody>
+</table>
 <p>As an example, the following log line within the logged error block indicates that the corrupt database is the <code>library.db</code>:</p>
 <p><code>at Emby.Server.Implementations.Data.SqliteItemRepository.Initialize</code></p>
 <h3 id="find-location-of-database-files">Find Location of Database Files</h3>
@@ -315,7 +336,7 @@ mv library-recovered.db library.db
 <ol start="4">
 <li><p>Restart Emby Server</p>
 </li>
-<li><p>Recreate your media libraries</p>
+<li><p>Recreate your media libraries <!-- markdownlint-disable-line MD029 --></p>
 </li>
 </ol>
 

@@ -105,7 +105,7 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1></h1>
 
-<h4 id="emby-server-does-not-restart-from-the-web-interface">Emby Server does not restart from the web interface:</h4>
+<h4 id="emby-server-does-not-restart-from-the-web-interface">Emby Server does not restart from the web interface</h4>
 <p>Emby on Linux does not have the built-in capability to restart itself. So to restart Emby uses a helper script. The helper script named <code>restart.sh</code> can be found on most distributions at <code>/usr/lib/emby-server</code>. The script can only restart Emby if it was started by a service manager program such as systemctl or service. If for some reason the helper script does not successfully restart Emby for you, please check the following:</p>
 <ul>
 <li>Ensure helper script is executable.</li>
@@ -114,7 +114,7 @@
 <li>Ensure whatever user is running emby-server is part of the emby group (usermod -a -G emby $USER_NAME)</li>
 <li>Ensure /etc/sudoers permissions is 0640</li>
 </ul>
-<p>####Example of troubleshooting restart on a distribution using systemd:</p>
+<h4 id="example-of-troubleshooting-restart-on-a-distribution-using-systemd">Example of troubleshooting restart on a distribution using systemd</h4>
 <ol>
 <li><code>sudo systemctl status emby-server</code> - Get PID.</li>
 <li>Hit restart on web interface</li>

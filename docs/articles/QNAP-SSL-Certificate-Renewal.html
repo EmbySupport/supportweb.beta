@@ -188,29 +188,29 @@ QNAP_CERT_PATH=&quot;&quot;
 QNAP_CERT_PATH=&quot;/etc/config/QcloudSSLCertificate/cert/cert&quot;
 
 if [ -z &quot;$QNAP_CERT_PATH&quot; ]; then
-	# For QuTS hero path may change so search filesystem for latest QNAP cert file
-	echo &quot;$now - Starting search of filesystem for the latest cert file&quot; &gt;&gt; &quot;$PFX_LOG&quot;
-	CRT_FILE=$(find /mnt -type f -name &quot;cert&quot; 2&gt;/dev/null \
-		| while read -r file; do
-			stat -c &quot;%Y %n&quot; &quot;$file&quot;
-		  done \
-		| sort -nr \
-		| head -n 1 \
-		| cut -d' ' -f2-)
+    # For QuTS hero path may change so search filesystem for latest QNAP cert file
+    echo &quot;$now - Starting search of filesystem for the latest cert file&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+    CRT_FILE=$(find /mnt -type f -name &quot;cert&quot; 2&gt;/dev/null \
+        | while read -r file; do
+            stat -c &quot;%Y %n&quot; &quot;$file&quot;
+          done \
+        | sort -nr \
+        | head -n 1 \
+        | cut -d' ' -f2-)
 
-	if [ -z &quot;$CRT_FILE&quot; ]; then
-		echo &quot;$now - No certificate file found.&quot; &gt;&gt; &quot;$PFX_LOG&quot;
-		exit 1
-	fi
+    if [ -z &quot;$CRT_FILE&quot; ]; then
+        echo &quot;$now - No certificate file found.&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+        exit 1
+    fi
 else
-	# For QTS we pick the cert file as per the specified path
-	echo &quot;$now - Picking QNAP certificate from this file path $QNAP_CERT_PATH&quot; &gt;&gt; &quot;$PFX_LOG&quot;
-	CRT_FILE=&quot;$QNAP_CERT_PATH&quot;
+    # For QTS we pick the cert file as per the specified path
+    echo &quot;$now - Picking QNAP certificate from this file path $QNAP_CERT_PATH&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+    CRT_FILE=&quot;$QNAP_CERT_PATH&quot;
 
-	if [ ! -f &quot;$CRT_FILE&quot; ]; then
-		echo &quot;$now - Specified cert file $CRT_FILE not found&quot; &gt;&gt; &quot;$PFX_LOG&quot;
-		exit 1
-	fi
+    if [ ! -f &quot;$CRT_FILE&quot; ]; then
+        echo &quot;$now - Specified cert file $CRT_FILE not found&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+        exit 1
+    fi
 fi
 
 CERT_DIR=$(dirname &quot;$CRT_FILE&quot;)
@@ -221,8 +221,8 @@ echo &quot;$now - CRT_FILE: $CRT_FILE&quot; &gt;&gt; &quot;$PFX_LOG&quot;
 echo &quot;$now - KEY_FILE: $KEY_FILE&quot; &gt;&gt; &quot;$PFX_LOG&quot;
 
 if [ ! -f &quot;$KEY_FILE&quot; ]; then
-	echo &quot;$now - Private key not found: $KEY_FILE&quot; &gt;&gt; &quot;$PFX_LOG&quot;
-	exit 1
+    echo &quot;$now - Private key not found: $KEY_FILE&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+    exit 1
 fi
 
 # Get current file mtime (epoch seconds)
@@ -230,97 +230,97 @@ CURRENT_MTIME=$(stat -c %Y &quot;$CRT_FILE&quot; 2&gt;/dev/null)
 
 # If state file exists, read last processed time
 if [ -f &quot;$STATE_FILE&quot; ]; then
-	LAST_MTIME=$(cat &quot;$STATE_FILE&quot;)
+    LAST_MTIME=$(cat &quot;$STATE_FILE&quot;)
 else
-	LAST_MTIME=0
+    LAST_MTIME=0
 fi
 
 # Only process if file is newer than last processed
 if [ &quot;$CURRENT_MTIME&quot; -gt &quot;$LAST_MTIME&quot; ]; then
 
-	echo &quot;$now - Certificate has changed (mtime $CURRENT_MTIME &gt; last processed $LAST_MTIME)&quot; &gt;&gt; &quot;$PFX_LOG&quot;
-	echo &quot;$now - Using certificate directory: $CERT_DIR&quot; &gt;&gt; &quot;$PFX_LOG&quot;
-	echo &quot;$now - Certificate: $CRT_FILE&quot; &gt;&gt; &quot;$PFX_LOG&quot;
-	echo &quot;$now - Private Key: $KEY_FILE&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+    echo &quot;$now - Certificate has changed (mtime $CURRENT_MTIME &gt; last processed $LAST_MTIME)&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+    echo &quot;$now - Using certificate directory: $CERT_DIR&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+    echo &quot;$now - Certificate: $CRT_FILE&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+    echo &quot;$now - Private Key: $KEY_FILE&quot; &gt;&gt; &quot;$PFX_LOG&quot;
 
-	# Convert epoch mtime to UTC yyyy-mm-dd_hh.mm.ss
-	CURRENT_MTIME_UTC=$(date -u -d &quot;@$CURRENT_MTIME&quot; +&quot;%Y-%m-%dT%H.%M.%SZ&quot;)
-	CURRENT_TIME_UTC=$(date -u +&quot;%Y-%m-%dT%H.%M.%SZ&quot;)
+    # Convert epoch mtime to UTC yyyy-mm-dd_hh.mm.ss
+    CURRENT_MTIME_UTC=$(date -u -d &quot;@$CURRENT_MTIME&quot; +&quot;%Y-%m-%dT%H.%M.%SZ&quot;)
+    CURRENT_TIME_UTC=$(date -u +&quot;%Y-%m-%dT%H.%M.%SZ&quot;)
 
-	# Build pfx filename
-	PFX_FILE=&quot;${PFX_DIR}${PFX_FILE_PREFIX}_${CURRENT_MTIME_UTC}_${CURRENT_TIME_UTC}.pfx&quot;
+    # Build pfx filename
+    PFX_FILE=&quot;${PFX_DIR}${PFX_FILE_PREFIX}_${CURRENT_MTIME_UTC}_${CURRENT_TIME_UTC}.pfx&quot;
 
-	echo &quot;$now - Emby PFX: $PFX_FILE&quot; &gt;&gt; &quot;$PFX_LOG&quot;
-	
-	# Create the PFX file
-	OPENSSL_CMD=&quot;openssl pkcs12 -export \
-		-out \&quot;$PFX_FILE\&quot; \
-		-inkey \&quot;$KEY_FILE\&quot; \
-		-in \&quot;$CRT_FILE\&quot; \
-		-passout \&quot;pass:$PFX_PASSWORD\&quot;&quot;
+    echo &quot;$now - Emby PFX: $PFX_FILE&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+    
+    # Create the PFX file
+    OPENSSL_CMD=&quot;openssl pkcs12 -export \
+        -out \&quot;$PFX_FILE\&quot; \
+        -inkey \&quot;$KEY_FILE\&quot; \
+        -in \&quot;$CRT_FILE\&quot; \
+        -passout \&quot;pass:$PFX_PASSWORD\&quot;&quot;
 
-	# uncomment next line to add extra logging if needed
-	# echo &quot;$now - Executing command $OPENSSL_CMD&quot; &gt;&gt; &quot;$PFX_LOG&quot;
-	
-	eval &quot;$OPENSSL_CMD&quot;
-	if [ $? -eq 0 ]; then
-		echo &quot;$now - PFX successfully created: $PFX_FILE&quot; &gt;&gt; &quot;$PFX_LOG&quot;
-	else
-		echo &quot;$now - PFX creation failed.&quot; &gt;&gt; &quot;$PFX_LOG&quot;
-		exit 1
-	fi
+    # uncomment next line to add extra logging if needed
+    # echo &quot;$now - Executing command $OPENSSL_CMD&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+    
+    eval &quot;$OPENSSL_CMD&quot;
+    if [ $? -eq 0 ]; then
+        echo &quot;$now - PFX successfully created: $PFX_FILE&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+    else
+        echo &quot;$now - PFX creation failed.&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+        exit 1
+    fi
 
-	# Save the processed certificate timestamp
-	echo &quot;$CURRENT_MTIME&quot; &gt; &quot;$STATE_FILE&quot;
+    # Save the processed certificate timestamp
+    echo &quot;$CURRENT_MTIME&quot; &gt; &quot;$STATE_FILE&quot;
 
-	if [ &quot;$AUTO_EMBY_UPDATE&quot; = &quot;YES&quot; ]; then
+    if [ &quot;$AUTO_EMBY_UPDATE&quot; = &quot;YES&quot; ]; then
 
-		if [ -z &quot;$EMBY_API_KEY&quot; ]; then
-			echo &quot;$now - Cannot update Emby Server: no API key specified&quot; &gt;&gt; &quot;$PFX_LOG&quot;
-			exit 1
-		fi
+        if [ -z &quot;$EMBY_API_KEY&quot; ]; then
+            echo &quot;$now - Cannot update Emby Server: no API key specified&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+            exit 1
+        fi
 
-		if [ &quot;$EMBY_IP&quot; = &quot;x.x.x.x&quot; ]; then
-			echo &quot;$now - Cannot update Emby Server: server IP address not configured&quot; &gt;&gt; &quot;$PFX_LOG&quot;
-			exit 1
-		fi
+        if [ &quot;$EMBY_IP&quot; = &quot;x.x.x.x&quot; ]; then
+            echo &quot;$now - Cannot update Emby Server: server IP address not configured&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+            exit 1
+        fi
 
-		PFX_DATA=&quot;{ \&quot;CertificatePath\&quot;: \&quot;$PFX_FILE\&quot;, \&quot;CertificatePassword\&quot;: \&quot;$PFX_PASSWORD\&quot; }&quot;
-		
-		EMBY_RESPONSE=$(curl \
-			--write-out '%{http_code}' \
-			--output /dev/null \
-			--silent \
-			-X POST \
-			&quot;http://$EMBY_IP:$EMBY_PORT/emby/System/Configuration/Partial&quot; \
-			-H &quot;X-Emby-Token: $EMBY_API_KEY&quot; \
-			-H &quot;Content-Type: text/plain&quot; \
-			--data-binary &quot;$PFX_DATA&quot;)
+        PFX_DATA=&quot;{ \&quot;CertificatePath\&quot;: \&quot;$PFX_FILE\&quot;, \&quot;CertificatePassword\&quot;: \&quot;$PFX_PASSWORD\&quot; }&quot;
+        
+        EMBY_RESPONSE=$(curl \
+            --write-out '%{http_code}' \
+            --output /dev/null \
+            --silent \
+            -X POST \
+            &quot;http://$EMBY_IP:$EMBY_PORT/emby/System/Configuration/Partial&quot; \
+            -H &quot;X-Emby-Token: $EMBY_API_KEY&quot; \
+            -H &quot;Content-Type: text/plain&quot; \
+            --data-binary &quot;$PFX_DATA&quot;)
 
-		echo &quot;$now - Emby Server Update Response: $EMBY_RESPONSE&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+        echo &quot;$now - Emby Server Update Response: $EMBY_RESPONSE&quot; &gt;&gt; &quot;$PFX_LOG&quot;
 
-		if [ &quot;$EMBY_RESPONSE&quot; != &quot;200&quot; ] &amp;&amp; [ &quot;$EMBY_RESPONSE&quot; != &quot;204&quot; ]; then
-			echo &quot;$now - Warning: Emby Server returned unexpected status code $EMBY_RESPONSE&quot; &gt;&gt; &quot;$PFX_LOG&quot;
-			exit 1
-		fi
-		# Purge pfx files created by this script more than 6 months ago
-		PFX_PATTERN=&quot;${PFX_FILE_PREFIX}_????-??-??T??.??.??Z_????-??-??T??.??.??Z.pfx&quot;	
-		DELETE_CMD=&quot;find \&quot;$PFX_DIR\&quot; -type f -name \&quot;$PFX_PATTERN\&quot; -mtime +183&quot;
+        if [ &quot;$EMBY_RESPONSE&quot; != &quot;200&quot; ] &amp;&amp; [ &quot;$EMBY_RESPONSE&quot; != &quot;204&quot; ]; then
+            echo &quot;$now - Warning: Emby Server returned unexpected status code $EMBY_RESPONSE&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+            exit 1
+        fi
+        # Purge pfx files created by this script more than 6 months ago
+        PFX_PATTERN=&quot;${PFX_FILE_PREFIX}_????-??-??T??.??.??Z_????-??-??T??.??.??Z.pfx&quot;    
+        DELETE_CMD=&quot;find \&quot;$PFX_DIR\&quot; -type f -name \&quot;$PFX_PATTERN\&quot; -mtime +183&quot;
 
-		eval &quot;$DELETE_CMD&quot; | while IFS= read line
-		do
-			echo &quot;$now - deleting $line&quot; &gt;&gt; &quot;$LOG_FILE&quot;
-			rm -f &quot;$line&quot; &gt;&gt; &quot;$LOG_FILE&quot; 2&gt;&amp;1
-		done
-		
-	else
-		echo &quot;$now - Emby Server not updated - AUTO_EMBY_UPDATE option not set to YES&quot; &gt;&gt; &quot;$PFX_LOG&quot;
-		echo &quot;$now - Emby Server Network Settings should be updated manually to specify the path as ${PFX_FILE}&quot; &gt;&gt; &quot;$PFX_LOG&quot;
-		echo &quot;$now - Also make sure the Emby Server certificate password is set to the value specified in this script&quot; &gt;&gt; &quot;$PFX_LOG&quot;
-	fi
-	
+        eval &quot;$DELETE_CMD&quot; | while IFS= read line
+        do
+            echo &quot;$now - deleting $line&quot; &gt;&gt; &quot;$LOG_FILE&quot;
+            rm -f &quot;$line&quot; &gt;&gt; &quot;$LOG_FILE&quot; 2&gt;&amp;1
+        done
+        
+    else
+        echo &quot;$now - Emby Server not updated - AUTO_EMBY_UPDATE option not set to YES&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+        echo &quot;$now - Emby Server Network Settings should be updated manually to specify the path as ${PFX_FILE}&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+        echo &quot;$now - Also make sure the Emby Server certificate password is set to the value specified in this script&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+    fi
+    
 else
-	echo &quot;$now - Certificate unchanged (mtime $CURRENT_MTIME, last processed $LAST_MTIME) - skipping&quot; &gt;&gt; &quot;$PFX_LOG&quot;
+    echo &quot;$now - Certificate unchanged (mtime $CURRENT_MTIME, last processed $LAST_MTIME) - skipping&quot; &gt;&gt; &quot;$PFX_LOG&quot;
 fi
 </code></pre>
 <h2 id="how-to-obtain-an-api-key-for-emby-server">How to obtain an API Key for Emby Server</h2>
@@ -330,7 +330,7 @@ fi
 <p>The following lists all the lines that should be edited and set.</p>
 <p>The <code>PFX_PASSWORD</code> is the password for the Emby Server pfx certificate file that will be generated and will be set when the pfx file update is notified to Emby Server.</p>
 <p>The <code>EMBY_API_KEY</code> will hold the api key you generated above.</p>
-<p>One of the two <code>QNAP_CERT_PATH</code> lines should be commented out by placing a <code># </code> before the text.</p>
+<p>One of the two <code>QNAP_CERT_PATH</code> lines should be commented out by placing a <code>#</code> before the text.</p>
 <pre><code>PFX_PASSWORD=&quot;Replace-This-With-Your-PFX-Password&quot;
 EMBY_API_KEY=&quot;Replace-This-With-Your-an-API-Key-For-EmbyServer&quot;
 QNAP_CERT_PATH=&quot;&quot;
