@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Node Conditions | Emby Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Node Conditions | Emby Documentation ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    <meta name="theme-color" content="#090d0f">
+    
+    <link rel="shortcut icon" href="../../../../favicon.ico">
+    <script type="text/javascript" src="../../../../styles/theme-config.js"></script>
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <link rel="stylesheet" href="../../../../styles/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
+    <link rel="stylesheet" href="../../../../styles/theme.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
+    <meta property="docfx:uid" content="Server-Transcoding-Expert-Conditions">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+    <script type="text/javascript" src="../../../../nav.js"></script>
+    <script type="text/javascript" src="../../../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      
+      <header class="site-header">
+        <nav class="nav container" aria-label="Primary navigation">
+          <a class="brand" href="https://emby.media/" aria-label="Emby home">
+            
+            <img class="logo-on-dark" src="../../../../images/logo.png" alt="Emby">
+            <img class="logo-on-light" src="../../../../images/logo-dark-text.png" alt="Emby">
+          </a>
+          <button class="menu-button" type="button" aria-expanded="false" aria-controls="navbar" aria-label="Open menu">&#9776;</button>
+          <div class="nav-links" id="navbar">
+            <ul class="nav-links-list">
+                
+                    <li><a href="https://emby.media/about.html" title="How it Works">How it Works</a></li>
+                    <li><a href="https://emby.media/download.html" title="Download">Download</a></li>
+                    <li><a href="https://emby.media/premiere.html" title="Premiere">Premiere</a></li>
+                    <li><a href="../../../../index.html" title="Support" class="is-current" aria-current="page">Support</a></li>
+                    <li><a href="https://emby.media/connect.html" title="Emby Connect">Emby Connect</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <script>
+        (function () {
+          var button = document.querySelector('.site-header .menu-button');
+          var links = document.querySelector('.site-header .nav-links');
+          if (!button || !links) { return; }
+          button.addEventListener('click', function () {
+            var isOpen = links.classList.toggle('open');
+            button.setAttribute('aria-expanded', String(isOpen));
+            button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+          });
+        }());
+      </script>
+      
+      <div class="subnav navbar navbar-default">
+        <div class="container">
+          <div class="hide-when-search" id="breadcrumb">
+      	  <ul class="breadcrumb">
+      		<li></li>
+      	  </ul>
+      	</div>
+      
+      	<div class="breadcrumpsearch">
+      	  <form class="navbar-form navbar-right" role="search" id="search">
+      		<div class="form-group">
+      		  <i class="fa fa-search" aria-hidden="true"></i>
+      		  <input type="text" class="form-control" id="search-query" placeholder="Search support topics" autocomplete="off">
+      		</div>
+      	  </form>
+      	</div>
+        </div>
+      </div>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Server-Transcoding-Expert-Conditions">
+<h1>Node Conditions</h1>
+
+
+<p>Every node in the graph can carry conditions, which decide whether that node applies to the operation being
+evaluated. A node whose conditions do not match is passed over, and evaluation carries on as if it were not
+there.</p>
+<p>Expert Mode shows a filter builder here, in place of the short list of operation kinds that
+<a href="Advanced-Mode.html#conditions">Advanced Mode</a> offers. The filter builder can combine several fields, with
+and/or groups, rather than only saying which kinds of operation a node applies to.</p>
+<p>Conditions apply to containers as well as to device nodes. A condition on a Condition Group applies to
+everything inside it - which is the entire purpose of that container, see
+<a href="Expert-Node-Types.html#condition-group">Node Types</a>. Nodes inside the container can carry their own
+conditions on top.</p>
+<h2 id="available-fields">Available Fields</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>What it matches</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Operation</td>
+<td>The kind of operation: Conversions, LiveTV, Playback, HlsPlayback</td>
+</tr>
+<tr>
+<td>Source Codec</td>
+<td>The video codec of the source</td>
+</tr>
+<tr>
+<td>Output Codec</td>
+<td>The video codec being produced - AV1, H.264 or HEVC</td>
+</tr>
+<tr>
+<td>Processing</td>
+<td>A processing step the operation involves: Closed Captions, Tone Mapping, Subtitle Burn-In, Subtitle Overlay</td>
+</tr>
+<tr>
+<td>User</td>
+<td>The user the playback or conversion belongs to</td>
+</tr>
+<tr>
+<td>Library</td>
+<td>The library the item comes from</td>
+</tr>
+<tr>
+<td>Error Count</td>
+<td>How many failed attempts precede this node being used - see below</td>
+</tr>
+</tbody>
+</table>
+<p>An operation can involve more than one processing step at once - tone mapping and subtitle burn-in
+together, for instance.</p>
+<h2 id="building-a-condition">Building a Condition</h2>
+<p>TBA - working with the filter builder itself: adding criteria and nesting groups.</p>
+<p>Two things about what a filter can express are worth knowing while you do.</p>
+<p>Criteria compare a field against a value using <code>=</code>, <code>&lt;&gt;</code>, <code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code> or <code>&lt;=</code>, and text fields
+additionally support matching on part of a value. Which of these the builder offers depends on the type of
+the field you picked.</p>
+<p>Criteria are combined with <strong>and</strong> or <strong>or</strong>, but not both within one group. To express a mixture, nest a
+group inside another - the inner group's combination is independent of the outer one's.</p>
+<h2 id="conditions-on-fallback-and-failure-points">Conditions on Fallback and Failure Points</h2>
+<p>Conditions on nodes that take part in fallback calculation are evaluated in the second pass just as they
+are in the first - see <a href="Expert-Fallback-Paths.html#fallback-paths-in-expert-mode">Fallback Paths</a>.</p>
+<!-- REVIEW: ErrorCount is documented here as an available condition field. Confirm the field name and the
+     values it takes once it is implemented. -->
+<p>What makes the two passes distinguishable from inside a condition is <strong>Error Count</strong>: the number of failed
+attempts that precede this node being used.</p>
+<ul>
+<li>During the first pass nothing has failed yet, so it is <strong>0</strong></li>
+<li>During the second pass it starts at <strong>1</strong> and increases by one for each fallback point already found and
+added to the list - so the first fallback is evaluated with 1, the second with 2, the third with 3</li>
+</ul>
+<p>That gives you a way to state when a node applies at all:</p>
+<table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Error Count = 0</code></td>
+<td>Effectively disables the node for fallback use - the equivalent of not marking it as a fallback point</td>
+</tr>
+<tr>
+<td><code>Error Count &gt; 0</code></td>
+<td>Applies only as a fallback, never during initial selection</td>
+</tr>
+<tr>
+<td><code>Error Count = 1</code></td>
+<td>Applies only as a fallback when no previous fallback attempt has been made</td>
+</tr>
+</tbody>
+</table>
+<p>The most common use is on a Failure Point. By default a Failure Point applies in both passes, which stops
+evaluation outright. Giving it <code>Error Count &gt; 0</code> leaves the first attempt alone while stopping any further
+ones - &quot;try this, but do not keep trying if it fails&quot; - see
+<a href="Expert-Node-Types.html#failure-point">Failure Point</a>.</p>
+<p>The same applies to a device entry marked as a fallback point: a condition on Error Count decides whether
+that entry is used as a fallback at all, and whether only as the first one.</p>
+
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix sdkversion" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="footer">
+          <div class="container footer-inner">
+            <div class="footer-copy">2026 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.</div>
+            <div class="footer-actions">
+              <span class="contribution">
+                  <a href="https://github.com/EmbySupport/Emby.Docs/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Article%20Details%0A%0A**Do%20not%20remove%20this%20section**%0A%0A*%20uid%3A%20Server-Transcoding-Expert-Conditions%0A*%20Title%3A%20Node%20Conditions%0A*%20Article%3A%20https%3A%2F%2Fgithub.com%2FEmbySupport%2FEmby.Docs%2Fblob%2Fmaster%2Fserver%2Ftranscoding%2Fconfiguration%2FExpert-Conditions.md%0A*%20LegacyUrl%3A%20https%3A%2F%2Fsupport.emby.mediaundefined%0A" class="contribution-link" title="Feedback on this article"><div class="far fa-comment-alt fa-sm"></div></a>
+                  <a href="https://github.com/EmbySupport/Emby.Docs/blob/master/server/transcoding/configuration/Expert-Conditions.md/#L1" class="contribution-link" title="View article source"><div class="far fa-edit fa-sm"></div></a>
+              </span>
+              <a href="#top" class="back-to-top">Back to Top</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

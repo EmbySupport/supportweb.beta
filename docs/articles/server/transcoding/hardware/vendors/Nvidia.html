@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Nvidia | Emby Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Nvidia | Emby Documentation ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    <meta name="theme-color" content="#090d0f">
+    
+    <link rel="shortcut icon" href="../../../../../favicon.ico">
+    <script type="text/javascript" src="../../../../../styles/theme-config.js"></script>
+    <link rel="stylesheet" href="../../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../../styles/main.css">
+    <link rel="stylesheet" href="../../../../../styles/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
+    <link rel="stylesheet" href="../../../../../styles/theme.css">
+    <meta property="docfx:navrel" content="../../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../../toc.html">
+    <meta property="docfx:uid" content="Server-Hwa-Vendor-Nvidia">
+    
+    <meta property="docfx:rel" content="../../../../../">
+    
+    <script type="text/javascript" src="../../../../../nav.js"></script>
+    <script type="text/javascript" src="../../../../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      
+      <header class="site-header">
+        <nav class="nav container" aria-label="Primary navigation">
+          <a class="brand" href="https://emby.media/" aria-label="Emby home">
+            
+            <img class="logo-on-dark" src="../../../../../images/logo.png" alt="Emby">
+            <img class="logo-on-light" src="../../../../../images/logo-dark-text.png" alt="Emby">
+          </a>
+          <button class="menu-button" type="button" aria-expanded="false" aria-controls="navbar" aria-label="Open menu">&#9776;</button>
+          <div class="nav-links" id="navbar">
+            <ul class="nav-links-list">
+                
+                    <li><a href="https://emby.media/about.html" title="How it Works">How it Works</a></li>
+                    <li><a href="https://emby.media/download.html" title="Download">Download</a></li>
+                    <li><a href="https://emby.media/premiere.html" title="Premiere">Premiere</a></li>
+                    <li><a href="../../../../../index.html" title="Support" class="is-current" aria-current="page">Support</a></li>
+                    <li><a href="https://emby.media/connect.html" title="Emby Connect">Emby Connect</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <script>
+        (function () {
+          var button = document.querySelector('.site-header .menu-button');
+          var links = document.querySelector('.site-header .nav-links');
+          if (!button || !links) { return; }
+          button.addEventListener('click', function () {
+            var isOpen = links.classList.toggle('open');
+            button.setAttribute('aria-expanded', String(isOpen));
+            button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+          });
+        }());
+      </script>
+      
+      <div class="subnav navbar navbar-default">
+        <div class="container">
+          <div class="hide-when-search" id="breadcrumb">
+      	  <ul class="breadcrumb">
+      		<li></li>
+      	  </ul>
+      	</div>
+      
+      	<div class="breadcrumpsearch">
+      	  <form class="navbar-form navbar-right" role="search" id="search">
+      		<div class="form-group">
+      		  <i class="fa fa-search" aria-hidden="true"></i>
+      		  <input type="text" class="form-control" id="search-query" placeholder="Search support topics" autocomplete="off">
+      		</div>
+      	  </form>
+      	</div>
+        </div>
+      </div>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Server-Hwa-Vendor-Nvidia">
+<h1>Nvidia</h1>
+<h4 class="long-title">Hardware Acceleration with Nvidia GPUs</h4>
+
+<p>Nvidia GPUs carry dedicated video engines that are separate from the CUDA cores: NVENC for encoding and
+NVDEC (formerly NVCUVID) for decoding. Because the work runs on those engines rather than on the graphics
+engine or the CPU, both stay free for other things, and the engines are fast enough to transcode
+considerably faster than real time.</p>
+<h2 id="gpu-context-types">GPU Context Types</h2>
+<p>Emby offers up to two context types for an Nvidia card, and most cards present both at the same time.</p>
+<p><strong>NvEnc</strong> is Nvidia's own interface, and the one Emby picks by default. The interop is identical on
+Windows and Linux, so nothing about this context differs between the two.</p>
+<p><strong>VulkanNvidia</strong> is the generic, cross-vendor Vulkan interface running on the same card. It is a separate
+context that sits alongside NvEnc rather than replacing it, and it is generally the less mature of the
+two. It is worth trying when a specific operation fails under NvEnc, or when you want to compare.</p>
+<p>Which one is in use, and which are available at all, is shown per device in
+<a href="../../configuration/Advanced-Mode.html">Advanced Mode</a>. Expert Mode additionally lets the same card appear
+more than once with a different context each time - see
+<a href="../../configuration/Expert-Mode.html">Expert Mode</a>.</p>
+<h2 id="nvidia-specific-options">Nvidia-Specific Options</h2>
+<p>The NvEnc context carries a few behaviour options of its own, reachable from the device's configuration
+dialog:</p>
+<ul>
+<li>What should happen when no suitable hardware decoder is available for a given media type - fall back to
+software decoding, or skip this configuration entirely</li>
+<li>Whether to use decoder-side (CUVID) deinterlacing</li>
+<li>Whether to use decoder-side (CUVID) scaling</li>
+</ul>
+<h2 id="hardware-requirements">Hardware Requirements</h2>
+<!-- REVIEW: hardware generation claim carried over from the previous article, not verified -->
+<p>Hardware acceleration is available on most Nvidia devices from the Kepler generation onwards (e.g. GeForce
+GT 630), both consumer and professional. Nvidia's own
+<a href="https://developer.nvidia.com/video-encode-decode-gpu-support-matrix">GPU Support Matrix</a> lists which
+codecs each chip generation can encode and decode.</p>
+<h2 id="drivers">Drivers</h2>
+<p>Nvidia cards need drivers installed on the server, and on Linux specifically they need Nvidia's own
+drivers rather than the ones a distribution ships. See <a href="../../../setup/gpu-setup/GPU-Setup.html">GPU Setup</a>.</p>
+<h2 id="what-your-card-can-do">What Your Card Can Do</h2>
+<p>Emby detects the encoders, decoders and filters each device actually offers, rather than assuming them
+from the model name, and shows them per device in the transcoding configuration. What a given card
+supports depends on its generation, its driver and the operating system, so the configuration is the
+authoritative answer for your own hardware.</p>
+<h2 id="further-reading">Further Reading</h2>
+<p><a href="https://developer.nvidia.com/nvidia-video-codec-sdk">Nvidia Video Codec SDK</a><br>
+<a href="https://developer.nvidia.com/video-encode-decode-gpu-support-matrix">GPU Support Matrix</a><br>
+<a href="https://en.wikipedia.org/wiki/Nvidia_NVENC">NVENC</a>, <a href="https://en.wikipedia.org/wiki/Nvidia_NVDEC">NVDEC</a></p>
+
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix sdkversion" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="footer">
+          <div class="container footer-inner">
+            <div class="footer-copy">2026 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.</div>
+            <div class="footer-actions">
+              <span class="contribution">
+                  <a href="https://github.com/EmbySupport/Emby.Docs/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Article%20Details%0A%0A**Do%20not%20remove%20this%20section**%0A%0A*%20uid%3A%20Server-Hwa-Vendor-Nvidia%0A*%20Title%3A%20Nvidia%0A*%20Article%3A%20https%3A%2F%2Fgithub.com%2FEmbySupport%2FEmby.Docs%2Fblob%2Fmaster%2Fserver%2Ftranscoding%2Fhardware%2Fvendors%2FNvidia.md%0A*%20LegacyUrl%3A%20https%3A%2F%2Fsupport.emby.mediaundefined%0A" class="contribution-link" title="Feedback on this article"><div class="far fa-comment-alt fa-sm"></div></a>
+                  <a href="https://github.com/EmbySupport/Emby.Docs/blob/master/server/transcoding/hardware/vendors/Nvidia.md/#L1" class="contribution-link" title="View article source"><div class="far fa-edit fa-sm"></div></a>
+              </span>
+              <a href="#top" class="back-to-top">Back to Top</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../../../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../../styles/main.js"></script>
+  </body>
+</html>

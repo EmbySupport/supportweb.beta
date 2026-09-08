@@ -102,7 +102,7 @@ references:
   href: articles/Devices.html
 - uid: DirectPlay-Stream-Transcoding
   name: Playback Methods
-  href: articles/DirectPlay-Stream-Transcoding.html
+  href: articles/server/transcoding/Playback-Methods.html
   fullName: Direct Play vs Direct Streaming vs Transcoding
 - uid: DVR-Settings
   name: DVR Settings
@@ -203,18 +203,9 @@ references:
 - uid: Google-Home
   name: Google Home
   href: articles/Google-Home.html
-- uid: Hardware-Acceleration-on-Android
-  name: Hardware Acceleration on Android
-  href: articles/Hardware-Acceleration-on-Android.html
-- uid: Hardware-Acceleration-on-Linux
-  name: Hardware Acceleration on Linux
-  href: articles/Hardware-Acceleration-on-Linux.html
-- uid: Hardware-Acceleration-on-Windows
-  name: Hardware Acceleration on Windows
-  href: articles/Hardware-Acceleration-on-Windows.html
 - uid: Hardware-Acceleration-Overview
   name: Hardware Acceleration Overview
-  href: articles/Hardware-Acceleration-Overview.html
+  href: articles/server/transcoding/hardware/Overview.html
 - uid: Hauppauge-Setup
   name: Hauppauge Setup
   href: articles/Hauppauge-Setup.html
@@ -233,7 +224,7 @@ references:
   href: articles/How-to-Set-Permissions-on-DSM-7.html
 - uid: Hwa-Fails-with-RDP
   name: HWA fails with RDP
-  href: articles/Hwa-Fails-with-RDP.html
+  href: articles/server/transcoding/Hwa-Fails-with-RDP.html
   fullName: Hardware Acceleration Fails with Remote Desktop (RDP) on Windows
 - uid: Identify
   name: Identify
@@ -442,12 +433,85 @@ references:
 - uid: Server-Data-Folder
   name: Emby Server Data Folder
   href: articles/Server-Data-Folder.html
+- uid: Server-Gpu-Setup
+  name: GPU Setup
+  href: articles/server/setup/gpu-setup/GPU-Setup.html
+- uid: Server-Gpu-Setup-Containers
+  name: GPU Setup in Containers
+  href: articles/server/setup/gpu-setup/Containers.html
+- uid: Server-Gpu-Setup-Linux
+  name: GPU Setup on Linux
+  href: articles/server/setup/gpu-setup/Linux.html
+- uid: Server-Gpu-Setup-Windows
+  name: GPU Setup on Windows
+  href: articles/server/setup/gpu-setup/Windows.html
+- uid: Server-Hwa-Vendor-Amd
+  name: AMD
+  href: articles/server/transcoding/hardware/vendors/AMD.html
+  fullName: Hardware Acceleration with AMD GPUs
+- uid: Server-Hwa-Vendor-Android
+  name: Android
+  href: articles/server/transcoding/hardware/vendors/Android.html
+  fullName: Hardware Acceleration on Android
+- uid: Server-Hwa-Vendor-Apple
+  name: Apple
+  href: articles/server/transcoding/hardware/vendors/Apple.html
+  fullName: Hardware Acceleration on Apple Hardware
+- uid: Server-Hwa-Vendor-Intel
+  name: Intel
+  href: articles/server/transcoding/hardware/vendors/Intel.html
+  fullName: Hardware Acceleration with Intel GPUs
+- uid: Server-Hwa-Vendor-Nvidia
+  name: Nvidia
+  href: articles/server/transcoding/hardware/vendors/Nvidia.html
+  fullName: Hardware Acceleration with Nvidia GPUs
+- uid: Server-Hwa-Vendor-Rockchip
+  name: Rockchip
+  href: articles/server/transcoding/hardware/vendors/Rockchip.html
+  fullName: Hardware Acceleration on Rockchip SoCs
 - uid: Server-Installation-Shield
   name: Server Installation on Shield TV
   href: articles/Server-Installation-Shield.html
 - uid: Server-Settings333
   name: Server Settings
   href: articles/Server-Settings.html
+- uid: Server-Transcoding-Advanced-Mode
+  name: Advanced Mode
+  href: articles/server/transcoding/configuration/Advanced-Mode.html
+- uid: Server-Transcoding-Basic-Mode
+  name: Basic Mode
+  href: articles/server/transcoding/configuration/Basic-Mode.html
+- uid: Server-Transcoding-Configuration
+  name: Configuration
+  href: articles/server/transcoding/configuration/Transcoding-Configuration.html
+- uid: Server-Transcoding-Expert-Conditions
+  name: Node Conditions
+  href: articles/server/transcoding/configuration/Expert-Conditions.html
+- uid: Server-Transcoding-Expert-Fallback
+  name: Fallback Paths
+  href: articles/server/transcoding/configuration/Expert-Fallback-Paths.html
+- uid: Server-Transcoding-Expert-Graph
+  name: Graph Evaluation
+  href: articles/server/transcoding/configuration/Expert-Graph-Evaluation.html
+- uid: Server-Transcoding-Expert-LoadBalancing
+  name: Load Balancing
+  href: articles/server/transcoding/configuration/Expert-Load-Balancing.html
+- uid: Server-Transcoding-Expert-Mode
+  name: Expert Mode
+  href: articles/server/transcoding/configuration/Expert-Mode.html
+- uid: Server-Transcoding-Expert-Nodes
+  name: Node Types
+  href: articles/server/transcoding/configuration/Expert-Node-Types.html
+- uid: Server-Transcoding-Settings
+  name: Settings
+  href: articles/server/transcoding/Settings.html
+  fullName: Transcoding Settings
+- uid: Server-Transcoding-Troubleshooting
+  name: Transcoding Troubleshooting
+  href: articles/server/transcoding/Troubleshooting.html
+- uid: Server-Transcoding-Why
+  name: Why Is My Media Transcoding?
+  href: articles/server/transcoding/Why-Media-Transcodes.html
 - uid: ShieldTV-Direct-File-Access
   name: Shield TV Direct File Access
   href: articles/ShieldTV-Direct-File-Access.html
@@ -488,7 +552,7 @@ references:
   href: articles/Trailers.html
 - uid: Transcoding
   name: Transcoding
-  href: articles/Transcoding.html
+  href: articles/server/transcoding/Transcoding.html
 - uid: TV-Naming
   name: TV Naming
   href: articles/TV-Naming.html

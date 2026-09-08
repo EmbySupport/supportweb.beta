@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Why Is My Media Transcoding? | Emby Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Why Is My Media Transcoding? | Emby Documentation ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    <meta name="theme-color" content="#090d0f">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <script type="text/javascript" src="../../../styles/theme-config.js"></script>
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link rel="stylesheet" href="../../../styles/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
+    <link rel="stylesheet" href="../../../styles/theme.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    <meta property="docfx:uid" content="Server-Transcoding-Why">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+    <script type="text/javascript" src="../../../nav.js"></script>
+    <script type="text/javascript" src="../../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      
+      <header class="site-header">
+        <nav class="nav container" aria-label="Primary navigation">
+          <a class="brand" href="https://emby.media/" aria-label="Emby home">
+            
+            <img class="logo-on-dark" src="../../../images/logo.png" alt="Emby">
+            <img class="logo-on-light" src="../../../images/logo-dark-text.png" alt="Emby">
+          </a>
+          <button class="menu-button" type="button" aria-expanded="false" aria-controls="navbar" aria-label="Open menu">&#9776;</button>
+          <div class="nav-links" id="navbar">
+            <ul class="nav-links-list">
+                
+                    <li><a href="https://emby.media/about.html" title="How it Works">How it Works</a></li>
+                    <li><a href="https://emby.media/download.html" title="Download">Download</a></li>
+                    <li><a href="https://emby.media/premiere.html" title="Premiere">Premiere</a></li>
+                    <li><a href="../../../index.html" title="Support" class="is-current" aria-current="page">Support</a></li>
+                    <li><a href="https://emby.media/connect.html" title="Emby Connect">Emby Connect</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <script>
+        (function () {
+          var button = document.querySelector('.site-header .menu-button');
+          var links = document.querySelector('.site-header .nav-links');
+          if (!button || !links) { return; }
+          button.addEventListener('click', function () {
+            var isOpen = links.classList.toggle('open');
+            button.setAttribute('aria-expanded', String(isOpen));
+            button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+          });
+        }());
+      </script>
+      
+      <div class="subnav navbar navbar-default">
+        <div class="container">
+          <div class="hide-when-search" id="breadcrumb">
+      	  <ul class="breadcrumb">
+      		<li></li>
+      	  </ul>
+      	</div>
+      
+      	<div class="breadcrumpsearch">
+      	  <form class="navbar-form navbar-right" role="search" id="search">
+      		<div class="form-group">
+      		  <i class="fa fa-search" aria-hidden="true"></i>
+      		  <input type="text" class="form-control" id="search-query" placeholder="Search support topics" autocomplete="off">
+      		</div>
+      	  </form>
+      	</div>
+        </div>
+      </div>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Server-Transcoding-Why">
+<h1>Why Is My Media Transcoding?</h1>
+
+
+<p>Emby apps play files directly wherever they can, and avoid transcoding. It happens only when the file is
+not natively supported by the device you are playing on, or when the content's bitrate is higher than the
+app's bitrate setting allows.</p>
+<p>There are three things to check, in order.</p>
+<h2 id="is-the-format-supported-by-the-app">Is the Format Supported by the App?</h2>
+<p>Compare the media's format against what the app supports. The media info is shown at the bottom of the
+detail page in Emby Web:</p>
+<p><img src="../../images/server/mediainfo.png" alt="Media Info"></p>
+<p>If the file is not natively supported, transcoding is required. Which formats each app supports natively
+is documented per app:</p>
+<ul>
+<li><a href="../../Fire-TV.html">Amazon Fire TV</a></li>
+<li><a href="../../Android-Mobile.html">Android Mobile</a></li>
+<li><a href="../../Android-TV.html">Android TV</a></li>
+<li><a href="../../Chromecast.html">Chromecast</a></li>
+<li><a href="../../iOS.html">iOS</a></li>
+<li><a href="../../Roku.html">Roku</a></li>
+<li><a href="../../Web-Client.html">Web Client</a></li>
+</ul>
+<h2 id="is-the-bitrate-higher-than-the-app-allows">Is the Bitrate Higher Than the App Allows?</h2>
+<p>Compare the file's bitrate, from the same media info, against the app's bitrate setting. If the file is
+higher, transcoding is required.</p>
+<p>Raising the app's bitrate setting can avoid this, but it will hurt playback if the network connection
+cannot sustain it. Leaving the setting on Auto gives the best results for most people.</p>
+<h2 id="are-subtitles-selected">Are Subtitles Selected?</h2>
+<p>Selected subtitles can trigger transcoding when the app does not natively support that subtitle format.
+Most Emby apps handle text-based subtitles such as SRT and VTT natively. Graphical formats such as PGS and
+VobSub are far more likely to force transcoding, because they usually have to be burned into the video -
+which is also expensive in CPU terms, see
+<a href="Troubleshooting.html#high-cpu-usage-despite-hardware-acceleration">Troubleshooting</a>.</p>
+<h2 id="reporting-unexpected-transcoding">Reporting Unexpected Transcoding</h2>
+<p>If your files should not be transcoding and none of the above explains it, report it in the
+<a href="http://emby.media/community/">Emby Community</a>. Start with a single example, and include:</p>
+<ul>
+<li>A copy of the media info from Emby Web</li>
+<li>The Emby Server log covering the time you played the content</li>
+<li>The transcoding log from the same time, if there is one</li>
+</ul>
+<p>Logs are reachable in the server dashboard under <strong>Help</strong> -&gt; <strong>Logs</strong>.</p>
+
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix sdkversion" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="footer">
+          <div class="container footer-inner">
+            <div class="footer-copy">2026 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.</div>
+            <div class="footer-actions">
+              <span class="contribution">
+                  <a href="https://github.com/EmbySupport/Emby.Docs/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Article%20Details%0A%0A**Do%20not%20remove%20this%20section**%0A%0A*%20uid%3A%20Server-Transcoding-Why%0A*%20Title%3A%20Why%20Is%20My%20Media%20Transcoding%3F%0A*%20Article%3A%20https%3A%2F%2Fgithub.com%2FEmbySupport%2FEmby.Docs%2Fblob%2Fmaster%2Fserver%2Ftranscoding%2FWhy-Media-Transcodes.md%0A*%20LegacyUrl%3A%20https%3A%2F%2Fsupport.emby.mediaundefined%0A" class="contribution-link" title="Feedback on this article"><div class="far fa-comment-alt fa-sm"></div></a>
+                  <a href="https://github.com/EmbySupport/Emby.Docs/blob/master/server/transcoding/Why-Media-Transcodes.md/#L1" class="contribution-link" title="View article source"><div class="far fa-edit fa-sm"></div></a>
+              </span>
+              <a href="#top" class="back-to-top">Back to Top</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Configuration | Emby Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Configuration | Emby Documentation ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    <meta name="theme-color" content="#090d0f">
+    
+    <link rel="shortcut icon" href="../../../../favicon.ico">
+    <script type="text/javascript" src="../../../../styles/theme-config.js"></script>
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <link rel="stylesheet" href="../../../../styles/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
+    <link rel="stylesheet" href="../../../../styles/theme.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
+    <meta property="docfx:uid" content="Server-Transcoding-Configuration">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+    <script type="text/javascript" src="../../../../nav.js"></script>
+    <script type="text/javascript" src="../../../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      
+      <header class="site-header">
+        <nav class="nav container" aria-label="Primary navigation">
+          <a class="brand" href="https://emby.media/" aria-label="Emby home">
+            
+            <img class="logo-on-dark" src="../../../../images/logo.png" alt="Emby">
+            <img class="logo-on-light" src="../../../../images/logo-dark-text.png" alt="Emby">
+          </a>
+          <button class="menu-button" type="button" aria-expanded="false" aria-controls="navbar" aria-label="Open menu">&#9776;</button>
+          <div class="nav-links" id="navbar">
+            <ul class="nav-links-list">
+                
+                    <li><a href="https://emby.media/about.html" title="How it Works">How it Works</a></li>
+                    <li><a href="https://emby.media/download.html" title="Download">Download</a></li>
+                    <li><a href="https://emby.media/premiere.html" title="Premiere">Premiere</a></li>
+                    <li><a href="../../../../index.html" title="Support" class="is-current" aria-current="page">Support</a></li>
+                    <li><a href="https://emby.media/connect.html" title="Emby Connect">Emby Connect</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <script>
+        (function () {
+          var button = document.querySelector('.site-header .menu-button');
+          var links = document.querySelector('.site-header .nav-links');
+          if (!button || !links) { return; }
+          button.addEventListener('click', function () {
+            var isOpen = links.classList.toggle('open');
+            button.setAttribute('aria-expanded', String(isOpen));
+            button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+          });
+        }());
+      </script>
+      
+      <div class="subnav navbar navbar-default">
+        <div class="container">
+          <div class="hide-when-search" id="breadcrumb">
+      	  <ul class="breadcrumb">
+      		<li></li>
+      	  </ul>
+      	</div>
+      
+      	<div class="breadcrumpsearch">
+      	  <form class="navbar-form navbar-right" role="search" id="search">
+      		<div class="form-group">
+      		  <i class="fa fa-search" aria-hidden="true"></i>
+      		  <input type="text" class="form-control" id="search-query" placeholder="Search support topics" autocomplete="off">
+      		</div>
+      	  </form>
+      	</div>
+        </div>
+      </div>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Server-Transcoding-Configuration">
+<h1>Configuration</h1>
+
+
+<h2 id="configuration-modes">Configuration Modes</h2>
+<p>There are three configuration modes, and they differ in how much they let you decide:</p>
+<ul>
+<li><a href="Basic-Mode.html">Basic Mode</a> - the default mode: simple selection for enabling or disabling hardware
+acceleration and which GPU to use</li>
+<li><a href="Advanced-Mode.html">Advanced Mode</a> - allows to configure encoders and tone mapping filters, priority
+ordering of GPUs and simple conditions for GPU selection</li>
+<li><a href="Expert-Mode.html">Expert Mode</a> - not for everyday configurations, enables very advanced scenarios but
+also makes it easy to get a broken setup</li>
+</ul>
+<p>Each mode's configuration is stored separately, and only one of them is in effect at a time. Switching
+modes therefore never discards what the other modes hold - switching away and back returns you to the
+configuration you left behind.</p>
+<h2 id="change-configuration-wizard">Change Configuration Wizard</h2>
+<p>The Change Configuration Wizard is launched from the <strong>Change Configuration</strong> button. It serves several
+purposes at once: switching between the configuration modes, resetting to a default configuration, and
+going back to a configuration that was active earlier.</p>
+<h3 id="choosing-a-mode">Choosing a Mode</h3>
+<p>The first page asks which mode to switch to. Choosing the mode you are already in is not a special case -
+it is how you reset or roll back within the current mode.</p>
+<h3 id="choosing-what-to-start-from">Choosing What to Start From</h3>
+<p>The second page asks where the new configuration should come from:</p>
+<ul>
+<li><strong>Restore Previous</strong> - choose from a list of configurations which had been active earlier for the chosen
+configuration mode. Available once that mode has more than one configuration in its history</li>
+<li><strong>Load Latest</strong> - load the most recently active configuration for the chosen mode. Available once that
+mode has any history at all</li>
+<li><strong>Use Default</strong> - start from a configuration with everything set to default values. Always available</li>
+</ul>
+<p>Whichever is the most useful is preselected: the latest configuration where one exists, otherwise the
+default.</p>
+<p>This page is skipped for Basic Mode, which keeps no history and therefore always starts from its default.</p>
+<h3 id="restoring-an-earlier-configuration">Restoring an Earlier Configuration</h3>
+<p>Choosing <strong>Restore Previous</strong> shows that mode's history, one row per saved configuration, with its revision
+number, its name if it was given one, when it was saved and by whom. Selecting a row restores that
+configuration.</p>
+<h3 id="confirming-expert-mode">Confirming Expert Mode</h3>
+<p>Switching to Expert Mode for the first time asks for confirmation, because an incorrect Expert
+configuration may degrade or break transcoding, and testing it is your responsibility.</p>
+<h3 id="summary">Summary</h3>
+<p>The last page states what is about to happen - which mode is being switched to and which configuration is
+being applied - and applies it when you finish.</p>
+<h2 id="saving">Saving</h2>
+<p>Changes to a configuration take effect when you save them, and the page tells you while there are unsaved
+changes. <strong>Discard changes</strong> abandons them and returns to what the server is currently using.</p>
+<p>In Advanced and Expert Mode, saving asks for a name for the configuration you are saving. It is optional -
+leave it blank and a name is made up for you. The name is what makes a configuration recognisable later in
+the history list, so it is worth filling in when you are trying something out that you may want to come
+back to.</p>
+<p>Basic Mode saves directly without asking, since there is no history for a name to distinguish anything in.</p>
+<p>Saving when nothing has changed does nothing, and says so.</p>
+<h2 id="configuration-history">Configuration History</h2>
+<p>Every save adds a revision to the history of the mode it belongs to. The last <strong>50</strong> saved configurations
+are kept per mode, and the <a href="#change-configuration-wizard">wizard</a> is how you get back to one.</p>
+<p>Basic Mode is the exception and keeps no history.</p>
+<h2 id="delta-storage">Delta Storage</h2>
+<p>Hardware transcoding configuration uses a delta storage approach. Instead of saving the complete configuration for a GPU, codec, or filter, Emby stores only those settings whose values differ from their defaults. This means that the stored configuration primarily represents the choices the user has actually made, rather than also persisting a large number of values that were never explicitly changed.</p>
+<p>When Emby Server starts, it creates the appropriate default configuration for the available hardware and then applies the stored delta to it. For example, if a user changes only the decoder used for a particular codec, only that change is stored. All other encoder, decoder, and filter settings continue to use their normal default values.</p>
+<p>This also keeps hardware configurations compact and easier to understand. The configuration UI indicates where custom settings exist and shows the values that differ from the defaults, while components without such changes remain shown as using their default settings.</p>
+
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix sdkversion" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="footer">
+          <div class="container footer-inner">
+            <div class="footer-copy">2026 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.</div>
+            <div class="footer-actions">
+              <span class="contribution">
+                  <a href="https://github.com/EmbySupport/Emby.Docs/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Article%20Details%0A%0A**Do%20not%20remove%20this%20section**%0A%0A*%20uid%3A%20Server-Transcoding-Configuration%0A*%20Title%3A%20Configuration%0A*%20Article%3A%20https%3A%2F%2Fgithub.com%2FEmbySupport%2FEmby.Docs%2Fblob%2Fmaster%2Fserver%2Ftranscoding%2Fconfiguration%2FTranscoding-Configuration.md%0A*%20LegacyUrl%3A%20https%3A%2F%2Fsupport.emby.mediaundefined%0A" class="contribution-link" title="Feedback on this article"><div class="far fa-comment-alt fa-sm"></div></a>
+                  <a href="https://github.com/EmbySupport/Emby.Docs/blob/master/server/transcoding/configuration/Transcoding-Configuration.md/#L1" class="contribution-link" title="View article source"><div class="far fa-edit fa-sm"></div></a>
+              </span>
+              <a href="#top" class="back-to-top">Back to Top</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>
