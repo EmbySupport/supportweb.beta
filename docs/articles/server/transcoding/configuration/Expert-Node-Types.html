@@ -166,9 +166,11 @@ and VP9. Every one of these lists the software decoder for that codec alongside 
 decoding in software while encoding on the GPU is a normal thing to configure.</p>
 <p><strong>Options</strong> - vendor-specific behaviour, where the context has any. Currently only the Nvidia CUDA context
 does; see <a href="../hardware/vendors/Nvidia.html">Nvidia</a>.</p>
-<p><strong>Fallback point</strong> - whether evaluation ends successfully here. Only offered in Expert Mode, since it is the
-only mode where nodes can be arranged, and a fallback point has to be the last node in its group. See
-<a href="Expert-Fallback-Paths.html">Fallback Paths</a>.</p>
+<p><strong>Fallback point</strong> - makes this node eligible for a retry after an earlier selected configuration fails.
+A marked node can still be selected for the first attempt. The switch is only offered in Expert Mode.
+Inside a load-balancing group, only one node may be marked as a fallback point, and it must be the last
+node in that group. This placement restriction does not apply at the top level or inside a condition
+group. See <a href="Expert-Fallback-Paths.html">Fallback Paths</a>.</p>
 <p>Every encoder and decoder dropdown also carries a <strong>Skip</strong> option. Selecting it opts this node out of
 handling that media type entirely, which is how you express &quot;use this card, but not for AV1&quot;.</p>
 <p>Anything you do not change stays on the device's automatic choice rather than being frozen at whatever was

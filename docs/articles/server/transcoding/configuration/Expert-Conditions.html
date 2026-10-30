@@ -181,7 +181,13 @@ conditions on top.</p>
 </tbody>
 </table>
 <p>An operation can involve more than one processing step at once - tone mapping and subtitle burn-in
-together, for instance.</p>
+together, for instance. <strong>Processing Equals Tone Mapping</strong> matches whenever tone mapping is needed, even
+when other steps are needed too. <strong>Processing Does not equal Tone Mapping</strong> matches only when tone
+mapping is absent.</p>
+<p>To require both tone mapping and subtitle burn-in, combine their Equals conditions in an <strong>And</strong> group.
+Processing conditions can be nested and combined with other fields just like any other condition.
+When an operation has no processing steps, <strong>Equals</strong> and <strong>Is any of</strong> do not match any step;
+<strong>Does not equal</strong> and <strong>Is none of</strong> match because the selected steps are absent.</p>
 <p><img src="images/expert-condition-fields.jpg" alt="The Condition Builder's field selector"></p>
 <h2 id="building-a-condition">Building a Condition</h2>
 <p>The <strong>Conditions</strong> command on a node opens the Condition Builder. A condition compares one field with a

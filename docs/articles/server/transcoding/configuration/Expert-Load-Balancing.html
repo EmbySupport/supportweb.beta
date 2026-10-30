@@ -140,8 +140,9 @@ they will accept.</p>
 <p><strong>Overflow</strong> uses the nodes in order, each until its own limit is reached, then the next one. The graph
 draws these as an ordered, left-to-right row, because the order is what determines which node is used
 first.</p>
-<p><strong>Balance</strong> uses whichever node is currently least loaded. The graph draws these as an unordered row,
-since position carries no meaning here.</p>
+<p><strong>Balance</strong> uses whichever eligible node is currently least loaded. The graph draws these as an unordered
+row because load determines the selection. When two nodes have equal load, the first in the configured
+order is selected.</p>
 <p>In the dialog, <strong>Fill one, then the next</strong> selects Overflow, and <strong>Spread across all</strong> selects Balance.</p>
 <p><img src="images/load-balancing.jpg" alt="Load-balancing settings with Spread across all selected"></p>
 <div class="IMPORTANT">
@@ -163,22 +164,32 @@ smaller limit is not simply favoured for having a smaller number of operations o
 <li><strong>Global</strong> (<strong>The device behind it</strong>) counts the operations running through the device behind it,
 across the whole graph</li>
 </ul>
-<p>The difference between the two only matters when the same device appears more than once in the graph -
-which Expert Mode allows, and which is one of the reasons this setting exists.</p>
+<p>For example, suppose N1 has one running operation and N2 has three, both on the same GPU. N1's load is
+<strong>1</strong> with <strong>This entry</strong>, or <strong>4</strong> with <strong>The device behind it</strong>. The device total includes N2 even if N2
+is outside a load-balancing group.</p>
+<p>For <strong>Relative</strong> comparisons, <strong>This entry</strong> uses the node's own limit, while <strong>The device behind it</strong>
+uses the device limit. If that limit is empty, the raw operation count is used instead of a proportion.
+For example, a node with one operation and no limit has a comparison value of 1, while a node with five
+operations and a limit of ten has a value of 0.5. Set a positive limit for every candidate in the selected
+scope when you want all candidates compared as proportions.</p>
 <h2 id="limits">Limits</h2>
 <p>Each node inside a load-balancing container has its own <strong>Limits</strong>, reachable from the node's own command
 menu. Two limits are edited together there, because neither reads sensibly on its own:</p>
 <p><strong>This node</strong> - how many operations may run through this particular node at once. Leave it empty for no
 limit. Once the limit is reached, the container passes work to another node instead, which is what makes
 Overflow possible at all.</p>
-<p><strong>This device, everywhere in the graph</strong> - how many operations the device behind the node may run at once
-in total, counted across every node in the graph that refers to it. Leave it empty for no limit.</p>
-<p>Only operations routed through a load-balancing container are counted, since nothing elsewhere in the graph
-would cause a device to be passed over for being busy.</p>
+<p><strong>This device, everywhere in the graph</strong> - a limit checked against all operations running on the device,
+counted across every node in the graph that refers to it. When that total reaches the limit, this node is
+passed over. Leave it empty for no limit.</p>
+<p>Both limits are checked when selecting a node inside a load-balancing group, regardless of <strong>Count load
+per</strong>. That choice only determines how Balance compares the load of eligible nodes. Operations elsewhere
+in the graph contribute to the device total, but nodes outside load-balancing groups are not passed over
+because of these limits.</p>
 <p><img src="images/load-balancing-limits.jpg" alt="Example limits of two parallel operations for this entry and four for the device across the graph"></p>
 <h2 id="evaluation-inside-a-load-balancing-group">Evaluation Inside a Load Balancing Group</h2>
-<p>The ordinary top-to-bottom, left-to-right reading order does not apply inside these containers - which
-node is used is a matter of load rather than of position. This is one of the exceptions noted in
+<p>Inside an <strong>Overflow</strong> group, nodes are considered from left to right, and the first eligible node below
+both limits is selected. Inside a <strong>Balance</strong> group, eligible nodes are compared by load, with configured
+order used only to break ties. This is one of the exceptions noted in
 <a href="Expert-Graph-Evaluation.html#exceptions">Graph Evaluation</a>.</p>
 <h2 id="fallback-points-in-a-load-balancing-group">Fallback Points in a Load Balancing Group</h2>
 <p>Only one node of a load balancing group can be a <a href="Expert-Fallback-Paths.html">fallback point</a>, and it has to
