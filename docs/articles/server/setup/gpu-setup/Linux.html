@@ -1,34 +1,40 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
-<html>
+<html lang="en">
   
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>GPU Setup on Linux | Emby Documentation </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="GPU Setup on Linux | Emby Documentation ">
-    <meta name="generator" content="docfx 2.59.2.0">
-    <meta name="theme-color" content="#090d0f">
-    
-    <link rel="shortcut icon" href="../../../../favicon.ico">
-    <script type="text/javascript" src="../../../../styles/theme-config.js"></script>
-    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../../../styles/docfx.css">
-    <link rel="stylesheet" href="../../../../styles/main.css">
-    <link rel="stylesheet" href="../../../../styles/header.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
-    <link rel="stylesheet" href="../../../../styles/theme.css">
-    <meta property="docfx:navrel" content="../../../../toc.html">
-    <meta property="docfx:tocrel" content="../../../toc.html">
-    <meta property="docfx:uid" content="Server-Gpu-Setup-Linux">
-    
-    <meta property="docfx:rel" content="../../../../">
-    
-    <script type="text/javascript" src="../../../../nav.js"></script>
-    <script type="text/javascript" src="../../../toc.js"></script>
+<head>
+  <meta charset="utf-8">
+  <title>GPU Setup on Linux | Emby Documentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="docfx 2.59.2.0">
+  <meta name="theme-color" content="#f7f8f9">
   
-  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  <link rel="canonical" href="https://emby.media/support/articles/server/setup/gpu-setup/Linux.html">
+  <meta property="og:title" content="GPU Setup on Linux | Emby Documentation">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://emby.media/support/articles/server/setup/gpu-setup/Linux.html">
+  <meta property="og:site_name" content="Emby Documentation">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://emby.media/support/articles/server/setup/gpu-setup/Linux.html","url":"https://emby.media/support/articles/server/setup/gpu-setup/Linux.html","name":"GPU Setup on Linux","inLanguage":"en","headline":"GPU Setup on Linux","articleSection":"Emby Server","author":{"@type":"Organization","name":"Emby LLC","url":"https://emby.media/"},"copyrightHolder":{"@type":"Organization","name":"Emby LLC","url":"https://emby.media/"},"isAccessibleForFree":true,"isFamilyFriendly":true},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Support Home","item":"https://emby.media/support/index.html"},{"@type":"ListItem","position":2,"name":"Emby Server","item":"https://emby.media/support/articles/Quick-Start.html"},{"@type":"ListItem","position":3,"name":"Installation \u0026 Setup","item":"https://emby.media/support/articles/Installation.html"},{"@type":"ListItem","position":4,"name":"GPU Setup","item":"https://emby.media/support/articles/server/setup/gpu-setup/GPU-Setup.html"},{"@type":"ListItem","position":5,"name":"Linux","item":"https://emby.media/support/articles/server/setup/gpu-setup/Linux.html"}]}]}</script>
+  <link rel="shortcut icon" href="../../../../favicon.ico">
+  <script type="text/javascript" src="../../../../styles/theme-config.js"></script>
+  <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+  <link rel="stylesheet" href="../../../../styles/docfx.css">
+  <link rel="stylesheet" href="../../../../styles/main.css">
+  <link rel="stylesheet" href="../../../../styles/header.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
+  <link rel="stylesheet" href="../../../../styles/theme.css">
+  <meta property="docfx:navrel" content="../../../../toc.html">
+  <meta property="docfx:tocrel" content="../../../toc.html">
+  <meta property="docfx:uid" content="Server-Gpu-Setup-Linux">
+  
+  <meta property="docfx:rel" content="../../../../">
+  
+  <script type="text/javascript" src="../../../../nav.js"></script>
+  <script type="text/javascript" src="../../../toc.js"></script>
+
+</head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       
       <header class="site-header">
@@ -38,15 +44,26 @@
             <img class="logo-on-dark" src="../../../../images/logo.png" alt="Emby">
             <img class="logo-on-light" src="../../../../images/logo-dark-text.png" alt="Emby">
           </a>
+          <a class="site-title-link" href="../../../../index.html"><span class="site-title">Emby <strong>Docs</strong></span></a>
           <button class="menu-button" type="button" aria-expanded="false" aria-controls="navbar" aria-label="Open menu">&#9776;</button>
           <div class="nav-links" id="navbar">
-            <ul class="nav-links-list">
+            <ul class="nav-links-list navbar-nav">
                 
-                    <li><a href="https://emby.media/about.html" title="How it Works">How it Works</a></li>
-                    <li><a href="https://emby.media/download.html" title="Download">Download</a></li>
-                    <li><a href="https://emby.media/premiere.html" title="Premiere">Premiere</a></li>
-                    <li><a href="../../../../index.html" title="Support" class="is-current" aria-current="page">Support</a></li>
-                    <li><a href="https://emby.media/connect.html" title="Emby Connect">Emby Connect</a></li>
+                    <li>
+                      <a href="https://emby.media/" title="Emby Home">Emby Home</a>
+                    </li>
+                    <li>
+                      <a href="../../../../index.html" title="Support Home">Support Home</a>
+                    </li>
+                    <li>
+                      <a href="../../../../articles/Quick-Start.html" title="Server Docs" class="is-current" aria-current="page">Server Docs</a>
+                    </li>
+                    <li>
+                      <a href="../../../../articles/Apps.html" title="Client Docs">Client Docs</a>
+                    </li>
+                    <li>
+                      <a href="../../../../articles/Emby-Premiere.html" title="Premiere Docs">Premiere Docs</a>
+                    </li>
             </ul>
           </div>
         </nav>
@@ -66,16 +83,22 @@
       
       <div class="subnav navbar navbar-default">
         <div class="container">
-          <div class="hide-when-search" id="breadcrumb">
-      	  <ul class="breadcrumb">
-      		<li></li>
-      	  </ul>
-      	</div>
+          <nav class="hide-when-search" id="breadcrumb" aria-label="Breadcrumb">
+            <ol class="breadcrumb">
+              <li><a href="../../../../index.html">Support Home</a></li>
+              <li><a href="../../../Quick-Start.html">Emby Server</a></li>
+              <li><a href="../../../Installation.html">Installation &amp; Setup</a></li>
+              <li><a href="../../../server/setup/gpu-setup/GPU-Setup.html">GPU Setup</a></li>
+              <li><span aria-current="page">Linux</span></li>
+              
+            </ol>
+          </nav>
       
       	<div class="breadcrumpsearch">
       	  <form class="navbar-form navbar-right" role="search" id="search">
       		<div class="form-group">
       		  <i class="fa fa-search" aria-hidden="true"></i>
+      		  <label class="sr-only" for="search-query">Search support topics</label>
       		  <input type="text" class="form-control" id="search-query" placeholder="Search support topics" autocomplete="off">
       		</div>
       	  </form>
@@ -97,7 +120,7 @@
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
+            <nav id="sidetoc" aria-label="Documentation table of contents"></nav>
           </div>
         </div>
         <div class="article row grid-right">
@@ -106,30 +129,74 @@
 <h1>GPU Setup on Linux</h1>
 
 
-<p>On Linux, only Nvidia hardware needs drivers installed separately. For Intel and AMD, everything required
-ships with Emby Server.</p>
+
+<p>On Linux, Nvidia hardware needs drivers installed separately, and Rockchip SoCs need a vendor kernel and
+device permissions. For Intel and AMD, everything required ships with Emby Server.</p>
 <p>What each vendor's hardware can actually do is described under
 <a href="../../transcoding/hardware/Overview.html">Hardware Acceleration</a>.</p>
 <h2 id="nvidia">Nvidia</h2>
 <div class="NOTE">
 <h5>Note</h5>
-<p>Always follow the instructions on the Nvidia site, even when the installed driver version appears to be
-sufficient.</p>
+<p>A sufficient driver version alone does not mean that all components needed for video encoding and
+decoding are installed.</p>
 </div>
-<p>Install the drivers from <a href="https://www.nvidia.com/Download/index.aspx">Nvidia Driver Downloads</a> - <strong>not</strong>
-from your distribution. The drivers a distribution ships, or offers through its own package manager, often
-include only a subset of what Nvidia provides, and the missing pieces are frequently exactly the ones
-needed for video encoding and decoding.</p>
-<!-- REVIEW: minimum driver version carried over from the previous article, not verified -->
-<p>The minimum required version on Linux is <strong>470.57</strong>.</p>
+<p>On older Linux distribution releases, install the drivers from
+<a href="https://www.nvidia.com/Download/index.aspx">Nvidia Driver Downloads</a>, following Nvidia's installation
+instructions, rather than using the driver packages supplied by the distribution. Older distributions
+frequently package <a class="xref" href="https://emby.media/learn/articles/hardware-acceleration/pipelines/Hardware-Driver-Capabilities.html">only a subset of what Nvidia provides</a>,
+omitting components needed for video encoding and decoding.</p>
+<p>On the latest Linux distribution releases available as of <strong>2026</strong>, the Nvidia drivers supplied through
+the distribution's package manager can be used, provided the required video encoding and decoding
+components are included. This exception does not apply to older distribution releases.</p>
+<p>The minimum required version on Linux is <strong>520.56.06</strong>.</p>
 <p>Nvidia works headless - no monitor has to be attached.</p>
 <h2 id="intel">Intel</h2>
-<p>No setup is required. The drivers needed for Intel hardware acceleration are included with Emby Server.</p>
+<p>No setup is required. The <a class="xref" href="https://emby.media/learn/articles/hardware-acceleration/interfaces/linux/Hardware-Linux-VAAPI-Drivers.html">drivers</a> needed for Intel hardware acceleration are included with Emby Server.</p>
 <h2 id="amd">AMD</h2>
 <p>No setup is required. The drivers needed for AMD hardware acceleration are included with Emby Server.</p>
-<h2 id="containers">Containers</h2>
-<p>Running Emby in a container adds device passthrough on top of the above - see
-<a href="Containers.html">Containers</a>.</p>
+<h2 id="rockchip">Rockchip</h2>
+<p><a class="xref" href="https://emby.media/learn/articles/hardware-acceleration/interfaces/android/Hardware-Rockchip-MPP.html">Rockchip hardware acceleration</a> requires the Rockchip BSP (vendor) kernel, 5.10 or 6.1 LTS. All of the
+following steps need root permission.</p>
+<ol>
+<li><p>Check that <code>dma_heap</code>, <code>dri</code>, <code>mpp_service</code> and <code>rga</code> exist in <code>/dev</code>:</p>
+<pre><code>ls -l /dev | grep -E &quot;mpp|rga|dri|dma_heap&quot;
+</code></pre>
+<p>If they don't, upgrade the BSP kernel to 5.10 LTS or newer.</p>
+</li>
+<li><p>Grant access to the device files by creating <code>/etc/udev/rules.d/99-rk-device-permissions.rules</code> with
+the following content, then restart the machine:</p>
+<pre><code>KERNEL==&quot;mpp_service&quot;, MODE=&quot;0660&quot;, GROUP=&quot;video&quot;
+KERNEL==&quot;rga&quot;, MODE=&quot;0660&quot;, GROUP=&quot;video&quot;
+KERNEL==&quot;system&quot;, MODE=&quot;0666&quot;, GROUP=&quot;video&quot;
+KERNEL==&quot;system-dma32&quot;, MODE=&quot;0666&quot;, GROUP=&quot;video&quot;
+KERNEL==&quot;system-uncached&quot;, MODE=&quot;0666&quot;, GROUP=&quot;video&quot;
+KERNEL==&quot;system-uncached-dma32&quot;, MODE=&quot;0666&quot;, GROUP=&quot;video&quot; RUN+=&quot;/usr/bin/chmod a+rw /dev/dma_heap&quot;
+</code></pre>
+</li>
+<li><p>Add the <code>emby</code> user to the <code>render</code> and <code>video</code> groups (on some distributions the group is <code>input</code>),
+then restart Emby Server:</p>
+<pre><code>sudo usermod -aG render emby
+sudo usermod -aG video emby
+sudo systemctl restart emby-server
+</code></pre>
+</li>
+<li><p>For <a class="xref" href="https://emby.media/learn/articles/video/tone-mapping/execution/gpu/Tone-Mapping-OpenCL.html">HDR tone mapping</a> on the RK3588/RK3588S only: install the Arm Mali <a class="xref" href="https://emby.media/learn/articles/hardware-acceleration/interfaces/portable/Hardware-OpenCL.html">OpenCL runtime</a> (libmali). Its
+version has to match the kernel driver, otherwise OpenCL does not work:</p>
+<ul>
+<li>6.1 LTS kernel on Ubuntu-Rockchip or Armbian, and the legacy 5.10 LTS kernel: <strong>v1.9-1-2131373</strong></li>
+<li>6.1 LTS kernel on other distributions made by board vendors: <strong>v1.9-1-55611b0</strong></li>
+</ul>
+</li>
+</ol>
+<p>Afterwards, the hardware detection result under <strong>Operations →
+<a href="../../transcoding/operations/Logs.html#detection-logs">Detection Logs</a></strong> shows whether the SoC was detected.</p>
+<p>To watch the hardware at work while a video transcodes, read the VPU and RGA load:</p>
+<pre><code>sudo sh -c &quot;echo 1000 &gt; /proc/mpp_service/load_interval&quot; &amp;&amp; sudo watch -n 1 cat /proc/mpp_service/load
+sudo watch -n 1 cat /sys/kernel/debug/rkrga/load
+</code></pre>
+<p>VPU load can only be read reliably on BSP kernels from 6.1.84 onwards.</p>
+<h2 id="further-reading">Further Reading</h2>
+<p><a class="xref" href="https://emby.media/learn/articles/hardware-acceleration/interfaces/linux/Hardware-Linux-DMABuf.html">DRM PRIME and DMA-BUF frame sharing</a></p>
 
 
             </article>

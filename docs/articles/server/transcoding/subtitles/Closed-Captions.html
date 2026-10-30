@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="utf-8">
+  <title>Closed Captions | Emby Documentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="docfx 2.59.2.0">
+  <meta name="theme-color" content="#f7f8f9">
+  
+  <link rel="canonical" href="https://emby.media/support/articles/server/transcoding/subtitles/Closed-Captions.html">
+  <meta property="og:title" content="Closed Captions | Emby Documentation">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://emby.media/support/articles/server/transcoding/subtitles/Closed-Captions.html">
+  <meta property="og:site_name" content="Emby Documentation">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://emby.media/support/articles/server/transcoding/subtitles/Closed-Captions.html","url":"https://emby.media/support/articles/server/transcoding/subtitles/Closed-Captions.html","name":"Closed Captions","inLanguage":"en","headline":"Closed Captions","articleSection":"Emby Server","author":{"@type":"Organization","name":"Emby LLC","url":"https://emby.media/"},"copyrightHolder":{"@type":"Organization","name":"Emby LLC","url":"https://emby.media/"},"isAccessibleForFree":true,"isFamilyFriendly":true}]}</script>
+  <link rel="shortcut icon" href="../../../../favicon.ico">
+  <script type="text/javascript" src="../../../../styles/theme-config.js"></script>
+  <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+  <link rel="stylesheet" href="../../../../styles/docfx.css">
+  <link rel="stylesheet" href="../../../../styles/main.css">
+  <link rel="stylesheet" href="../../../../styles/header.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
+  <link rel="stylesheet" href="../../../../styles/theme.css">
+  <meta property="docfx:navrel" content="../../../../toc.html">
+  <meta property="docfx:tocrel" content="../../../toc.html">
+  <meta property="docfx:uid" content="Server-Transcoding-Subtitle-Closed-Captions">
+  
+  <meta property="docfx:rel" content="../../../../">
+  
+  <script type="text/javascript" src="../../../../nav.js"></script>
+  <script type="text/javascript" src="../../../toc.js"></script>
+
+</head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      
+      <header class="site-header">
+        <nav class="nav container" aria-label="Primary navigation">
+          <a class="brand" href="https://emby.media/" aria-label="Emby home">
+            
+            <img class="logo-on-dark" src="../../../../images/logo.png" alt="Emby">
+            <img class="logo-on-light" src="../../../../images/logo-dark-text.png" alt="Emby">
+          </a>
+          <a class="site-title-link" href="../../../../index.html"><span class="site-title">Emby <strong>Docs</strong></span></a>
+          <button class="menu-button" type="button" aria-expanded="false" aria-controls="navbar" aria-label="Open menu">&#9776;</button>
+          <div class="nav-links" id="navbar">
+            <ul class="nav-links-list navbar-nav">
+                
+                    <li>
+                      <a href="https://emby.media/" title="Emby Home">Emby Home</a>
+                    </li>
+                    <li>
+                      <a href="../../../../index.html" title="Support Home">Support Home</a>
+                    </li>
+                    <li>
+                      <a href="../../../../articles/Quick-Start.html" title="Server Docs" class="is-current" aria-current="page">Server Docs</a>
+                    </li>
+                    <li>
+                      <a href="../../../../articles/Apps.html" title="Client Docs">Client Docs</a>
+                    </li>
+                    <li>
+                      <a href="../../../../articles/Emby-Premiere.html" title="Premiere Docs">Premiere Docs</a>
+                    </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <script>
+        (function () {
+          var button = document.querySelector('.site-header .menu-button');
+          var links = document.querySelector('.site-header .nav-links');
+          if (!button || !links) { return; }
+          button.addEventListener('click', function () {
+            var isOpen = links.classList.toggle('open');
+            button.setAttribute('aria-expanded', String(isOpen));
+            button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+          });
+        }());
+      </script>
+      
+      <div class="subnav navbar navbar-default">
+        <div class="container">
+          <nav class="hide-when-search" id="breadcrumb" aria-label="Breadcrumb">
+            <ol class="breadcrumb">
+              <li><a href="../../../../index.html">Support Home</a></li>
+              <li><a href="../../../Quick-Start.html">Emby Server</a></li>
+              <li><a href="../../../server/transcoding/Transcoding.html">Transcoding</a></li>
+              <li><span>Subtitle Processing</span></li>
+              <li><span aria-current="page">Closed Captions</span></li>
+              
+            </ol>
+          </nav>
+      
+      	<div class="breadcrumpsearch">
+      	  <form class="navbar-form navbar-right" role="search" id="search">
+      		<div class="form-group">
+      		  <i class="fa fa-search" aria-hidden="true"></i>
+      		  <label class="sr-only" for="search-query">Search support topics</label>
+      		  <input type="text" class="form-control" id="search-query" placeholder="Search support topics" autocomplete="off">
+      		</div>
+      	  </form>
+      	</div>
+        </div>
+      </div>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <nav id="sidetoc" aria-label="Documentation table of contents"></nav>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Server-Transcoding-Subtitle-Closed-Captions">
+<h1>Closed Captions</h1>
+
+
+
+<p><a class="xref" href="https://emby.media/learn/articles/subtitles/formats/broadcast/Caption-CTA-608.html">Closed captions</a> as used in ATSC broadcasts are not a separate subtitle track
+but are <a class="xref" href="https://emby.media/learn/articles/subtitles/storage-delivery/locations/Subtitle-In-Band.html">carried inside the video stream</a>. How Emby handles them is set on the
+<strong>Closed Captions</strong> tab of the <strong>Subtitle Processing</strong> page in the Transcoding section of the dashboard.</p>
+<h2 id="settings">Settings</h2>
+<p><img src="images/closed-captions.jpg" alt="Closed-caption options for incremental display, traditional styling, and client-side decoding"></p>
+<ul>
+<li><strong>Disable Incremental Line Display</strong> - captions are often sent letter by letter. With this on, only
+complete lines are shown.</li>
+<li><strong>Use Traditional Display Style</strong> - shows captions in white on a black box.</li>
+<li><strong>Disable Client-Side Decoding</strong> - some clients can decode captions from the video themselves, which can
+save a transcode. This turns that off, so that the server handles the captions - which is needed for
+<a href="Content-Change.html">Content Change</a>, including the profanity filter, to apply to them.</li>
+</ul>
+<h2 id="further-reading">Further Reading</h2>
+<p><a class="xref" href="https://emby.media/learn/articles/subtitles/selection/Subtitle-SDH.html">Subtitles for the deaf and hard of hearing (SDH)</a></p>
+
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix sdkversion" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="footer">
+          <div class="container footer-inner">
+            <div class="footer-copy">2026 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.</div>
+            <div class="footer-actions">
+              <span class="contribution">
+                  <a href="https://github.com/EmbySupport/Emby.Docs/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Article%20Details%0A%0A**Do%20not%20remove%20this%20section**%0A%0A*%20uid%3A%20Server-Transcoding-Subtitle-Closed-Captions%0A*%20Title%3A%20Closed%20Captions%0A*%20Article%3A%20https%3A%2F%2Fgithub.com%2FEmbySupport%2FEmby.Docs%2Fblob%2Fmaster%2Fserver%2Ftranscoding%2Fsubtitles%2FClosed-Captions.md%0A*%20LegacyUrl%3A%20https%3A%2F%2Fsupport.emby.mediaundefined%0A" class="contribution-link" title="Feedback on this article"><div class="far fa-comment-alt fa-sm"></div></a>
+                  <a href="https://github.com/EmbySupport/Emby.Docs/blob/master/server/transcoding/subtitles/Closed-Captions.md/#L1" class="contribution-link" title="View article source"><div class="far fa-edit fa-sm"></div></a>
+              </span>
+              <a href="#top" class="back-to-top">Back to Top</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

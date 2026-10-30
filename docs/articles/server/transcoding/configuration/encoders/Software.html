@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="utf-8">
+  <title>Software | Emby Documentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="docfx 2.59.2.0">
+  <meta name="theme-color" content="#f7f8f9">
+  
+  <link rel="canonical" href="https://emby.media/support/articles/server/transcoding/configuration/encoders/Software.html">
+  <meta property="og:title" content="Software | Emby Documentation">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://emby.media/support/articles/server/transcoding/configuration/encoders/Software.html">
+  <meta property="og:site_name" content="Emby Documentation">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://emby.media/support/articles/server/transcoding/configuration/encoders/Software.html","url":"https://emby.media/support/articles/server/transcoding/configuration/encoders/Software.html","name":"Software","inLanguage":"en","headline":"Software","articleSection":"Emby Server","author":{"@type":"Organization","name":"Emby LLC","url":"https://emby.media/"},"copyrightHolder":{"@type":"Organization","name":"Emby LLC","url":"https://emby.media/"},"isAccessibleForFree":true,"isFamilyFriendly":true},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Support Home","item":"https://emby.media/support/index.html"},{"@type":"ListItem","position":2,"name":"Emby Server","item":"https://emby.media/support/articles/Quick-Start.html"},{"@type":"ListItem","position":3,"name":"Transcoding","item":"https://emby.media/support/articles/server/transcoding/Transcoding.html"},{"@type":"ListItem","position":4,"name":"Configuration","item":"https://emby.media/support/articles/server/transcoding/configuration/Transcoding-Configuration.html"},{"@type":"ListItem","position":5,"name":"Encoders","item":"https://emby.media/support/articles/server/transcoding/configuration/encoders/Encoders.html"},{"@type":"ListItem","position":6,"name":"Software","item":"https://emby.media/support/articles/server/transcoding/configuration/encoders/Software.html"}]}]}</script>
+  <link rel="shortcut icon" href="../../../../../favicon.ico">
+  <script type="text/javascript" src="../../../../../styles/theme-config.js"></script>
+  <link rel="stylesheet" href="../../../../../styles/docfx.vendor.css">
+  <link rel="stylesheet" href="../../../../../styles/docfx.css">
+  <link rel="stylesheet" href="../../../../../styles/main.css">
+  <link rel="stylesheet" href="../../../../../styles/header.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
+  <link rel="stylesheet" href="../../../../../styles/theme.css">
+  <meta property="docfx:navrel" content="../../../../../toc.html">
+  <meta property="docfx:tocrel" content="../../../../toc.html">
+  <meta property="docfx:uid" content="Server-Transcoding-Encoders-Software">
+  
+  <meta property="docfx:rel" content="../../../../../">
+  
+  <script type="text/javascript" src="../../../../../nav.js"></script>
+  <script type="text/javascript" src="../../../../toc.js"></script>
+
+</head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      
+      <header class="site-header">
+        <nav class="nav container" aria-label="Primary navigation">
+          <a class="brand" href="https://emby.media/" aria-label="Emby home">
+            
+            <img class="logo-on-dark" src="../../../../../images/logo.png" alt="Emby">
+            <img class="logo-on-light" src="../../../../../images/logo-dark-text.png" alt="Emby">
+          </a>
+          <a class="site-title-link" href="../../../../../index.html"><span class="site-title">Emby <strong>Docs</strong></span></a>
+          <button class="menu-button" type="button" aria-expanded="false" aria-controls="navbar" aria-label="Open menu">&#9776;</button>
+          <div class="nav-links" id="navbar">
+            <ul class="nav-links-list navbar-nav">
+                
+                    <li>
+                      <a href="https://emby.media/" title="Emby Home">Emby Home</a>
+                    </li>
+                    <li>
+                      <a href="../../../../../index.html" title="Support Home">Support Home</a>
+                    </li>
+                    <li>
+                      <a href="../../../../../articles/Quick-Start.html" title="Server Docs" class="is-current" aria-current="page">Server Docs</a>
+                    </li>
+                    <li>
+                      <a href="../../../../../articles/Apps.html" title="Client Docs">Client Docs</a>
+                    </li>
+                    <li>
+                      <a href="../../../../../articles/Emby-Premiere.html" title="Premiere Docs">Premiere Docs</a>
+                    </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <script>
+        (function () {
+          var button = document.querySelector('.site-header .menu-button');
+          var links = document.querySelector('.site-header .nav-links');
+          if (!button || !links) { return; }
+          button.addEventListener('click', function () {
+            var isOpen = links.classList.toggle('open');
+            button.setAttribute('aria-expanded', String(isOpen));
+            button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+          });
+        }());
+      </script>
+      
+      <div class="subnav navbar navbar-default">
+        <div class="container">
+          <nav class="hide-when-search" id="breadcrumb" aria-label="Breadcrumb">
+            <ol class="breadcrumb">
+              <li><a href="../../../../../index.html">Support Home</a></li>
+              <li><a href="../../../../Quick-Start.html">Emby Server</a></li>
+              <li><a href="../../../../server/transcoding/Transcoding.html">Transcoding</a></li>
+              <li><a href="../../../../server/transcoding/configuration/Transcoding-Configuration.html">Configuration</a></li>
+              <li><a href="../../../../server/transcoding/configuration/encoders/Encoders.html">Encoders</a></li>
+              <li><span aria-current="page">Software</span></li>
+              
+            </ol>
+          </nav>
+      
+      	<div class="breadcrumpsearch">
+      	  <form class="navbar-form navbar-right" role="search" id="search">
+      		<div class="form-group">
+      		  <i class="fa fa-search" aria-hidden="true"></i>
+      		  <label class="sr-only" for="search-query">Search support topics</label>
+      		  <input type="text" class="form-control" id="search-query" placeholder="Search support topics" autocomplete="off">
+      		</div>
+      	  </form>
+      	</div>
+        </div>
+      </div>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <nav id="sidetoc" aria-label="Documentation table of contents"></nav>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Server-Transcoding-Encoders-Software">
+<h1>Software</h1>
+
+<h4 class="long-title">Software Encoder Parameters</h4>
+
+<p>The software encoders run on the CPU. They belong to the Software context type and are used by the
+software node of the transcoding configuration. For live transcoding, a software encoder has to keep up
+with playback on the server's CPU, which makes the preset the parameter with the largest effect on whether
+it can. How the dialog works is described in <a href="Encoders.html">Encoders</a>.</p>
+<h2 id="x264">x264</h2>
+<p><img src="images/x264.jpg" alt="x264 encoding preset, tuning, ABR mode, and constant rate factor controls"></p>
+<p>The <code>libx264</code> encoder for <a class="xref" href="https://emby.media/learn/articles/video/codecs/mpeg-itu/Video-Codec-H264.html">H.264</a>, offered by the Software context type.</p>
+<p><strong>Encoding Preset</strong> - trades encoding speed against compression efficiency
+(<a class="xref" href="https://emby.media/learn/articles/video/encoding-quality/Video-Encoder-Presets.html">preset</a>, ffmpeg <code>preset</code>). Faster presets need less CPU time per frame
+but more bitrate for the same picture quality; slower presets compress better and need more CPU time. For
+live transcoding, choose a preset the CPU can sustain in real time for as many simultaneous streams as you
+expect. Choices, from fastest to slowest: <strong>Superfast</strong>, <strong>Veryfast</strong>, <strong>Faster</strong>, <strong>Fast</strong>, <strong>Medium</strong>,
+<strong>Slow</strong>, <strong>Slower</strong>, <strong>Veryslow</strong>. Default: <strong>Veryfast</strong>.</p>
+<p><strong>Tune</strong> - adjusts the encoder to a particular kind of source content, on top of the preset (ffmpeg
+<code>tune</code>). Leave it at <strong>None</strong> if unsure. Default: <strong>None</strong>.</p>
+<ul>
+<li><strong>None</strong> - no content-specific tuning. A safe choice for mixed or unknown content</li>
+<li><strong>Film</strong> - for live-action video. Slightly reduces deblocking and adjusts psychovisual settings to
+preserve fine detail</li>
+<li><strong>Animation</strong> - for cartoons and anime with large flat areas and hard edges. Increases deblocking and
+the number of reference frames, and lowers the adaptive quantization strength</li>
+<li><strong>Grain</strong> - preserves heavy <a class="xref" href="https://emby.media/learn/articles/video/encoding-quality/quality-changes-artifacts/Video-Film-Grain.html">film grain</a> or noise instead of smoothing it
+away, at the cost of more bitrate spent on fine detail</li>
+<li><strong>Still Image</strong> - for slideshows and near-static content. Reduces deblocking and strengthens adaptive
+quantization for the sharpest possible still frames</li>
+<li><strong>Fast Decode</strong> - disables CABAC entropy coding and the in-loop deblocking filter, so the stream is
+cheaper to decode on playback devices with very little processing power. Reduces compression efficiency</li>
+<li><strong>Zero Latency</strong> - disables B-frames and lookahead, so every frame is output as soon as it is encoded.
+For real-time, low-latency streaming; reduces compression efficiency</li>
+<li><strong>PSNR (benchmarking only)</strong> - disables psychovisual optimizations to maximize the PSNR quality metric.
+Intended for benchmarking; usually looks worse than an untuned encode of the same size</li>
+<li><strong>SSIM (benchmarking only)</strong> - the same for the SSIM quality metric</li>
+</ul>
+<p><strong>Encode in ABR Mode</strong> - switches from constant-quality encoding to average-bitrate encoding. When on, the
+bitrate Emby requests for the transcode becomes the encoder's target average bitrate (ffmpeg <code>b</code>), and
+<strong>Constant Rate Factor</strong> is hidden and not used. When off, the encoder aims for the constant quality set by
+<strong>Constant Rate Factor</strong>. ABR mode needs a target, so when Emby does not request a bitrate, the encoder
+uses the constant rate factor either way. In both modes, the requested bitrate is also set as the maximum
+rate, with a buffer of twice the bitrate (<a class="xref" href="https://emby.media/learn/articles/video/encoding-quality/rate-control/Video-Encoding-VBV.html">VBV</a>, ffmpeg <code>maxrate</code> and
+<code>bufsize</code>), which keeps the stream within what the client can receive. Default: off.</p>
+<p><strong>Constant Rate Factor</strong> - the quality level for constant-quality encoding
+(<a class="xref" href="https://emby.media/learn/articles/video/encoding-quality/rate-control/Video-Encoding-CRF.html">CRF</a>, ffmpeg <code>crf</code>). Lower values give better quality and larger output,
+higher values smaller output and lower quality; sensible values are between 18 and 28. When the requested
+bitrate is too low for the chosen quality, the maximum rate takes precedence. Range 0 to 51, default
+<strong>23</strong>. Shown only while <strong>Encode in ABR Mode</strong> is off.</p>
+<p><strong>Adaptive Quantization</strong> - redistributes bits from complex, detailed areas of the picture to flat areas
+such as skies, gradients and walls, where blocking and <a class="xref" href="https://emby.media/learn/articles/video/color-pixel-formats/precision-banding/Video-Color-Banding.html">banding</a> are most
+visible (ffmpeg <code>aq-mode</code>). Recommended to leave enabled. Default: <strong>Variance (standard)</strong>.</p>
+<ul>
+<li><strong>Disabled</strong> - every block is treated the same, regardless of its content. Flat areas are more prone to
+visible blocking and banding at a given bitrate</li>
+<li><strong>Variance (standard)</strong> - the standard algorithm, redistributing bits across the whole video. The
+recommended choice for most content</li>
+<li><strong>Auto-Variance</strong> - like Variance, but adapts its strength per frame. More experimental; it improves
+some sources, while its general benefit over Variance is debated</li>
+<li><strong>Auto-Variance (dark-scene bias)</strong> - Auto-Variance with extra bits for dark scenes, where banding in
+shadows and dark gradients is especially noticeable. The most aggressive of the three modes</li>
+</ul>
+<p><strong>Adaptive Quantization Strength</strong> - how strongly adaptive quantization redistributes bits (ffmpeg
+<code>aq-strength</code>). Higher values protect flat areas more but can soften edges; lower values often suit
+grainy or animated content. A decimal number; leave it empty (the default) to use x264's own default of
+about 1.0. Shown only when <strong>Adaptive Quantization</strong> is not <strong>Disabled</strong>.</p>
+<p><strong>Encoding Thread Count</strong> - the maximum number of <a class="xref" href="https://emby.media/learn/articles/storage/execution/processors/Server-CPU-Concurrency.html">CPU threads</a> the
+encoder uses (ffmpeg <code>threads</code>). Use it to limit how much of the CPU a single transcode can take; leave it
+empty for maximum performance. Range 0 to 16; 0 or empty (the default) means automatic.</p>
+<p><strong>LibX264 Options</strong> - additional x264 options in x264's own syntax, as <code>key=value</code> pairs separated by
+colons (ffmpeg <code>x264-params</code>). They are applied last, so they override the preset and the fields above
+where they set the same option. Default: <code>subme=0:me_range=4:rc_lookahead=10:partitions=none</code> - settings
+that favour speed over compression efficiency: minimal subpixel motion refinement, a small motion search
+range, a lookahead of 10 frames and no partition analysis. Because they override the preset, slower
+presets gain less than they otherwise would; clear the field to let the preset decide these settings.</p>
+<p><strong>Encoding Profile Limit</strong> - the highest H.264 profile the encoder may use; empty (the default) means no
+limit - see <a href="Encoders.html#encoding-profile-limit">Encoding Profile Limit</a>. Choices: <strong>Baseline Profile</strong>,
+<strong>Main Profile</strong>, <strong>High Profile</strong>, <strong>High 10 Profile</strong>, <strong>High 4:2:2 Profile</strong>, <strong>High 4:4:4 Predictive
+Profile</strong>.</p>
+<h2 id="x265">x265</h2>
+<p><img src="images/x265.jpg" alt="x265 encoding preset, tuning, ABR mode, and constant rate factor controls"></p>
+<p>The <code>libx265</code> encoder for <a class="xref" href="https://emby.media/learn/articles/video/codecs/mpeg-itu/Video-Codec-HEVC.html">HEVC</a>, offered by the Software context type. HEVC
+encoding in software takes considerably more CPU time than H.264, so real-time transcoding usually needs
+one of the faster presets.</p>
+<p><strong>Encoding Preset</strong> - trades encoding speed against compression efficiency (ffmpeg <code>preset</code>). Faster
+presets need less CPU time per frame but more bitrate for the same picture quality; slower presets
+compress better and need more CPU time. Choices, from fastest to slowest: <strong>Ultrafast</strong>, <strong>Superfast</strong>,
+<strong>Veryfast</strong>, <strong>Faster</strong>, <strong>Fast</strong>, <strong>Medium</strong>, <strong>Slow</strong>, <strong>Slower</strong>, <strong>Veryslow</strong>, <strong>Placebo</strong>. Default:
+<strong>Veryfast</strong>.</p>
+<p><strong>Tune</strong> - adjusts the encoder to a particular kind of source content, on top of the preset (ffmpeg
+<code>tune</code>). Leave it at <strong>None</strong> if unsure. Default: <strong>None</strong>.</p>
+<ul>
+<li><strong>None</strong> - no content-specific tuning. A safe choice for mixed or unknown content</li>
+<li><strong>Animation</strong> - for cartoons and anime with large flat areas and hard edges</li>
+<li><strong>Grain</strong> - preserves heavy film grain or noise instead of smoothing it away, at the cost of more
+bitrate spent on fine detail</li>
+<li><strong>Fast Decode</strong> - turns off the in-loop filters (deblocking and SAO) and some prediction tools, so the
+stream is cheaper to decode on playback devices with very little processing power. Reduces compression
+efficiency</li>
+<li><strong>Zero Latency</strong> - disables B-frames and lookahead, so every frame is output as soon as it is encoded.
+For real-time, low-latency streaming; reduces compression efficiency</li>
+<li><strong>PSNR (benchmarking only)</strong> - disables psychovisual optimizations to maximize the PSNR quality metric.
+Intended for benchmarking; usually looks worse than an untuned encode of the same size</li>
+<li><strong>SSIM (benchmarking only)</strong> - the same for the SSIM quality metric</li>
+</ul>
+<p><strong>Encode in ABR Mode</strong> - switches from constant-quality encoding to average-bitrate encoding. When on, the
+bitrate Emby requests for the transcode becomes the encoder's target average bitrate (ffmpeg <code>b</code>), and
+<strong>Constant Rate Factor</strong> is hidden and not used. When off, the encoder aims for the constant quality set by
+<strong>Constant Rate Factor</strong>. ABR mode needs a target, so when Emby does not request a bitrate, the encoder
+uses the constant rate factor either way. In both modes, the requested bitrate is also set as the maximum
+rate, with a buffer of twice the bitrate (ffmpeg <code>maxrate</code> and <code>bufsize</code>), which keeps the stream within
+what the client can receive. Default: off.</p>
+<p><strong>Constant Rate Factor</strong> - the quality level for constant-quality encoding (ffmpeg <code>crf</code>). Lower values
+give better quality and larger output, higher values smaller output and lower quality. x265's default of
+28 corresponds roughly to x264's 23 in visual quality, which makes it a good starting point. When the
+requested bitrate is too low for the chosen quality, the maximum rate takes precedence. Range 0 to 51,
+default <strong>28</strong>. Shown only while <strong>Encode in ABR Mode</strong> is off.</p>
+<p><strong>Encoding Thread Count</strong> - the maximum number of CPU threads the encoder uses (ffmpeg <code>threads</code>). Use it
+to limit how much of the CPU a single transcode can take; leave it empty for maximum performance. Range 0
+to 16; 0 or empty (the default) means automatic.</p>
+<p><strong>LibX265 Options</strong> - additional x265 options in the syntax of the x265 command-line tool, as <code>key=value</code>
+pairs separated by colons (ffmpeg <code>x265-params</code>). This is where to set options that have no field of their
+own, such as adaptive quantization - for example <code>aq-mode=3:aq-strength=0.8</code>. Default: empty.</p>
+<p><strong>Encoding Profile Limit</strong> - the highest HEVC profile the encoder may use; empty (the default) means no
+limit - see <a href="Encoders.html#encoding-profile-limit">Encoding Profile Limit</a>. Choices: <strong>Main Profile</strong>,
+<strong>Main 10 Profile</strong>.</p>
+<h2 id="svt-av1">SVT-AV1</h2>
+<p>The <code>libsvtav1</code> encoder for <a class="xref" href="https://emby.media/learn/articles/video/codecs/vpx-av1/Video-Codec-AV1.html">AV1</a>, offered by the Software context type.
+AV1 encoding is used for media conversions only, not for transcoding during playback.</p>
+<p><strong>Encoding Preset</strong> - trades encoding speed against compression efficiency, as a number (ffmpeg
+<code>preset</code>). Lower values are slower and give better quality; higher values are faster. Range 0 (slowest) to
+13 (fastest), default <strong>10</strong>.</p>
+<p><strong>Encode in ABR Mode</strong> - switches from constant-quality encoding to average-bitrate encoding. When on, the
+bitrate Emby requests for the transcode becomes the encoder's target average bitrate (ffmpeg <code>b</code>), and
+<strong>Constant Rate Factor</strong> is hidden and not used. When off, the encoder aims for the constant quality set by
+<strong>Constant Rate Factor</strong>. ABR mode needs a target, so when Emby does not request a bitrate, the encoder
+uses the constant rate factor either way. In both modes, the requested bitrate is also set as the maximum
+rate, with a buffer of twice the bitrate (ffmpeg <code>maxrate</code> and <code>bufsize</code>). Default: off.</p>
+<p><strong>Constant Rate Factor</strong> - the quality level for constant-quality encoding (ffmpeg <code>crf</code>). Lower values
+give better quality and larger output, higher values smaller output and lower quality. Range 0 to 63,
+default <strong>35</strong>. Shown only while <strong>Encode in ABR Mode</strong> is off.</p>
+<p><strong>SVT-AV1 Options</strong> - additional SVT-AV1 options in the syntax of the SVT-AV1 command-line tool, as
+<code>key=value</code> pairs separated by colons (ffmpeg <code>svtav1-params</code>). For example, <code>tune=0</code> optimizes for
+subjective visual quality instead of PSNR, and <code>film-grain=8</code> enables film grain synthesis, which removes
+grain before encoding and has the player add it back. Default: empty.</p>
+<p>AV1 encoders have no <strong>Encoding Profile Limit</strong>.</p>
+<h2 id="further-reading">Further Reading</h2>
+<p><a class="xref" href="https://emby.media/learn/articles/hardware-acceleration/Hardware-Encoding.html">Hardware encoding and software encoding</a><br>
+<a class="xref" href="https://emby.media/learn/articles/video/encoding-quality/rate-control/index.html">Overview: Rate control</a></p>
+
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix sdkversion" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="footer">
+          <div class="container footer-inner">
+            <div class="footer-copy">2026 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.</div>
+            <div class="footer-actions">
+              <span class="contribution">
+                  <a href="https://github.com/EmbySupport/Emby.Docs/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Article%20Details%0A%0A**Do%20not%20remove%20this%20section**%0A%0A*%20uid%3A%20Server-Transcoding-Encoders-Software%0A*%20Title%3A%20Software%0A*%20Article%3A%20https%3A%2F%2Fgithub.com%2FEmbySupport%2FEmby.Docs%2Fblob%2Fmaster%2Fserver%2Ftranscoding%2Fconfiguration%2Fencoders%2FSoftware.md%0A*%20LegacyUrl%3A%20https%3A%2F%2Fsupport.emby.mediaundefined%0A" class="contribution-link" title="Feedback on this article"><div class="far fa-comment-alt fa-sm"></div></a>
+                  <a href="https://github.com/EmbySupport/Emby.Docs/blob/master/server/transcoding/configuration/encoders/Software.md/#L1" class="contribution-link" title="View article source"><div class="far fa-edit fa-sm"></div></a>
+              </span>
+              <a href="#top" class="back-to-top">Back to Top</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../../../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="utf-8">
+  <title>Vulkan | Emby Documentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="docfx 2.59.2.0">
+  <meta name="theme-color" content="#f7f8f9">
+  
+  <link rel="canonical" href="https://emby.media/support/articles/server/transcoding/configuration/encoders/Vulkan.html">
+  <meta property="og:title" content="Vulkan | Emby Documentation">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://emby.media/support/articles/server/transcoding/configuration/encoders/Vulkan.html">
+  <meta property="og:site_name" content="Emby Documentation">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://emby.media/support/articles/server/transcoding/configuration/encoders/Vulkan.html","url":"https://emby.media/support/articles/server/transcoding/configuration/encoders/Vulkan.html","name":"Vulkan","inLanguage":"en","headline":"Vulkan","articleSection":"Emby Server","author":{"@type":"Organization","name":"Emby LLC","url":"https://emby.media/"},"copyrightHolder":{"@type":"Organization","name":"Emby LLC","url":"https://emby.media/"},"isAccessibleForFree":true,"isFamilyFriendly":true},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Support Home","item":"https://emby.media/support/index.html"},{"@type":"ListItem","position":2,"name":"Emby Server","item":"https://emby.media/support/articles/Quick-Start.html"},{"@type":"ListItem","position":3,"name":"Transcoding","item":"https://emby.media/support/articles/server/transcoding/Transcoding.html"},{"@type":"ListItem","position":4,"name":"Configuration","item":"https://emby.media/support/articles/server/transcoding/configuration/Transcoding-Configuration.html"},{"@type":"ListItem","position":5,"name":"Encoders","item":"https://emby.media/support/articles/server/transcoding/configuration/encoders/Encoders.html"},{"@type":"ListItem","position":6,"name":"Vulkan","item":"https://emby.media/support/articles/server/transcoding/configuration/encoders/Vulkan.html"}]}]}</script>
+  <link rel="shortcut icon" href="../../../../../favicon.ico">
+  <script type="text/javascript" src="../../../../../styles/theme-config.js"></script>
+  <link rel="stylesheet" href="../../../../../styles/docfx.vendor.css">
+  <link rel="stylesheet" href="../../../../../styles/docfx.css">
+  <link rel="stylesheet" href="../../../../../styles/main.css">
+  <link rel="stylesheet" href="../../../../../styles/header.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
+  <link rel="stylesheet" href="../../../../../styles/theme.css">
+  <meta property="docfx:navrel" content="../../../../../toc.html">
+  <meta property="docfx:tocrel" content="../../../../toc.html">
+  <meta property="docfx:uid" content="Server-Transcoding-Encoders-Vulkan">
+  
+  <meta property="docfx:rel" content="../../../../../">
+  
+  <script type="text/javascript" src="../../../../../nav.js"></script>
+  <script type="text/javascript" src="../../../../toc.js"></script>
+
+</head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      
+      <header class="site-header">
+        <nav class="nav container" aria-label="Primary navigation">
+          <a class="brand" href="https://emby.media/" aria-label="Emby home">
+            
+            <img class="logo-on-dark" src="../../../../../images/logo.png" alt="Emby">
+            <img class="logo-on-light" src="../../../../../images/logo-dark-text.png" alt="Emby">
+          </a>
+          <a class="site-title-link" href="../../../../../index.html"><span class="site-title">Emby <strong>Docs</strong></span></a>
+          <button class="menu-button" type="button" aria-expanded="false" aria-controls="navbar" aria-label="Open menu">&#9776;</button>
+          <div class="nav-links" id="navbar">
+            <ul class="nav-links-list navbar-nav">
+                
+                    <li>
+                      <a href="https://emby.media/" title="Emby Home">Emby Home</a>
+                    </li>
+                    <li>
+                      <a href="../../../../../index.html" title="Support Home">Support Home</a>
+                    </li>
+                    <li>
+                      <a href="../../../../../articles/Quick-Start.html" title="Server Docs" class="is-current" aria-current="page">Server Docs</a>
+                    </li>
+                    <li>
+                      <a href="../../../../../articles/Apps.html" title="Client Docs">Client Docs</a>
+                    </li>
+                    <li>
+                      <a href="../../../../../articles/Emby-Premiere.html" title="Premiere Docs">Premiere Docs</a>
+                    </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <script>
+        (function () {
+          var button = document.querySelector('.site-header .menu-button');
+          var links = document.querySelector('.site-header .nav-links');
+          if (!button || !links) { return; }
+          button.addEventListener('click', function () {
+            var isOpen = links.classList.toggle('open');
+            button.setAttribute('aria-expanded', String(isOpen));
+            button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+          });
+        }());
+      </script>
+      
+      <div class="subnav navbar navbar-default">
+        <div class="container">
+          <nav class="hide-when-search" id="breadcrumb" aria-label="Breadcrumb">
+            <ol class="breadcrumb">
+              <li><a href="../../../../../index.html">Support Home</a></li>
+              <li><a href="../../../../Quick-Start.html">Emby Server</a></li>
+              <li><a href="../../../../server/transcoding/Transcoding.html">Transcoding</a></li>
+              <li><a href="../../../../server/transcoding/configuration/Transcoding-Configuration.html">Configuration</a></li>
+              <li><a href="../../../../server/transcoding/configuration/encoders/Encoders.html">Encoders</a></li>
+              <li><span aria-current="page">Vulkan</span></li>
+              
+            </ol>
+          </nav>
+      
+      	<div class="breadcrumpsearch">
+      	  <form class="navbar-form navbar-right" role="search" id="search">
+      		<div class="form-group">
+      		  <i class="fa fa-search" aria-hidden="true"></i>
+      		  <label class="sr-only" for="search-query">Search support topics</label>
+      		  <input type="text" class="form-control" id="search-query" placeholder="Search support topics" autocomplete="off">
+      		</div>
+      	  </form>
+      	</div>
+        </div>
+      </div>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <nav id="sidetoc" aria-label="Documentation table of contents"></nav>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Server-Transcoding-Encoders-Vulkan">
+<h1>Vulkan</h1>
+
+<h4 class="long-title">Vulkan Encoder Parameters</h4>
+
+<p>The Vulkan context types - Vulkan (Nvidia), Vulkan (Intel) and Vulkan (AMD) - encode through
+<a class="xref" href="https://emby.media/learn/articles/hardware-acceleration/interfaces/portable/Hardware-Vulkan-Video.html">Vulkan Video</a>, the vendor-neutral video extension of
+<a class="xref" href="https://emby.media/learn/articles/hardware-acceleration/interfaces/portable/Hardware-Vulkan.html">Vulkan</a>. These context types are experimental - see
+<a href="../../hardware/Overview.html">Hardware Acceleration</a>. How the dialog works is described in
+<a href="Encoders.html">Encoders</a>.</p>
+<p>Only the HEVC encoder has parameters. The H.264 encoder (<code>h264_vulkan</code>) and the AV1 encoder (<code>av1_vulkan</code>)
+have none, and their settings button is disabled.</p>
+<h2 id="hevc">HEVC</h2>
+<p><img src="images/vulkan-hevc.jpg" alt="Vulkan Video HEVC rate control, tuning, and tier parameters"></p>
+<p>The <code>hevc_vulkan</code> encoder for <a class="xref" href="https://emby.media/learn/articles/video/codecs/mpeg-itu/Video-Codec-HEVC.html">HEVC</a>, offered by the Vulkan (Nvidia), Vulkan
+(Intel) and Vulkan (AMD) context types.</p>
+<p><strong>Rate Control Method</strong> - how the encoder reaches the bitrate Emby requests (ffmpeg <code>rc_mode</code>). With every
+choice, the requested bitrate is passed as the target and maximum rate, with a buffer of twice the
+bitrate. Default: <strong>Auto (driver default)</strong>.</p>
+<ul>
+<li><strong>Auto (driver default)</strong> - lets the driver choose its default behaviour. The recommended starting
+point</li>
+<li><strong>Driver-Specific</strong> - uses the GPU driver's own built-in rate control instead of one of the standard
+modes below</li>
+<li><strong>Constant QP</strong> - encodes every frame with the same fixed
+<a class="xref" href="https://emby.media/learn/articles/video/encoding-quality/rate-control/Video-Encoding-QP.html">quantization parameter</a>, using the encoder's default QP value:
+predictable per-frame quality, unpredictable size</li>
+<li><strong>Constant Bitrate (CBR)</strong> - holds the bitrate as close to constant as possible, regardless of scene
+complexity (<a class="xref" href="https://emby.media/learn/articles/video/encoding-quality/rate-control/Video-Encoding-CBR.html">CBR</a>). Useful for strict bandwidth limits, at the cost of
+quality consistency across scenes</li>
+<li><strong>Variable Bitrate (VBR)</strong> - targets an average bitrate and lets it vary with scene complexity
+(<a class="xref" href="https://emby.media/learn/articles/video/encoding-quality/rate-control/Video-Encoding-VBR.html">VBR</a>). Generally better quality for the same amount of data, with a less
+predictable size</li>
+</ul>
+<p><strong>Tune</strong> - biases the encoder's internal trade-offs towards quality or latency (ffmpeg <code>tune</code>). Default:
+<strong>Default (no extra tuning)</strong>.</p>
+<ul>
+<li><strong>Default (no extra tuning)</strong> - no tuning beyond the other settings. A safe baseline if unsure</li>
+<li><strong>High Quality</strong> - the best quality achievable at the chosen settings and bitrate. Suited to on-demand
+transcoding</li>
+<li><strong>Low Latency</strong> - reduces encoding latency at some cost in quality and efficiency, for interactive or
+near-real-time streaming</li>
+<li><strong>Ultra Low Latency</strong> - reduces latency further, with lower quality and efficiency than Low Latency</li>
+<li><strong>Lossless</strong> - mathematically lossless output instead of a bitrate and quality trade-off. Produces very
+large streams; not suited to streaming</li>
+</ul>
+<p><strong>Tier</strong> - the HEVC <a class="xref" href="https://emby.media/learn/articles/video/compression/Video-Codec-Levels-Tiers.html">tier</a>, which sets the maximum bitrate allowed at
+the encoding level in use (ffmpeg <code>tier</code>). Main is sufficient for almost all content. Default: <strong>Main</strong>.</p>
+<ul>
+<li><strong>Main</strong> - the standard tier, sufficient for the vast majority of content and bitrates</li>
+<li><strong>High</strong> - allows a higher maximum bitrate at a given level. Only relevant for unusually high bitrates;
+most playback devices support the Main tier only</li>
+</ul>
+<p><strong>Encoding Profile Limit</strong> - the highest HEVC profile the encoder may use; empty (the default) means no
+limit - see <a href="Encoders.html#encoding-profile-limit">Encoding Profile Limit</a>. Offers those of
+<strong>Main Profile</strong> and <strong>Main 10 Profile</strong> that the driver reports.</p>
+<h2 id="further-reading">Further Reading</h2>
+<p><a class="xref" href="https://emby.media/learn/articles/hardware-acceleration/pipelines/Hardware-Driver-Capabilities.html">Driver-dependent media capabilities</a><br>
+<a class="xref" href="https://emby.media/learn/articles/video/encoding-quality/rate-control/index.html">Overview: Rate control</a></p>
+
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix sdkversion" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="footer">
+          <div class="container footer-inner">
+            <div class="footer-copy">2026 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.</div>
+            <div class="footer-actions">
+              <span class="contribution">
+                  <a href="https://github.com/EmbySupport/Emby.Docs/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Article%20Details%0A%0A**Do%20not%20remove%20this%20section**%0A%0A*%20uid%3A%20Server-Transcoding-Encoders-Vulkan%0A*%20Title%3A%20Vulkan%0A*%20Article%3A%20https%3A%2F%2Fgithub.com%2FEmbySupport%2FEmby.Docs%2Fblob%2Fmaster%2Fserver%2Ftranscoding%2Fconfiguration%2Fencoders%2FVulkan.md%0A*%20LegacyUrl%3A%20https%3A%2F%2Fsupport.emby.mediaundefined%0A" class="contribution-link" title="Feedback on this article"><div class="far fa-comment-alt fa-sm"></div></a>
+                  <a href="https://github.com/EmbySupport/Emby.Docs/blob/master/server/transcoding/configuration/encoders/Vulkan.md/#L1" class="contribution-link" title="View article source"><div class="far fa-edit fa-sm"></div></a>
+              </span>
+              <a href="#top" class="back-to-top">Back to Top</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../../../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../../styles/main.js"></script>
+  </body>
+</html>

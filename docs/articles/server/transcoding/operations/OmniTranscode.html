@@ -1,0 +1,332 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="utf-8">
+  <title>OmniTranscode&#8482; | Emby Documentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="docfx 2.59.2.0">
+  <meta name="theme-color" content="#f7f8f9">
+  
+  <link rel="canonical" href="https://emby.media/support/articles/server/transcoding/operations/OmniTranscode.html">
+  <meta property="og:title" content="OmniTranscode&#8482; | Emby Documentation">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://emby.media/support/articles/server/transcoding/operations/OmniTranscode.html">
+  <meta property="og:site_name" content="Emby Documentation">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://emby.media/support/articles/server/transcoding/operations/OmniTranscode.html","url":"https://emby.media/support/articles/server/transcoding/operations/OmniTranscode.html","name":"OmniTranscode™","inLanguage":"en","headline":"OmniTranscode™","articleSection":"Emby Server","author":{"@type":"Organization","name":"Emby LLC","url":"https://emby.media/"},"copyrightHolder":{"@type":"Organization","name":"Emby LLC","url":"https://emby.media/"},"isAccessibleForFree":true,"isFamilyFriendly":true},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Support Home","item":"https://emby.media/support/index.html"},{"@type":"ListItem","position":2,"name":"Emby Server","item":"https://emby.media/support/articles/Quick-Start.html"},{"@type":"ListItem","position":3,"name":"Transcoding","item":"https://emby.media/support/articles/server/transcoding/Transcoding.html"},{"@type":"ListItem","position":4,"name":"Operations","item":"https://emby.media/support/articles/server/transcoding/operations/Operations.html"},{"@type":"ListItem","position":5,"name":"OmniTranscode™","item":"https://emby.media/support/articles/server/transcoding/operations/OmniTranscode.html"}]}]}</script>
+  <link rel="shortcut icon" href="../../../../favicon.ico">
+  <script type="text/javascript" src="../../../../styles/theme-config.js"></script>
+  <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+  <link rel="stylesheet" href="../../../../styles/docfx.css">
+  <link rel="stylesheet" href="../../../../styles/main.css">
+  <link rel="stylesheet" href="../../../../styles/header.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
+  <link rel="stylesheet" href="../../../../styles/theme.css">
+  <meta property="docfx:navrel" content="../../../../toc.html">
+  <meta property="docfx:tocrel" content="../../../toc.html">
+  <meta property="docfx:uid" content="Server-Transcoding-OmniTranscode">
+  
+  <meta property="docfx:rel" content="../../../../">
+  
+  <script type="text/javascript" src="../../../../nav.js"></script>
+  <script type="text/javascript" src="../../../toc.js"></script>
+
+</head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      
+      <header class="site-header">
+        <nav class="nav container" aria-label="Primary navigation">
+          <a class="brand" href="https://emby.media/" aria-label="Emby home">
+            
+            <img class="logo-on-dark" src="../../../../images/logo.png" alt="Emby">
+            <img class="logo-on-light" src="../../../../images/logo-dark-text.png" alt="Emby">
+          </a>
+          <a class="site-title-link" href="../../../../index.html"><span class="site-title">Emby <strong>Docs</strong></span></a>
+          <button class="menu-button" type="button" aria-expanded="false" aria-controls="navbar" aria-label="Open menu">&#9776;</button>
+          <div class="nav-links" id="navbar">
+            <ul class="nav-links-list navbar-nav">
+                
+                    <li>
+                      <a href="https://emby.media/" title="Emby Home">Emby Home</a>
+                    </li>
+                    <li>
+                      <a href="../../../../index.html" title="Support Home">Support Home</a>
+                    </li>
+                    <li>
+                      <a href="../../../../articles/Quick-Start.html" title="Server Docs" class="is-current" aria-current="page">Server Docs</a>
+                    </li>
+                    <li>
+                      <a href="../../../../articles/Apps.html" title="Client Docs">Client Docs</a>
+                    </li>
+                    <li>
+                      <a href="../../../../articles/Emby-Premiere.html" title="Premiere Docs">Premiere Docs</a>
+                    </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <script>
+        (function () {
+          var button = document.querySelector('.site-header .menu-button');
+          var links = document.querySelector('.site-header .nav-links');
+          if (!button || !links) { return; }
+          button.addEventListener('click', function () {
+            var isOpen = links.classList.toggle('open');
+            button.setAttribute('aria-expanded', String(isOpen));
+            button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+          });
+        }());
+      </script>
+      
+      <div class="subnav navbar navbar-default">
+        <div class="container">
+          <nav class="hide-when-search" id="breadcrumb" aria-label="Breadcrumb">
+            <ol class="breadcrumb">
+              <li><a href="../../../../index.html">Support Home</a></li>
+              <li><a href="../../../Quick-Start.html">Emby Server</a></li>
+              <li><a href="../../../server/transcoding/Transcoding.html">Transcoding</a></li>
+              <li><a href="../../../server/transcoding/operations/Operations.html">Operations</a></li>
+              <li><span aria-current="page">OmniTranscode&#8482;</span></li>
+              
+            </ol>
+          </nav>
+      
+      	<div class="breadcrumpsearch">
+      	  <form class="navbar-form navbar-right" role="search" id="search">
+      		<div class="form-group">
+      		  <i class="fa fa-search" aria-hidden="true"></i>
+      		  <label class="sr-only" for="search-query">Search support topics</label>
+      		  <input type="text" class="form-control" id="search-query" placeholder="Search support topics" autocomplete="off">
+      		</div>
+      	  </form>
+      	</div>
+        </div>
+      </div>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <nav id="sidetoc" aria-label="Documentation table of contents"></nav>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Server-Transcoding-OmniTranscode">
+<h1>OmniTranscode™</h1>
+
+<h4 class="long-title">OmniTranscode™ - Remote Transcoding Hosts</h4>
+
+<p>OmniTranscode™ lets Emby Server run transcoding jobs on other computers - remote hosts - and use their
+GPUs. Hosts are managed on the <strong>OmniTranscode™</strong> tab of the <a href="Operations.html">Operations</a> page.</p>
+<p>OmniTranscode™ is available when Emby Server runs on Windows or Linux.</p>
+<p><img src="images/omni-hosts.jpg" alt="OmniTranscode host management with the local server and a disabled remote host"></p>
+<p><em>Remote connection details are redacted.</em></p>
+<h2 id="how-it-works">How It Works</h2>
+<p>Emby Server connects to a remote host over SSH and logs in as a user of its own, which is created on the
+host for this purpose and used for nothing else. Under that user, Emby installs its own FFmpeg and mounts
+the folders FFmpeg needs from the server: the media, the transcoding output, and server data such as fonts
+and subtitle caches. The folders are reached through the SSH connection, so no network shares have to be
+set up.</p>
+<p>GPUs detected on a host become devices in the
+<a href="../configuration/Transcoding-Configuration.html">transcoding configuration</a>, just like the server's own:</p>
+<ul>
+<li>In <strong>Basic Mode</strong>, remote GPUs are not used.</li>
+<li>In <strong>Advanced Mode</strong>, newly detected remote GPUs are added switched off. Switch them on to use them.</li>
+<li>In <strong>Expert Mode</strong>, the configuration stays as you built it. Remote GPUs can be placed like any other
+device, including in load-balancing groups.</li>
+</ul>
+<p>When the configuration picks a remote GPU for a job, that job's FFmpeg runs on the host. Live TV never uses a
+remote GPU.</p>
+<p>Any number of hosts can be saved, and up to two can be enabled at a time. A host that is switched off is not
+used, and its nodes in the configuration show <em>Host disabled</em>.</p>
+<h2 id="requirements">Requirements</h2>
+<p>Only systems that remote transcoding is known to work on are supported; everything else is refused, even
+where it might work.</p>
+<p><strong>Windows</strong></p>
+<ul>
+<li>Windows 10 version 1809 or Windows Server 2019 (build 17763) or newer, including Windows 11 and Windows
+Server 2022/2025</li>
+<li>64-bit x86 only - no 32-bit, no ARM64</li>
+<li>OpenSSH Server</li>
+</ul>
+<p><strong>macOS</strong></p>
+<ul>
+<li>macOS 15 or newer on Apple silicon - no Intel Macs</li>
+<li><a href="https://macfuse.github.io">macFUSE</a> and its SSHFS</li>
+</ul>
+<p><strong>Linux</strong></p>
+<ul>
+<li>Ubuntu 24.04, 25.10 and newer; Debian 12 and newer; Fedora 42 and newer; Linux Mint 22.1 and newer; Arch
+Linux, Manjaro and openSUSE Tumbleweed. Derivatives with an identity of their own, such as Pop!_OS,
+EndeavourOS or openSUSE Leap, are not supported.</li>
+<li>64-bit x86 or 64-bit ARM, running a 64-bit system</li>
+<li>glibc 2.34 or newer, and systemd</li>
+<li>No immutable (ostree) systems such as Fedora Silverblue or Fedora CoreOS</li>
+</ul>
+<p><strong>Not supported, whatever they run:</strong> virtual machines of any kind including cloud instances, containers of
+any kind (Docker, Podman, Kubernetes, LXC/Incus, OpenVZ, systemd-nspawn, Windows containers), Proxmox VE, WSL,
+and NAS systems.</p>
+<p>The requirements are checked when Emby logs in to the host, and again every time the host is prepared.</p>
+<p>Beyond that, a remote host needs exactly what Emby Server itself would need on the same system. On Linux,
+the Intel and AMD user-space GPU drivers are included, as they are with Emby Server. Windows hosts still
+need the manufacturer's graphics drivers installed. See <a href="../../setup/gpu-setup/GPU-Setup.html">GPU Setup</a>
+for the requirements for each platform and GPU.</p>
+<h2 id="adding-a-host">Adding a Host</h2>
+<p><strong>Add Host</strong> on the OmniTranscode™ tab starts a wizard with the following steps. Editing an existing host
+starts at the address step.</p>
+<h3 id="operating-system">Operating System</h3>
+<p>Choose whether the host runs Windows, Linux or macOS. <strong>Show system requirements</strong> lists the requirements for
+that system. An SSH server must already be running on the host - check <strong>Please show me how to install SSH
+on that machine</strong> to get instructions for it.</p>
+<p><img src="images/add-host-os.jpg" alt="Selecting the remote host's operating system and requesting SSH installation instructions"></p>
+<h3 id="installing-an-ssh-server">Installing an SSH Server</h3>
+<p>Only shown when the instructions were requested:</p>
+<ul>
+<li><strong>Windows</strong> - install OpenSSH Server and set its service to start automatically, either in PowerShell or
+through Optional Features and Services</li>
+<li><strong>Linux</strong> - install and start OpenSSH with the distribution's package manager, and allow it through the
+firewall (ufw or firewalld)</li>
+<li><strong>macOS</strong> - turn on Remote Login under System Settings → General → Sharing, or with a Terminal command</li>
+</ul>
+<p><img src="images/add-host-ssh.jpg" alt="The wizard's OpenSSH Server installation instructions for a Windows host"></p>
+<h3 id="host-address">Host Address</h3>
+<ul>
+<li><strong>ID</strong> - 2 to 4 letters or digits that identify the host, for example <em>R1</em>. It cannot be changed later.</li>
+<li><strong>Name</strong></li>
+<li><strong>Host</strong> - host name or IP address</li>
+<li><strong>Port</strong> - the SSH port, 22 by default</li>
+</ul>
+<p><img src="images/add-host-address.jpg" alt="The host ID, name, hostname, and SSH port using an example hostname"></p>
+<p>At this point Emby only checks that an SSH server answers; logging in comes later. When the address is
+already used by another host entry, Emby warns about it, and <strong>Next</strong> has to be clicked again to continue
+anyway.</p>
+<h3 id="connection-method">Connection Method</h3>
+<p>Emby logs in to the host as a user of its own. Choose how that user is set up:</p>
+<ul>
+<li><strong>Set it up for me</strong> - you provide an administrator login once, and Emby creates the user</li>
+<li><strong>I want to set it up manually</strong> - Emby shows the commands, and you run them on the host yourself</li>
+</ul>
+<h3 id="administrator-login">Administrator Login</h3>
+<p>The login is used once, to create Emby's user and authorize Emby's key. It is not saved. On Linux and
+macOS, the account must be able to use sudo.</p>
+<p>Authenticate either with a user name and password, or with a private key file and its passphrase, if it has
+one. A separate <strong>Sudo password</strong> can be given; leave it empty when sudo needs no password.</p>
+<h3 id="manual-setup">Manual Setup</h3>
+<p>Shows the commands that create Emby's user - to run in a terminal on Linux and macOS, or in Windows
+PowerShell run as administrator on Windows. <strong>Next</strong> then logs in as that user.</p>
+<h3 id="host-setup">Host Setup</h3>
+<p>Lists what still has to be done on the host with administrator rights, such as installing the software
+used to mount the server's folders. With the automatic method, <strong>Perform setup</strong> does it; with the manual
+method, the page shows the commands to run. <strong>Next</strong> checks the result, saves the host and starts
+preparing it.</p>
+<p>If two hosts are already enabled, the new host is saved switched off.</p>
+<h3 id="preparing-the-host">Preparing the Host</h3>
+<p>Emby installs its transcoder on the host, mounts the server's folders there and detects the GPUs. The page
+shows each step as it runs: connection, login, system, host setup, downloading, installing and testing
+FFmpeg, folder mounts, and hardware detection.</p>
+<p>The host stays saved even when preparation fails - see <a href="#troubleshooting-a-host">Troubleshooting a Host</a>. A
+host that was saved switched off is not prepared.</p>
+<h2 id="troubleshooting-a-host">Troubleshooting a Host</h2>
+<p><strong>Troubleshoot</strong> on an enabled host runs the preparation again, or follows one that is already running, and
+lists each step with its result. <strong>Check again</strong> repeats it.</p>
+<p>The hardware detection log of each host is available under <a href="Logs.html#detection-logs">Detection Logs</a>, and
+the FFmpeg logs of the jobs that ran on it under <a href="Logs.html#ffmpeg-logs">FFmpeg Logs</a>.</p>
+<h3 id="messages">Messages</h3>
+<p>Where a step cannot be completed, a message says why. Most of them include the error the host or the
+connection reported.</p>
+<ul>
+<li><strong>Same machine</strong> - another host entry already connects to the same address and port. A second entry for
+the same machine gets a user of its own there, and Emby treats the two as separate machines with the same
+GPUs. Click <strong>Next</strong> again to add it anyway.</li>
+<li><strong>Cannot connect</strong> - no SSH server answered at the address and port. Check that the SSH server is
+running, that address and port are correct, and that no firewall blocks the connection.</li>
+<li><strong>Login failed</strong> - the host did not accept the <a href="#administrator-login">administrator login</a>.</li>
+<li><strong>Cannot log in yet</strong> - after <a href="#manual-setup">manual setup</a>, the host does not accept the key of Emby's
+user yet. Check that the commands ran without errors, then click <strong>Next</strong> again.</li>
+<li><strong>Setup failed</strong> - performing the <a href="#host-setup">host setup</a> failed.</li>
+<li><strong>Setup incomplete</strong> - the host setup ran, but something still is not ready. The message lists what.</li>
+<li><strong>Not done yet</strong> - checking the host showed that not everything listed under
+<a href="#host-setup">host setup</a> has been done yet. The message lists what remains.</li>
+<li><strong>Cannot check the host</strong> - Emby could not complete checking the host.</li>
+<li><strong>Cannot save the host</strong> - the host entry could not be saved.</li>
+<li><strong>Cannot enable the host</strong> - switching the host on failed.</li>
+</ul>
+<h2 id="removing-a-host">Removing a Host</h2>
+<p>Removing a host cannot be undone; to use the machine again, it has to be added as a new host. Removing only
+takes the host out of Emby Server - the user Emby created on the host stays in place.</p>
+<h3 id="cleaning-up-the-host">Cleaning Up the Host</h3>
+<p>Emby's user on the host is named <em>emby</em> followed by four digits, for example <em>emby0815</em>. Everything Emby put
+on the host is in that user's home folder, which also contains a file <em>Why this user exists.txt</em> that names
+the host entry it belongs to and the exact command for removing the user.</p>
+<ul>
+<li><p><strong>Linux</strong></p>
+<pre><code>sudo userdel -r emby0815
+</code></pre>
+</li>
+<li><p><strong>macOS</strong></p>
+<pre><code>sudo rm -rfx ~emby0815 &amp;&amp; sudo dscl . -delete /Users/emby0815
+</code></pre>
+</li>
+<li><p><strong>Windows</strong>, in Windows PowerShell run as administrator</p>
+<pre><code>$a = Get-LocalUser emby0815; Get-CimInstance Win32_UserProfile -Filter &quot;SID='$($a.SID)'&quot; | Remove-CimInstance; Remove-LocalUser emby0815
+</code></pre>
+</li>
+</ul>
+<p>Software that host setup installed for everyone on the machine - WinFsp and SSHFS-Win on Windows, packages
+on Linux - stays installed, as does the SSH server. Remove it separately if nothing else uses it.</p>
+<h2 id="further-reading">Further Reading</h2>
+<p><a class="xref" href="https://emby.media/learn/articles/hardware-acceleration/pipelines/Hardware-Emby-Server.html">Hardware acceleration in Emby Server</a><br>
+<a class="xref" href="https://emby.media/learn/articles/playback-streaming/conversion/Playback-Transcode-Pipeline.html">How a transcoding pipeline works</a></p>
+
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix sdkversion" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="footer">
+          <div class="container footer-inner">
+            <div class="footer-copy">2026 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.</div>
+            <div class="footer-actions">
+              <span class="contribution">
+                  <a href="https://github.com/EmbySupport/Emby.Docs/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Article%20Details%0A%0A**Do%20not%20remove%20this%20section**%0A%0A*%20uid%3A%20Server-Transcoding-OmniTranscode%0A*%20Title%3A%20OmniTranscode%E2%84%A2%0A*%20Article%3A%20https%3A%2F%2Fgithub.com%2FEmbySupport%2FEmby.Docs%2Fblob%2Fmaster%2Fserver%2Ftranscoding%2Foperations%2FOmniTranscode.md%0A*%20LegacyUrl%3A%20https%3A%2F%2Fsupport.emby.mediaundefined%0A" class="contribution-link" title="Feedback on this article"><div class="far fa-comment-alt fa-sm"></div></a>
+                  <a href="https://github.com/EmbySupport/Emby.Docs/blob/master/server/transcoding/operations/OmniTranscode.md/#L1" class="contribution-link" title="View article source"><div class="far fa-edit fa-sm"></div></a>
+              </span>
+              <a href="#top" class="back-to-top">Back to Top</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

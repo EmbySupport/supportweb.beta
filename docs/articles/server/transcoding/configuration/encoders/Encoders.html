@@ -1,0 +1,297 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="utf-8">
+  <title>Encoders | Emby Documentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="docfx 2.59.2.0">
+  <meta name="theme-color" content="#f7f8f9">
+  
+  <link rel="canonical" href="https://emby.media/support/articles/server/transcoding/configuration/encoders/Encoders.html">
+  <meta property="og:title" content="Encoders | Emby Documentation">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://emby.media/support/articles/server/transcoding/configuration/encoders/Encoders.html">
+  <meta property="og:site_name" content="Emby Documentation">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://emby.media/support/articles/server/transcoding/configuration/encoders/Encoders.html","url":"https://emby.media/support/articles/server/transcoding/configuration/encoders/Encoders.html","name":"Encoders","inLanguage":"en","headline":"Encoders","articleSection":"Emby Server","author":{"@type":"Organization","name":"Emby LLC","url":"https://emby.media/"},"copyrightHolder":{"@type":"Organization","name":"Emby LLC","url":"https://emby.media/"},"isAccessibleForFree":true,"isFamilyFriendly":true},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Support Home","item":"https://emby.media/support/index.html"},{"@type":"ListItem","position":2,"name":"Emby Server","item":"https://emby.media/support/articles/Quick-Start.html"},{"@type":"ListItem","position":3,"name":"Transcoding","item":"https://emby.media/support/articles/server/transcoding/Transcoding.html"},{"@type":"ListItem","position":4,"name":"Configuration","item":"https://emby.media/support/articles/server/transcoding/configuration/Transcoding-Configuration.html"},{"@type":"ListItem","position":5,"name":"Encoders","item":"https://emby.media/support/articles/server/transcoding/configuration/encoders/Encoders.html"},{"@type":"ListItem","position":6,"name":"Encoders","item":"https://emby.media/support/articles/server/transcoding/configuration/encoders/Encoders.html"}]}]}</script>
+  <link rel="shortcut icon" href="../../../../../favicon.ico">
+  <script type="text/javascript" src="../../../../../styles/theme-config.js"></script>
+  <link rel="stylesheet" href="../../../../../styles/docfx.vendor.css">
+  <link rel="stylesheet" href="../../../../../styles/docfx.css">
+  <link rel="stylesheet" href="../../../../../styles/main.css">
+  <link rel="stylesheet" href="../../../../../styles/header.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
+  <link rel="stylesheet" href="../../../../../styles/theme.css">
+  <meta property="docfx:navrel" content="../../../../../toc.html">
+  <meta property="docfx:tocrel" content="../../../../toc.html">
+  <meta property="docfx:uid" content="Server-Transcoding-Encoders">
+  
+  <meta property="docfx:rel" content="../../../../../">
+  
+  <script type="text/javascript" src="../../../../../nav.js"></script>
+  <script type="text/javascript" src="../../../../toc.js"></script>
+
+</head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      
+      <header class="site-header">
+        <nav class="nav container" aria-label="Primary navigation">
+          <a class="brand" href="https://emby.media/" aria-label="Emby home">
+            
+            <img class="logo-on-dark" src="../../../../../images/logo.png" alt="Emby">
+            <img class="logo-on-light" src="../../../../../images/logo-dark-text.png" alt="Emby">
+          </a>
+          <a class="site-title-link" href="../../../../../index.html"><span class="site-title">Emby <strong>Docs</strong></span></a>
+          <button class="menu-button" type="button" aria-expanded="false" aria-controls="navbar" aria-label="Open menu">&#9776;</button>
+          <div class="nav-links" id="navbar">
+            <ul class="nav-links-list navbar-nav">
+                
+                    <li>
+                      <a href="https://emby.media/" title="Emby Home">Emby Home</a>
+                    </li>
+                    <li>
+                      <a href="../../../../../index.html" title="Support Home">Support Home</a>
+                    </li>
+                    <li>
+                      <a href="../../../../../articles/Quick-Start.html" title="Server Docs" class="is-current" aria-current="page">Server Docs</a>
+                    </li>
+                    <li>
+                      <a href="../../../../../articles/Apps.html" title="Client Docs">Client Docs</a>
+                    </li>
+                    <li>
+                      <a href="../../../../../articles/Emby-Premiere.html" title="Premiere Docs">Premiere Docs</a>
+                    </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <script>
+        (function () {
+          var button = document.querySelector('.site-header .menu-button');
+          var links = document.querySelector('.site-header .nav-links');
+          if (!button || !links) { return; }
+          button.addEventListener('click', function () {
+            var isOpen = links.classList.toggle('open');
+            button.setAttribute('aria-expanded', String(isOpen));
+            button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+          });
+        }());
+      </script>
+      
+      <div class="subnav navbar navbar-default">
+        <div class="container">
+          <nav class="hide-when-search" id="breadcrumb" aria-label="Breadcrumb">
+            <ol class="breadcrumb">
+              <li><a href="../../../../../index.html">Support Home</a></li>
+              <li><a href="../../../../Quick-Start.html">Emby Server</a></li>
+              <li><a href="../../../../server/transcoding/Transcoding.html">Transcoding</a></li>
+              <li><a href="../../../../server/transcoding/configuration/Transcoding-Configuration.html">Configuration</a></li>
+              <li><a href="../../../../server/transcoding/configuration/encoders/Encoders.html">Encoders</a></li>
+              <li><span aria-current="page">Encoders</span></li>
+              
+            </ol>
+          </nav>
+      
+      	<div class="breadcrumpsearch">
+      	  <form class="navbar-form navbar-right" role="search" id="search">
+      		<div class="form-group">
+      		  <i class="fa fa-search" aria-hidden="true"></i>
+      		  <label class="sr-only" for="search-query">Search support topics</label>
+      		  <input type="text" class="form-control" id="search-query" placeholder="Search support topics" autocomplete="off">
+      		</div>
+      	  </form>
+      	</div>
+        </div>
+      </div>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <nav id="sidetoc" aria-label="Documentation table of contents"></nav>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Server-Transcoding-Encoders">
+<h1>Encoders</h1>
+
+<h4 class="long-title">Encoder Parameters</h4>
+
+<p>Every encoder Emby can use for transcoding has a parameters dialog of its own. The parameters decide how
+the encoder works: how much time it spends on each frame, how it reaches the bitrate it is given, and which
+of its own features it uses. They are set per device node and per encoder, and everything you leave alone
+keeps Emby's default.</p>
+<p>Emby sets the target bitrate, the frame rate and the encoding profile of each transcode itself, based on
+what the client needs. The parameters control how the encoder works within those limits, and
+<a href="#encoding-profile-limit">Encoding Profile Limit</a> narrows the profile choice.</p>
+<p>AV1 encoding is available for <a href="../../../../Convert-Media.html">media conversions</a> only. Selecting an AV1
+encoder here does not make Emby transcode playback to AV1; playback uses other supported output codecs.</p>
+<h2 id="opening-the-dialog">Opening the Dialog</h2>
+<p>The <strong>Encoding</strong> section of a device's configuration dialog - see
+<a href="../Advanced-Mode.html#device-configuration">Device Configuration</a> and <a href="../Expert-Node-Types.html#gpu-config">GPU Config</a> -
+has one dropdown per output codec: <strong>H.264 (AVC)</strong>, <strong>H.265 (HEVC)</strong> and <strong>AV1</strong>. Each lists the encoders
+the device offers, followed by <strong>Skip this configuration</strong>. The configuration dialog of the software node
+has the same section for the software encoders - see <a href="../Expert-Node-Types.html#software-config">Software Config</a>.</p>
+<p><img src="images/encoder-selection.jpg" alt="Encoder selections with a settings button and a codec information button beside each codec"></p>
+<p>Two buttons sit beside each dropdown:</p>
+<ul>
+<li>The <strong>settings</strong> button (gear icon) opens the parameters dialog of the selected encoder. It is disabled
+for <strong>Skip this configuration</strong> and for encoders without parameters, such as the Vulkan H.264 encoder</li>
+<li>The <strong>info</strong> button opens the <a href="#codec-information">codec information</a> of the selected encoder</li>
+</ul>
+<p>Below the dropdown, a summary shows the state of the selected encoder's parameters: <strong>Using default
+settings</strong> while nothing differs from the defaults, or <strong>Custom configuration:</strong> followed by one line per
+changed value. Each line names the parameter as the parameters dialog does, followed by its value: the name
+of the chosen option for a dropdown, <strong>ON</strong> or <strong>OFF</strong> for a switch, and the entered value otherwise.</p>
+<h2 id="the-parameters-dialog">The Parameters Dialog</h2>
+<p>The dialog is titled with the encoder's name, for example <code>x264</code> or <code>NVENC &lt;device name&gt; - H.264 (AVC)</code>,
+and lists the encoder's parameters. Some fields appear only when another field calls for them - for
+example, <strong>Constant Rate Factor</strong> is hidden while <strong>Encode in ABR Mode</strong> is on - and the dialog updates as
+soon as you change such a field. For H.264 and HEVC encoders, the last field is always
+<a href="#encoding-profile-limit">Encoding Profile Limit</a>.</p>
+<ul>
+<li><strong>Dropdowns</strong> - most choice labels end with the underlying ffmpeg value in square brackets, such as
+<code>P4 (medium, balanced - default) - [p4]</code>. The encoder pages quote the labels without that suffix. Plain
+preset lists, such as x264's, and <strong>Encoding Profile Limit</strong> show names only. Where the choices have
+descriptions, the help button beside the dropdown lists every choice with its description</li>
+<li><strong>Number fields</strong> - accept only values within the range given for them. Where a field may be left empty,
+an empty field passes nothing to the encoder, so the encoder's own default applies</li>
+<li><strong>Text fields</strong> - the software encoders accept additional options in their own <code>key=value</code> syntax</li>
+</ul>
+<p><img src="images/encoder-choice-help.jpg" alt="Choice help listing the NVENC encoding presets and their descriptions"></p>
+<h3 id="reset-to-default">Reset to Default</h3>
+<p><strong>Reset to Default</strong> puts every field of the dialog back to its default value. Like every other change in
+the dialog, it takes effect when you press <strong>Save</strong>. Closing the dialog without saving discards all
+changes.</p>
+<p>The device dialog has a <strong>Reset to Default</strong> button of its own. When the device dialog is saved after
+using it, all encoder and filter parameters stored for that device node are removed.</p>
+<h3 id="saving">Saving</h3>
+<p><strong>Save</strong> stores only the values that differ from the defaults - see
+<a href="../Transcoding-Configuration.html#delta-storage">Delta Storage</a>. A value set back to its default is removed
+from storage, so that parameter follows Emby's default again, including when the default changes in a
+later version.</p>
+<p>Parameters are stored per encoder. Selecting a different encoder in the dropdown does not discard them,
+and they apply again when you switch back.</p>
+<p>The parameters belong to the device dialog the parameters dialog was opened from: they are only kept when
+that dialog is saved as well, and cancelling it discards them together with its other changes. Like every
+other change, they take effect when the transcoding configuration is
+<a href="../Transcoding-Configuration.html#saving">saved</a>.</p>
+<h2 id="encoder-pages">Encoder Pages</h2>
+<ul>
+<li><a href="Software.html">Software</a> - x264, x265 and SVT-AV1, for the Software context type</li>
+<li><a href="Nvidia.html">Nvidia</a> - NVENC, for Nvidia CUDA</li>
+<li><a href="Quick-Sync.html">Quick Sync</a> - Intel Quick Sync, for QSV on D3D11 and QSV on VAAPI</li>
+<li><a href="AMF.html">AMF</a> - AMD AMF, for AMF on D3D11 and AMF on Vulkan</li>
+<li><a href="VAAPI.html">VAAPI</a> - for VAAPI (Intel) and VAAPI (AMD)</li>
+<li><a href="VideoToolbox.html">VideoToolbox</a> - Apple VideoToolbox, for VideoToolbox</li>
+<li><a href="Vulkan.html">Vulkan</a> - Vulkan Video, for Vulkan (Nvidia), Vulkan (Intel) and Vulkan (AMD)</li>
+<li><a href="Rockchip.html">Rockchip</a> - RKMPP, for Rockchip</li>
+<li><a href="MediaCodec.html">MediaCodec</a> - Android MediaCodec, for MediaCodec</li>
+</ul>
+<h2 id="encoding-profile-limit">Encoding Profile Limit</h2>
+<p>Every H.264 and HEVC encoder has <strong>Encoding Profile Limit</strong> as the last field of its dialog. AV1 encoders
+do not have it.</p>
+<p>Emby chooses the encoding <a class="xref" href="https://emby.media/learn/articles/video/compression/Video-Codec-Profiles.html">profile</a> for each transcode automatically: the
+highest profile that the encoder supports, that the client accepts, and that can carry the bit depth of the
+output. <strong>Encoding Profile Limit</strong> caps that choice - profiles above the selected one are not used. Leave it
+empty (the default) for no limit. This is useful when a client or the encoder has trouble with a profile
+that would otherwise be chosen.</p>
+<p>The dropdown lists the profiles the encoder supports, from lowest to highest: a fixed list for the software
+encoders, and the profiles detected for the device for hardware encoders.</p>
+<p>The limit has two effects:</p>
+<ul>
+<li><strong>Profile choice</strong> - the highest qualifying profile at or below the limit is used. The limit does not
+change the bit depth of the output: if no profile at or below the limit can carry it, the lowest profile
+that can is used</li>
+<li><strong>Device choice</strong> - if every profile that both the client and the encoder support is above the limit,
+this device node is not used for the transcode, and the next one in the
+<a href="../Advanced-Mode.html#priority">order</a> is tried</li>
+</ul>
+<p>Emby does not pass a profile to the VideoToolbox HEVC and MediaCodec HEVC encoders; those choose it
+themselves. For them, the limit only has the second effect.</p>
+<h2 id="codec-information">Codec Information</h2>
+<p>The info button beside an encoder in the <strong>Encoding</strong> section, and beside each decoder in the <strong>Decoding</strong>
+section, opens a read-only overview of what the selected codec reports about itself. It is titled with the
+codec's name - for software codecs, with the media type, such as <code>H.264 (AVC)</code>. <strong>Close</strong> closes it.</p>
+<p><img src="images/codec-information.jpg" alt="Detected NVENC codec information including bitrate, frame-size, and color-format capabilities"></p>
+<p><strong>General</strong> lists the following, leaving out anything the codec does not report:</p>
+<ul>
+<li>The device the codec runs on - for hardware codecs, its adapter number, name and driver details -
+together with the ffmpeg codec name, such as <code>h264_nvenc</code>. For software codecs, only the ffmpeg codec
+name, such as <code>libx264</code></li>
+<li><strong>Max Bit Rate</strong> - the highest bitrate the codec handles. Where the codec does not report one directly,
+the highest maximum bitrate among its levels</li>
+<li><strong>Frame Sizes</strong> - the smallest and the largest frame size, written as <code>smallest...largest</code>, or <code>max</code>
+followed by the largest size when no minimum is known</li>
+<li><strong>Max Instances</strong> - how many instances of the codec can run at the same time - see
+<a class="xref" href="https://emby.media/learn/articles/hardware-acceleration/pipelines/Hardware-Encoder-Sessions.html">encoder sessions</a></li>
+<li><strong>Color Formats</strong> - the <a class="xref" href="https://emby.media/learn/articles/video/color-pixel-formats/pixel-layouts/Video-Pixel-Formats.html">pixel formats</a> the codec works with</li>
+</ul>
+<p><strong>Supported Profiles &amp; Levels</strong> is shown when the codec reports profiles. It is a table with one row per
+profile:</p>
+<ul>
+<li><strong>Profile</strong> - the profile name</li>
+<li><strong>Max Level</strong> - the highest <a class="xref" href="https://emby.media/learn/articles/video/compression/Video-Codec-Levels-Tiers.html">level</a> the codec supports for that profile</li>
+<li><strong>Max Bitrate</strong> - the maximum bitrate of that level</li>
+<li><strong>Bit Depths</strong> - the <a class="xref" href="https://emby.media/learn/articles/video/color-pixel-formats/precision-banding/Video-Bit-Depth.html">bit depths</a> the profile supports</li>
+<li><strong>Resolutions</strong> - the range of resolution and frame rate combinations the level allows, each written as
+width x height @ frame rate, such as <code>1920x1080@60</code></li>
+</ul>
+<p>The overview shows what Emby has detected for a device - for example, whether an encoder supports 10-bit
+output, or up to which resolution a decoder works.</p>
+<h2 id="further-reading">Further Reading</h2>
+<p><a class="xref" href="https://emby.media/learn/articles/hardware-acceleration/Hardware-Encoding.html">Hardware encoding and software encoding</a><br>
+<a class="xref" href="https://emby.media/learn/articles/video/encoding-quality/rate-control/index.html">Overview: Rate control</a></p>
+
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix sdkversion" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="footer">
+          <div class="container footer-inner">
+            <div class="footer-copy">2026 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.</div>
+            <div class="footer-actions">
+              <span class="contribution">
+                  <a href="https://github.com/EmbySupport/Emby.Docs/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Article%20Details%0A%0A**Do%20not%20remove%20this%20section**%0A%0A*%20uid%3A%20Server-Transcoding-Encoders%0A*%20Title%3A%20Encoders%0A*%20Article%3A%20https%3A%2F%2Fgithub.com%2FEmbySupport%2FEmby.Docs%2Fblob%2Fmaster%2Fserver%2Ftranscoding%2Fconfiguration%2Fencoders%2FEncoders.md%0A*%20LegacyUrl%3A%20https%3A%2F%2Fsupport.emby.mediaundefined%0A" class="contribution-link" title="Feedback on this article"><div class="far fa-comment-alt fa-sm"></div></a>
+                  <a href="https://github.com/EmbySupport/Emby.Docs/blob/master/server/transcoding/configuration/encoders/Encoders.md/#L1" class="contribution-link" title="View article source"><div class="far fa-edit fa-sm"></div></a>
+              </span>
+              <a href="#top" class="back-to-top">Back to Top</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../../../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../../styles/main.js"></script>
+  </body>
+</html>

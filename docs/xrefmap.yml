@@ -25,6 +25,9 @@ references:
 - uid: Apple-TV
   name: Apple TV
   href: articles/Apple-TV.html
+- uid: Apps
+  name: Emby Apps Documentation
+  href: articles/Apps.html
 - uid: Audio-Book-Naming
   name: Audio Book Naming
   href: articles/Audio-Book-Naming.html
@@ -436,9 +439,6 @@ references:
 - uid: Server-Gpu-Setup
   name: GPU Setup
   href: articles/server/setup/gpu-setup/GPU-Setup.html
-- uid: Server-Gpu-Setup-Containers
-  name: GPU Setup in Containers
-  href: articles/server/setup/gpu-setup/Containers.html
 - uid: Server-Gpu-Setup-Linux
   name: GPU Setup on Linux
   href: articles/server/setup/gpu-setup/Linux.html
@@ -484,6 +484,46 @@ references:
 - uid: Server-Transcoding-Configuration
   name: Configuration
   href: articles/server/transcoding/configuration/Transcoding-Configuration.html
+- uid: Server-Transcoding-Encoders
+  name: Encoders
+  href: articles/server/transcoding/configuration/encoders/Encoders.html
+  fullName: Encoder Parameters
+- uid: Server-Transcoding-Encoders-Amf
+  name: AMF
+  href: articles/server/transcoding/configuration/encoders/AMF.html
+  fullName: AMF Encoder Parameters
+- uid: Server-Transcoding-Encoders-MediaCodec
+  name: MediaCodec
+  href: articles/server/transcoding/configuration/encoders/MediaCodec.html
+  fullName: MediaCodec Encoder Parameters
+- uid: Server-Transcoding-Encoders-Nvidia
+  name: Nvidia
+  href: articles/server/transcoding/configuration/encoders/Nvidia.html
+  fullName: Nvidia Encoder Parameters
+- uid: Server-Transcoding-Encoders-QuickSync
+  name: Quick Sync
+  href: articles/server/transcoding/configuration/encoders/Quick-Sync.html
+  fullName: Quick Sync Encoder Parameters
+- uid: Server-Transcoding-Encoders-Rockchip
+  name: Rockchip
+  href: articles/server/transcoding/configuration/encoders/Rockchip.html
+  fullName: Rockchip Encoder Parameters
+- uid: Server-Transcoding-Encoders-Software
+  name: Software
+  href: articles/server/transcoding/configuration/encoders/Software.html
+  fullName: Software Encoder Parameters
+- uid: Server-Transcoding-Encoders-Vaapi
+  name: VAAPI
+  href: articles/server/transcoding/configuration/encoders/VAAPI.html
+  fullName: VAAPI Encoder Parameters
+- uid: Server-Transcoding-Encoders-VideoToolbox
+  name: VideoToolbox
+  href: articles/server/transcoding/configuration/encoders/VideoToolbox.html
+  fullName: VideoToolbox Encoder Parameters
+- uid: Server-Transcoding-Encoders-Vulkan
+  name: Vulkan
+  href: articles/server/transcoding/configuration/encoders/Vulkan.html
+  fullName: Vulkan Encoder Parameters
 - uid: Server-Transcoding-Expert-Conditions
   name: Node Conditions
   href: articles/server/transcoding/configuration/Expert-Conditions.html
@@ -502,10 +542,48 @@ references:
 - uid: Server-Transcoding-Expert-Nodes
   name: Node Types
   href: articles/server/transcoding/configuration/Expert-Node-Types.html
+- uid: Server-Transcoding-Filters
+  name: Filters
+  href: articles/server/transcoding/configuration/filters/Filters.html
+  fullName: Filter Parameters
+- uid: Server-Transcoding-Filters-ToneMapping
+  name: Tone Mapping
+  href: articles/server/transcoding/configuration/filters/Tone-Mapping.html
+  fullName: Tone Mapping Filters
+- uid: Server-Transcoding-Graph-Editing
+  name: Editing the Graph
+  href: articles/server/transcoding/configuration/Graph-Editing.html
+- uid: Server-Transcoding-Logs
+  name: Logs
+  href: articles/server/transcoding/operations/Logs.html
+  fullName: Detection Logs and FFmpeg Logs
+- uid: Server-Transcoding-OmniTranscode
+  name: OmniTranscode™
+  href: articles/server/transcoding/operations/OmniTranscode.html
+  fullName: OmniTranscode™ - Remote Transcoding Hosts
+- uid: Server-Transcoding-Operations
+  name: Operations
+  href: articles/server/transcoding/operations/Operations.html
+  fullName: Transcoding Operations
 - uid: Server-Transcoding-Settings
-  name: Settings
+  name: Advanced Settings
   href: articles/server/transcoding/Settings.html
-  fullName: Transcoding Settings
+  fullName: Advanced Transcoding Settings
+- uid: Server-Transcoding-Subtitle-Burn-In
+  name: Subtitle Burn-In
+  href: articles/server/transcoding/configuration/Subtitle-Burn-In.html
+  fullName: Subtitle Burn-In per Device
+- uid: Server-Transcoding-Subtitle-Closed-Captions
+  name: Closed Captions
+  href: articles/server/transcoding/subtitles/Closed-Captions.html
+- uid: Server-Transcoding-Subtitle-Content-Change
+  name: Content Change
+  href: articles/server/transcoding/subtitles/Content-Change.html
+  fullName: Subtitle Content Change
+- uid: Server-Transcoding-Subtitle-OCR
+  name: OCR Conversion
+  href: articles/server/transcoding/subtitles/OCR-Conversion.html
+  fullName: Subtitle OCR Conversion
 - uid: Server-Transcoding-Troubleshooting
   name: Transcoding Troubleshooting
   href: articles/server/transcoding/Troubleshooting.html

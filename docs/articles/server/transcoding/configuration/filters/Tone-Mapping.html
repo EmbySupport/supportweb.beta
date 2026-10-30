@@ -1,0 +1,425 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="utf-8">
+  <title>Tone Mapping | Emby Documentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="docfx 2.59.2.0">
+  <meta name="theme-color" content="#f7f8f9">
+  
+  <link rel="canonical" href="https://emby.media/support/articles/server/transcoding/configuration/filters/Tone-Mapping.html">
+  <meta property="og:title" content="Tone Mapping | Emby Documentation">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://emby.media/support/articles/server/transcoding/configuration/filters/Tone-Mapping.html">
+  <meta property="og:site_name" content="Emby Documentation">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://emby.media/support/articles/server/transcoding/configuration/filters/Tone-Mapping.html","url":"https://emby.media/support/articles/server/transcoding/configuration/filters/Tone-Mapping.html","name":"Tone Mapping","inLanguage":"en","headline":"Tone Mapping","articleSection":"Emby Server","author":{"@type":"Organization","name":"Emby LLC","url":"https://emby.media/"},"copyrightHolder":{"@type":"Organization","name":"Emby LLC","url":"https://emby.media/"},"isAccessibleForFree":true,"isFamilyFriendly":true},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Support Home","item":"https://emby.media/support/index.html"},{"@type":"ListItem","position":2,"name":"Emby Server","item":"https://emby.media/support/articles/Quick-Start.html"},{"@type":"ListItem","position":3,"name":"Transcoding","item":"https://emby.media/support/articles/server/transcoding/Transcoding.html"},{"@type":"ListItem","position":4,"name":"Configuration","item":"https://emby.media/support/articles/server/transcoding/configuration/Transcoding-Configuration.html"},{"@type":"ListItem","position":5,"name":"Filters","item":"https://emby.media/support/articles/server/transcoding/configuration/filters/Filters.html"},{"@type":"ListItem","position":6,"name":"Tone Mapping","item":"https://emby.media/support/articles/server/transcoding/configuration/filters/Tone-Mapping.html"}]}]}</script>
+  <link rel="shortcut icon" href="../../../../../favicon.ico">
+  <script type="text/javascript" src="../../../../../styles/theme-config.js"></script>
+  <link rel="stylesheet" href="../../../../../styles/docfx.vendor.css">
+  <link rel="stylesheet" href="../../../../../styles/docfx.css">
+  <link rel="stylesheet" href="../../../../../styles/main.css">
+  <link rel="stylesheet" href="../../../../../styles/header.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
+  <link rel="stylesheet" href="../../../../../styles/theme.css">
+  <meta property="docfx:navrel" content="../../../../../toc.html">
+  <meta property="docfx:tocrel" content="../../../../toc.html">
+  <meta property="docfx:uid" content="Server-Transcoding-Filters-ToneMapping">
+  
+  <meta property="docfx:rel" content="../../../../../">
+  
+  <script type="text/javascript" src="../../../../../nav.js"></script>
+  <script type="text/javascript" src="../../../../toc.js"></script>
+
+</head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      
+      <header class="site-header">
+        <nav class="nav container" aria-label="Primary navigation">
+          <a class="brand" href="https://emby.media/" aria-label="Emby home">
+            
+            <img class="logo-on-dark" src="../../../../../images/logo.png" alt="Emby">
+            <img class="logo-on-light" src="../../../../../images/logo-dark-text.png" alt="Emby">
+          </a>
+          <a class="site-title-link" href="../../../../../index.html"><span class="site-title">Emby <strong>Docs</strong></span></a>
+          <button class="menu-button" type="button" aria-expanded="false" aria-controls="navbar" aria-label="Open menu">&#9776;</button>
+          <div class="nav-links" id="navbar">
+            <ul class="nav-links-list navbar-nav">
+                
+                    <li>
+                      <a href="https://emby.media/" title="Emby Home">Emby Home</a>
+                    </li>
+                    <li>
+                      <a href="../../../../../index.html" title="Support Home">Support Home</a>
+                    </li>
+                    <li>
+                      <a href="../../../../../articles/Quick-Start.html" title="Server Docs" class="is-current" aria-current="page">Server Docs</a>
+                    </li>
+                    <li>
+                      <a href="../../../../../articles/Apps.html" title="Client Docs">Client Docs</a>
+                    </li>
+                    <li>
+                      <a href="../../../../../articles/Emby-Premiere.html" title="Premiere Docs">Premiere Docs</a>
+                    </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <script>
+        (function () {
+          var button = document.querySelector('.site-header .menu-button');
+          var links = document.querySelector('.site-header .nav-links');
+          if (!button || !links) { return; }
+          button.addEventListener('click', function () {
+            var isOpen = links.classList.toggle('open');
+            button.setAttribute('aria-expanded', String(isOpen));
+            button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+          });
+        }());
+      </script>
+      
+      <div class="subnav navbar navbar-default">
+        <div class="container">
+          <nav class="hide-when-search" id="breadcrumb" aria-label="Breadcrumb">
+            <ol class="breadcrumb">
+              <li><a href="../../../../../index.html">Support Home</a></li>
+              <li><a href="../../../../Quick-Start.html">Emby Server</a></li>
+              <li><a href="../../../../server/transcoding/Transcoding.html">Transcoding</a></li>
+              <li><a href="../../../../server/transcoding/configuration/Transcoding-Configuration.html">Configuration</a></li>
+              <li><a href="../../../../server/transcoding/configuration/filters/Filters.html">Filters</a></li>
+              <li><span aria-current="page">Tone Mapping</span></li>
+              
+            </ol>
+          </nav>
+      
+      	<div class="breadcrumpsearch">
+      	  <form class="navbar-form navbar-right" role="search" id="search">
+      		<div class="form-group">
+      		  <i class="fa fa-search" aria-hidden="true"></i>
+      		  <label class="sr-only" for="search-query">Search support topics</label>
+      		  <input type="text" class="form-control" id="search-query" placeholder="Search support topics" autocomplete="off">
+      		</div>
+      	  </form>
+      	</div>
+        </div>
+      </div>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <nav id="sidetoc" aria-label="Documentation table of contents"></nav>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Server-Transcoding-Filters-ToneMapping">
+<h1>Tone Mapping</h1>
+
+<h4 class="long-title">Tone Mapping Filters</h4>
+
+<p>These are the filters offered in the <strong>Tone Mapping</strong> section of a device configuration and in the tone
+mapping for image extraction. Filters that share the same parameters are described together. Where filters
+are selected, and how the parameters dialog works, is described in <a href="Filters.html">Filters</a>.</p>
+<p>Choices are quoted here without the value that the dialog shows after them in square brackets.</p>
+<h2 id="emby-tonemap">Emby Tonemap</h2>
+<p>Emby's own tone mapping filter, for all four kinds of HDR. For <a class="xref" href="https://emby.media/learn/articles/video/hdr/formats/HDR10-Plus.html">HDR10+</a> and
+<a class="xref" href="https://emby.media/learn/articles/video/hdr/formats/dolby-vision/Dolby-Vision.html">Dolby Vision</a> profiles 5 and 8 it uses the per-scene metadata of the video.</p>
+<ul>
+<li><strong>Emby Tonemap</strong> (<code>embytonemap</code>) - Software, on the <a class="xref" href="https://emby.media/learn/articles/video/tone-mapping/execution/Tone-Mapping-CPU.html">CPU</a></li>
+<li><strong>Emby Tonemap CUDA</strong> (<code>embytonemap_cuda</code>) - <a class="xref" href="https://emby.media/learn/articles/video/tone-mapping/execution/gpu/Tone-Mapping-CUDA.html">Nvidia CUDA</a></li>
+<li><strong>Emby Tonemap OpenCL</strong> (<code>embytonemap_opencl</code>) - QSV on D3D11, QSV on VAAPI, VAAPI (Intel), AMF on D3D11
+and Rockchip, when <a class="xref" href="https://emby.media/learn/articles/video/tone-mapping/execution/gpu/Tone-Mapping-OpenCL.html">OpenCL</a> is available on the device</li>
+<li><strong>Emby Tonemap Vulkan</strong> (<code>embytonemap_vulkan</code>) - Vulkan (Nvidia), Vulkan (Intel), Vulkan (AMD) and AMF on
+Vulkan, when <a class="xref" href="https://emby.media/learn/articles/video/tone-mapping/execution/gpu/Tone-Mapping-Vulkan.html">Vulkan</a> is available on the device</li>
+</ul>
+<p><img src="images/emby-tonemap-software.jpg" alt="Emby Tonemap software parameters for HDR10"></p>
+<p><strong>Tonemap Algorithm</strong> - the curve that fits the HDR brightness range into SDR. It decides how bright the
+picture looks overall and how highlights are compressed - see <a href="#algorithm-choices">Algorithm Choices</a>.
+Always shown. The choices are <em>SMPTE ST 2094-40</em>, <em>SMPTE ST 2094-10</em>, <em>BT.2390</em>, <em>Spline</em>, <em>Linear</em>,
+<em>Gamma</em>, <em>Clip</em>, <em>Reinhard</em>, <em>Hable</em>, <em>Mobius</em> and <em>ITU-R BT.2446 Method A</em>; Emby Tonemap Vulkan lists
+<em>Spline</em> last. The default, and which choices are offered, depend on the kind of HDR:</p>
+<table>
+<thead>
+<tr>
+<th>Kind of HDR</th>
+<th>Default</th>
+<th>Not offered</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HDR10</td>
+<td>BT.2390</td>
+<td>SMPTE ST 2094-40, SMPTE ST 2094-10</td>
+</tr>
+<tr>
+<td>HDR10+</td>
+<td>SMPTE ST 2094-40</td>
+<td>SMPTE ST 2094-10</td>
+</tr>
+<tr>
+<td>DV 5/8</td>
+<td>SMPTE ST 2094-10</td>
+<td>SMPTE ST 2094-40</td>
+</tr>
+<tr>
+<td>HLG</td>
+<td>BT.2390</td>
+<td>SMPTE ST 2094-40, SMPTE ST 2094-10, ITU-R BT.2446 Method A</td>
+</tr>
+</tbody>
+</table>
+<p>An HDR10 entry chosen in the HDR10+ list behaves as described for HDR10.</p>
+<p><strong>Tonemap Parameter</strong> - fine-tunes the Reinhard and Mobius curves, and is only shown when one of them is
+selected. With Reinhard it sets the contrast at peak brightness: higher values make bright areas relatively
+brighter. With Mobius it sets the brightness level below which the picture is left unchanged: higher
+values keep more of the original image, at the cost of detail in the brightest areas. A decimal number,
+empty by default, which uses the filter's built-in value.</p>
+<p><strong>Signal Peak Override</strong> - the peak brightness of the source in <a class="xref" href="https://emby.media/learn/articles/video/hdr/HDR-Luminance-Nits.html">nits</a>,
+which is normally taken from the video's <a class="xref" href="https://emby.media/learn/articles/video/hdr/metadata-and-light-levels/HDR-Metadata.html">HDR metadata</a>. Only set it when that
+metadata is missing or wrong: too high a value darkens the picture, too low a value clips the highlights.
+Empty by default, which uses the metadata. Always shown - except for Emby Tonemap CUDA, which does not have
+this parameter.</p>
+<h2 id="super-tonemap">Super Tonemap</h2>
+<p>A fast tone mapping filter for <a class="xref" href="https://emby.media/learn/articles/video/hdr/formats/HDR10.html">HDR10</a>. It does not use per-scene metadata: chosen in the
+HDR10+ list, it tone maps HDR10+ video as HDR10.</p>
+<ul>
+<li><strong>Super Tonemap</strong> (<code>supertonemap</code>) - Software</li>
+<li><strong>Super Tonemap OpenCL</strong> (<code>supertonemap_opencl</code>) - QSV on D3D11, when OpenCL is available on the device</li>
+</ul>
+<p><img src="images/super-tonemap.jpg" alt="Super Tonemap's algorithm, desaturation, and signal peak controls"></p>
+<p><strong>Tonemap Algorithm</strong> - the curve that fits the HDR brightness range into SDR. It decides how bright the
+picture looks overall and how highlights are compressed - see <a href="#algorithm-choices">Algorithm Choices</a>.
+Always shown. The choices are <em>Hable</em>, <em>Reinhard</em>, <em>Mobius</em>, <em>BT.2390</em> (Super Tonemap only), <em>Linear</em>,
+<em>Gamma</em> and <em>Clip</em>. The default is <em>Hable</em>.</p>
+<p><strong>Tonemap Parameter</strong> - fine-tunes the Reinhard and Mobius curves, and is only shown when one of them is
+selected. With Reinhard it sets the contrast at peak brightness: higher values make bright areas relatively
+brighter. With Mobius it sets the brightness level below which the picture is left unchanged: higher
+values keep more of the original image, at the cost of detail in the brightest areas. A decimal number,
+empty by default, which uses the filter's built-in value.</p>
+<p><strong>Desaturation</strong> - softly fades the colour of highlights above this brightness level towards white, which
+avoids unnaturally vivid, blown-out colours. Higher values keep more of the original colour; 0 turns it
+off. Always shown. A decimal number, empty by default, which uses ffmpeg's built-in value - 2.0 for Super
+Tonemap and 0.5 for Super Tonemap OpenCL. Either only affects very bright highlights such as skies or
+direct sunlight.</p>
+<p><strong>Signal Peak Override</strong> - the peak brightness of the source in nits, which is normally taken from the
+video's HDR metadata. Only set it when that metadata is missing or wrong: too high a value darkens the
+picture, too low a value clips the highlights. Empty by default, which uses the metadata. Always shown.</p>
+<h2 id="extra-tonemap">Extra Tonemap</h2>
+<p>An OpenCL tone mapping filter for HDR10. It does not use per-scene metadata: chosen in the HDR10+ list, it
+tone maps HDR10+ video as HDR10.</p>
+<ul>
+<li><strong>Extra Tonemap OpenCL</strong> (<code>extratonemap_opencl</code>) - QSV on D3D11, QSV on VAAPI, VAAPI (Intel) and
+Rockchip, when OpenCL is available on the device</li>
+</ul>
+<p><strong>Tonemap Algorithm</strong> - the curve that fits the HDR brightness range into SDR. It decides how bright the
+picture looks overall and how highlights are compressed - see <a href="#algorithm-choices">Algorithm Choices</a>.
+Always shown. The choices are <em>Hable</em>, <em>Reinhard</em>, <em>Mobius</em>, <em>Linear</em>, <em>Gamma</em> and <em>Clip</em>. The default is
+<em>Hable</em>.</p>
+<p><strong>Tonemap Parameter</strong> - fine-tunes the Reinhard and Mobius curves, and is only shown when one of them is
+selected. With Reinhard it sets the contrast at peak brightness: higher values make bright areas relatively
+brighter. With Mobius it sets the brightness level below which the picture is left unchanged: higher
+values keep more of the original image, at the cost of detail in the brightest areas. A decimal number,
+empty by default, which uses the filter's built-in value.</p>
+<p><strong>Desaturation</strong> - softly fades the colour of highlights above this brightness level towards white, which
+avoids unnaturally vivid, blown-out colours. Higher values keep more of the original colour; 0 turns it
+off. Always shown. A decimal number, empty by default, which uses ffmpeg's built-in value of 0.5.</p>
+<p><strong>Signal Peak Override</strong> - the peak brightness of the source in nits, which is normally taken from the
+video's HDR metadata. Only set it when that metadata is missing or wrong: too high a value darkens the
+picture, too low a value clips the highlights. Empty by default, which uses the metadata. Always shown.</p>
+<h2 id="tunemap">Tunemap</h2>
+<p>A tone mapping filter for HDR10, Dolby Vision profiles 5 and 8, and <a class="xref" href="https://emby.media/learn/articles/video/hdr/formats/HLG.html">HLG</a>, which adapts its
+curve to each scene. For Dolby Vision it applies the video's
+<a class="xref" href="https://emby.media/learn/articles/video/hdr/formats/dolby-vision/metadata-and-layers/Dolby-Vision-RPU.html">Dolby Vision metadata</a>. The HDR10 entry is also listed for HDR10+, where it
+tone maps HDR10+ video as HDR10.</p>
+<ul>
+<li><strong>Tunemap CUDA</strong> (<code>tunemap_cuda</code>) - Nvidia CUDA</li>
+<li><strong>Tunemap OpenCL</strong> (<code>tunemap_opencl</code>) - QSV on D3D11, QSV on VAAPI, VAAPI (Intel), AMF on D3D11 and
+Rockchip, when OpenCL is available on the device</li>
+</ul>
+<p><img src="images/tunemap-opencl.jpg" alt="Tunemap OpenCL algorithm, mode, and performance tradeoff parameters"></p>
+<p>The defaults are the same for every kind of HDR.</p>
+<p><strong>Tonemap Algorithm</strong> - the curve that fits the HDR brightness range into SDR. It decides how bright the
+picture looks overall and how highlights are compressed - see <a href="#algorithm-choices">Algorithm Choices</a>.
+Always shown. The choices are <em>Hable</em>, <em>Reinhard</em>, <em>Mobius</em>, <em>BT.2390</em>, <em>Linear</em>, <em>Gamma</em> and <em>Clip</em>. The
+default is <em>Hable</em>.</p>
+<p><strong>Tonemap Mode</strong> - which brightness of a pixel the curve is applied to, which decides how well colours hold
+up. Always shown. The default is <em>Automatic</em>.</p>
+<ul>
+<li><em>Brightest Channel</em> - the brightest colour channel of each pixel. Simple and fast, but can shift colours
+slightly</li>
+<li><em>Per-Channel</em> - red, green and blue each on their own. Keeps saturation well, but can shift the hue of
+strongly coloured highlights</li>
+<li><em>Relative Luminance</em> - the overall brightness of the pixel, scaling all channels together. Keeps hue and
+saturation better than Per-Channel</li>
+<li><em>ICtCp Intensity</em> - the intensity channel of the ICtCp colour space. Perceptually the most accurate, at a
+slightly higher processing cost</li>
+<li><em>Automatic</em> - ffmpeg chooses, based on the capabilities of the GPU</li>
+</ul>
+<p><strong>Performance Tradeoff</strong> - whether to trade accuracy for speed. Always shown. The default is
+<em>Disabled (best quality)</em>.</p>
+<ul>
+<li><em>Automatic</em> - ffmpeg decides, based on the GPU</li>
+<li><em>Disabled (best quality)</em> - computes the full curve for every pixel. Highest quality, at the highest
+processing cost</li>
+<li><em>Enabled (best performance)</em> - uses a cheaper approximation, such as a precomputed lookup table. Less load
+on slower GPUs, at a small cost in accuracy</li>
+</ul>
+<p><strong>Tonemap Parameter</strong> - fine-tunes the Reinhard and Mobius curves, and is only shown when one of them is
+selected. With Reinhard it sets the contrast at peak brightness: higher values make bright areas relatively
+brighter. With Mobius it sets the brightness level below which the picture is left unchanged: higher
+values keep more of the original image, at the cost of detail in the brightest areas. A decimal number,
+empty by default, which uses the filter's built-in value.</p>
+<p><strong>Desaturation</strong> - softly fades the colour of highlights above this brightness level towards white, which
+avoids unnaturally vivid, blown-out colours. Higher values keep more of the original colour; 0 turns it
+off. Always shown. A decimal number, empty by default, which uses ffmpeg's built-in value of 0 - no
+desaturation.</p>
+<p><strong>Signal Peak Override</strong> - the peak brightness of the source in nits, which is normally taken from the
+video's HDR metadata. Only set it when that metadata is missing or wrong: too high a value darkens the
+picture, too low a value clips the highlights. Empty by default, which uses the metadata. Always shown.</p>
+<p><strong>Scene Detection Threshold</strong> - how readily the filter detects a scene change while it
+<a class="xref" href="https://emby.media/learn/articles/video/tone-mapping/color-and-luminance/Tone-Mapping-Scene-Adaptive.html">adapts its curve to each scene</a>. Lower values make it react to
+more scene changes; higher values to fewer, so that after a cut the new scene can keep the previous scene's
+brightness for a moment. Always shown. A decimal number, empty by default, which uses ffmpeg's built-in
+value of 0.2.</p>
+<h2 id="libplacebo">libplacebo</h2>
+<p>The tone mapping of the libplacebo video rendering library, for all four kinds of HDR. For HDR10+ and
+Dolby Vision profiles 5 and 8 it uses the per-scene metadata of the video.</p>
+<ul>
+<li><strong>libplacebo</strong> (<code>libplacebo</code>) - Vulkan (Nvidia), Vulkan (Intel), Vulkan (AMD) and AMF on Vulkan, when
+Vulkan is available on the device</li>
+</ul>
+<p><img src="images/libplacebo.jpg" alt="libplacebo with the Reinhard algorithm selected, revealing Tonemap Parameter"></p>
+<p><strong>Tonemap Algorithm</strong> - the curve that fits the HDR brightness range into SDR. It decides how bright
+the picture looks overall and how highlights are compressed - see <a href="#algorithm-choices">Algorithm Choices</a>.
+Always shown. The choices are <em>SMPTE ST 2094-40</em>, <em>SMPTE ST 2094-10</em>, <em>BT.2390</em>, <em>Spline</em>, <em>Clip</em>,
+<em>ITU-R BT.2446 Method A</em>, <em>Reinhard</em>, <em>Mobius</em>, <em>Hable</em>, <em>Gamma</em>, <em>Linear</em> and <em>Automatic</em>. <em>Automatic</em>
+lets libplacebo pick the curve that suits the source. The default, and which choices are offered, depend
+on the kind of HDR:</p>
+<table>
+<thead>
+<tr>
+<th>Kind of HDR</th>
+<th>Default</th>
+<th>Not offered</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HDR10</td>
+<td>BT.2390</td>
+<td>SMPTE ST 2094-40, SMPTE ST 2094-10</td>
+</tr>
+<tr>
+<td>HDR10+</td>
+<td>SMPTE ST 2094-40</td>
+<td>SMPTE ST 2094-10</td>
+</tr>
+<tr>
+<td>DV 5/8</td>
+<td>SMPTE ST 2094-10</td>
+<td>SMPTE ST 2094-40</td>
+</tr>
+<tr>
+<td>HLG</td>
+<td>BT.2390</td>
+<td>SMPTE ST 2094-40, SMPTE ST 2094-10, ITU-R BT.2446 Method A</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tonemap Parameter</strong> - tunes the shape of the selected curve. What it controls depends on the curve -
+for example the contrast of Reinhard, or the brightness below which Mobius leaves the picture unchanged.
+Only shown for <em>Reinhard</em>, <em>Mobius</em>, <em>Gamma</em>, <em>Linear</em> and <em>Spline</em>. A decimal number from 0 to 100, empty
+by default, which uses libplacebo's built-in value for the selected curve.</p>
+<h2 id="algorithm-choices">Algorithm Choices</h2>
+<p>What the <a class="xref" href="https://emby.media/learn/articles/video/tone-mapping/curves/Tone-Mapping-Curves.html">tone mapping curves</a> do with the picture. Not every filter offers
+every curve.</p>
+<ul>
+<li><strong>SMPTE ST 2094-40</strong> - follows the <a class="xref" href="https://emby.media/learn/articles/video/tone-mapping/curves/standards-based/Tone-Mapping-Curve-ST2094-40.html">per-scene metadata</a> of
+HDR10+ video. Only offered for HDR10+</li>
+<li><strong>SMPTE ST 2094-10</strong> - follows the <a class="xref" href="https://emby.media/learn/articles/video/tone-mapping/curves/standards-based/Tone-Mapping-Curve-ST2094-10.html">per-scene metadata</a> of
+Dolby Vision video. Only offered for DV 5/8</li>
+<li><strong>BT.2390</strong> - the <a class="xref" href="https://emby.media/learn/articles/video/tone-mapping/curves/standards-based/Tone-Mapping-Curve-BT2390.html">ITU-R reference curve</a>
+that most HDR-to-SDR converters use. A good, standards-based default. Does not use the parameter</li>
+<li><strong>Spline</strong> - a <a class="xref" href="https://emby.media/learn/articles/video/tone-mapping/curves/general-purpose/Tone-Mapping-Curve-Spline.html">polynomial spline</a> around a single pivot, which
+adapts to the brightness of the source</li>
+<li><strong>Linear</strong> - <a class="xref" href="https://emby.media/learn/articles/video/tone-mapping/curves/general-purpose/Tone-Mapping-Curve-Linear.html">scales all brightness evenly</a> to fit. Simple and
+predictable, but can look flat</li>
+<li><strong>Gamma</strong> - compresses the brightness range with a <a class="xref" href="https://emby.media/learn/articles/video/tone-mapping/curves/general-purpose/Tone-Mapping-Curve-Gamma.html">power curve</a>.
+Similar to Linear, but perceptually smoother</li>
+<li><strong>Clip</strong> - <a class="xref" href="https://emby.media/learn/articles/video/tone-mapping/curves/general-purpose/Tone-Mapping-Curve-Clip.html">cuts off</a> every value above
+the SDR range. Highlights lose their detail and colours can clip harshly</li>
+<li><strong>Reinhard</strong> - a simple, <a class="xref" href="https://emby.media/learn/articles/video/tone-mapping/curves/general-purpose/Tone-Mapping-Algorithm-Reinhard.html">classic curve</a> that compresses the
+whole brightness range smoothly. The parameter sets the contrast at peak brightness</li>
+<li><strong>Hable</strong> - a <a class="xref" href="https://emby.media/learn/articles/video/tone-mapping/curves/general-purpose/Tone-Mapping-Algorithm-Hable.html">filmic curve</a>
+that <a class="xref" href="https://emby.media/learn/articles/video/tone-mapping/color-and-luminance/Tone-Mapping-Highlight-Roll-Off.html">rolls off highlights</a> gradually instead of clipping
+them. A natural, cinematic look, somewhat darker overall. Does not use the parameter</li>
+<li><strong>Mobius</strong> - leaves colours and contrast within the SDR range <a class="xref" href="https://emby.media/learn/articles/video/tone-mapping/curves/general-purpose/Tone-Mapping-Algorithm-Mobius.html">mostly untouched</a>
+and maps brighter values smoothly into it. The parameter sets the brightness below which nothing changes</li>
+<li><strong>ITU-R BT.2446 Method A</strong> - an <a class="xref" href="https://emby.media/learn/articles/video/tone-mapping/curves/standards-based/Tone-Mapping-Curve-BT2446A.html">alternative standards-based curve</a>.
+Not offered for HLG</li>
+</ul>
+<h2 id="filters-without-parameters">Filters Without Parameters</h2>
+<p>These filters run with fixed settings, so the gear button beside them is disabled. Each tone maps HDR10 and
+HLG. The HDR10 entry is also listed for HDR10+, where it tone maps HDR10+ video as HDR10.</p>
+<ul>
+<li><strong>Tonemap QSV</strong> (<code>vpp_qsv</code>) - Intel Quick Sync tone mapping, in QSV on D3D11 and QSV on VAAPI</li>
+<li><strong>Tonemap VAAPI</strong> (<code>tonemap_vaapi</code>) - VAAPI tone mapping, in VAAPI (Intel)</li>
+<li><strong>Tonemap AMF</strong> (<code>vpp_amf</code>) - AMD AMF tone mapping, in AMF on D3D11 and AMF on Vulkan</li>
+</ul>
+<h2 id="further-reading">Further Reading</h2>
+<p><a class="xref" href="https://emby.media/learn/articles/video/tone-mapping/fundamentals/Tone-Mapping-HDR-to-SDR.html">How HDR-to-SDR Tone Mapping Works</a><br>
+<a class="xref" href="https://emby.media/learn/articles/video/tone-mapping/color-and-luminance/Tone-Mapping-Peak-Detection.html">Peak-Luminance Detection for Tone Mapping</a></p>
+
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix sdkversion" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="footer">
+          <div class="container footer-inner">
+            <div class="footer-copy">2026 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.</div>
+            <div class="footer-actions">
+              <span class="contribution">
+                  <a href="https://github.com/EmbySupport/Emby.Docs/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Article%20Details%0A%0A**Do%20not%20remove%20this%20section**%0A%0A*%20uid%3A%20Server-Transcoding-Filters-ToneMapping%0A*%20Title%3A%20Tone%20Mapping%0A*%20Article%3A%20https%3A%2F%2Fgithub.com%2FEmbySupport%2FEmby.Docs%2Fblob%2Fmaster%2Fserver%2Ftranscoding%2Fconfiguration%2Ffilters%2FTone-Mapping.md%0A*%20LegacyUrl%3A%20https%3A%2F%2Fsupport.emby.mediaundefined%0A" class="contribution-link" title="Feedback on this article"><div class="far fa-comment-alt fa-sm"></div></a>
+                  <a href="https://github.com/EmbySupport/Emby.Docs/blob/master/server/transcoding/configuration/filters/Tone-Mapping.md/#L1" class="contribution-link" title="View article source"><div class="far fa-edit fa-sm"></div></a>
+              </span>
+              <a href="#top" class="back-to-top">Back to Top</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../../../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../../styles/main.js"></script>
+  </body>
+</html>

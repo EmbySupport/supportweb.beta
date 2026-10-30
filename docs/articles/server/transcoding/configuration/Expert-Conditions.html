@@ -1,34 +1,40 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
-<html>
+<html lang="en">
   
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Node Conditions | Emby Documentation </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Node Conditions | Emby Documentation ">
-    <meta name="generator" content="docfx 2.59.2.0">
-    <meta name="theme-color" content="#090d0f">
-    
-    <link rel="shortcut icon" href="../../../../favicon.ico">
-    <script type="text/javascript" src="../../../../styles/theme-config.js"></script>
-    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../../../styles/docfx.css">
-    <link rel="stylesheet" href="../../../../styles/main.css">
-    <link rel="stylesheet" href="../../../../styles/header.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
-    <link rel="stylesheet" href="../../../../styles/theme.css">
-    <meta property="docfx:navrel" content="../../../../toc.html">
-    <meta property="docfx:tocrel" content="../../../toc.html">
-    <meta property="docfx:uid" content="Server-Transcoding-Expert-Conditions">
-    
-    <meta property="docfx:rel" content="../../../../">
-    
-    <script type="text/javascript" src="../../../../nav.js"></script>
-    <script type="text/javascript" src="../../../toc.js"></script>
+<head>
+  <meta charset="utf-8">
+  <title>Node Conditions | Emby Documentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="docfx 2.59.2.0">
+  <meta name="theme-color" content="#f7f8f9">
   
-  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  <link rel="canonical" href="https://emby.media/support/articles/server/transcoding/configuration/Expert-Conditions.html">
+  <meta property="og:title" content="Node Conditions | Emby Documentation">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://emby.media/support/articles/server/transcoding/configuration/Expert-Conditions.html">
+  <meta property="og:site_name" content="Emby Documentation">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://emby.media/support/articles/server/transcoding/configuration/Expert-Conditions.html","url":"https://emby.media/support/articles/server/transcoding/configuration/Expert-Conditions.html","name":"Node Conditions","inLanguage":"en","headline":"Node Conditions","articleSection":"Emby Server","author":{"@type":"Organization","name":"Emby LLC","url":"https://emby.media/"},"copyrightHolder":{"@type":"Organization","name":"Emby LLC","url":"https://emby.media/"},"isAccessibleForFree":true,"isFamilyFriendly":true},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Support Home","item":"https://emby.media/support/index.html"},{"@type":"ListItem","position":2,"name":"Emby Server","item":"https://emby.media/support/articles/Quick-Start.html"},{"@type":"ListItem","position":3,"name":"Transcoding","item":"https://emby.media/support/articles/server/transcoding/Transcoding.html"},{"@type":"ListItem","position":4,"name":"Configuration","item":"https://emby.media/support/articles/server/transcoding/configuration/Transcoding-Configuration.html"},{"@type":"ListItem","position":5,"name":"Expert Mode","item":"https://emby.media/support/articles/server/transcoding/configuration/Expert-Mode.html"},{"@type":"ListItem","position":6,"name":"Node Conditions","item":"https://emby.media/support/articles/server/transcoding/configuration/Expert-Conditions.html"}]}]}</script>
+  <link rel="shortcut icon" href="../../../../favicon.ico">
+  <script type="text/javascript" src="../../../../styles/theme-config.js"></script>
+  <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+  <link rel="stylesheet" href="../../../../styles/docfx.css">
+  <link rel="stylesheet" href="../../../../styles/main.css">
+  <link rel="stylesheet" href="../../../../styles/header.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
+  <link rel="stylesheet" href="../../../../styles/theme.css">
+  <meta property="docfx:navrel" content="../../../../toc.html">
+  <meta property="docfx:tocrel" content="../../../toc.html">
+  <meta property="docfx:uid" content="Server-Transcoding-Expert-Conditions">
+  
+  <meta property="docfx:rel" content="../../../../">
+  
+  <script type="text/javascript" src="../../../../nav.js"></script>
+  <script type="text/javascript" src="../../../toc.js"></script>
+
+</head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       
       <header class="site-header">
@@ -38,15 +44,26 @@
             <img class="logo-on-dark" src="../../../../images/logo.png" alt="Emby">
             <img class="logo-on-light" src="../../../../images/logo-dark-text.png" alt="Emby">
           </a>
+          <a class="site-title-link" href="../../../../index.html"><span class="site-title">Emby <strong>Docs</strong></span></a>
           <button class="menu-button" type="button" aria-expanded="false" aria-controls="navbar" aria-label="Open menu">&#9776;</button>
           <div class="nav-links" id="navbar">
-            <ul class="nav-links-list">
+            <ul class="nav-links-list navbar-nav">
                 
-                    <li><a href="https://emby.media/about.html" title="How it Works">How it Works</a></li>
-                    <li><a href="https://emby.media/download.html" title="Download">Download</a></li>
-                    <li><a href="https://emby.media/premiere.html" title="Premiere">Premiere</a></li>
-                    <li><a href="../../../../index.html" title="Support" class="is-current" aria-current="page">Support</a></li>
-                    <li><a href="https://emby.media/connect.html" title="Emby Connect">Emby Connect</a></li>
+                    <li>
+                      <a href="https://emby.media/" title="Emby Home">Emby Home</a>
+                    </li>
+                    <li>
+                      <a href="../../../../index.html" title="Support Home">Support Home</a>
+                    </li>
+                    <li>
+                      <a href="../../../../articles/Quick-Start.html" title="Server Docs" class="is-current" aria-current="page">Server Docs</a>
+                    </li>
+                    <li>
+                      <a href="../../../../articles/Apps.html" title="Client Docs">Client Docs</a>
+                    </li>
+                    <li>
+                      <a href="../../../../articles/Emby-Premiere.html" title="Premiere Docs">Premiere Docs</a>
+                    </li>
             </ul>
           </div>
         </nav>
@@ -66,16 +83,23 @@
       
       <div class="subnav navbar navbar-default">
         <div class="container">
-          <div class="hide-when-search" id="breadcrumb">
-      	  <ul class="breadcrumb">
-      		<li></li>
-      	  </ul>
-      	</div>
+          <nav class="hide-when-search" id="breadcrumb" aria-label="Breadcrumb">
+            <ol class="breadcrumb">
+              <li><a href="../../../../index.html">Support Home</a></li>
+              <li><a href="../../../Quick-Start.html">Emby Server</a></li>
+              <li><a href="../../../server/transcoding/Transcoding.html">Transcoding</a></li>
+              <li><a href="../../../server/transcoding/configuration/Transcoding-Configuration.html">Configuration</a></li>
+              <li><a href="../../../server/transcoding/configuration/Expert-Mode.html">Expert Mode</a></li>
+              <li><span aria-current="page">Node Conditions</span></li>
+              
+            </ol>
+          </nav>
       
       	<div class="breadcrumpsearch">
       	  <form class="navbar-form navbar-right" role="search" id="search">
       		<div class="form-group">
       		  <i class="fa fa-search" aria-hidden="true"></i>
+      		  <label class="sr-only" for="search-query">Search support topics</label>
       		  <input type="text" class="form-control" id="search-query" placeholder="Search support topics" autocomplete="off">
       		</div>
       	  </form>
@@ -97,13 +121,14 @@
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
+            <nav id="sidetoc" aria-label="Documentation table of contents"></nav>
           </div>
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="Server-Transcoding-Expert-Conditions">
 <h1>Node Conditions</h1>
+
 
 
 <p>Every node in the graph can carry conditions, which decide whether that node applies to the operation being
@@ -127,7 +152,7 @@ conditions on top.</p>
 <tbody>
 <tr>
 <td>Operation</td>
-<td>The kind of operation: Conversions, LiveTV, Playback, HlsPlayback</td>
+<td>The kind of operation: Conversions, LiveTV, Playback, HlsPlayback, LiveStream</td>
 </tr>
 <tr>
 <td>Source Codec</td>
@@ -139,7 +164,7 @@ conditions on top.</p>
 </tr>
 <tr>
 <td>Processing</td>
-<td>A processing step the operation involves: Closed Captions, Tone Mapping, Subtitle Burn-In, Subtitle Overlay</td>
+<td>A processing step the operation involves: Closed Captions, <a class="xref" href="https://emby.media/learn/articles/video/tone-mapping/fundamentals/Tone-Mapping-HDR-to-SDR.html">Tone Mapping</a>, <a class="xref" href="https://emby.media/learn/articles/subtitles/emby-processing/overlay-filters/Subtitle-Burn-In.html">Subtitle Burn-In</a>, Subtitle Overlay</td>
 </tr>
 <tr>
 <td>User</td>
@@ -157,19 +182,91 @@ conditions on top.</p>
 </table>
 <p>An operation can involve more than one processing step at once - tone mapping and subtitle burn-in
 together, for instance.</p>
+<p><img src="images/expert-condition-fields.jpg" alt="The Condition Builder's field selector"></p>
 <h2 id="building-a-condition">Building a Condition</h2>
-<p>TBA - working with the filter builder itself: adding criteria and nesting groups.</p>
-<p>Two things about what a filter can express are worth knowing while you do.</p>
-<p>Criteria compare a field against a value using <code>=</code>, <code>&lt;&gt;</code>, <code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code> or <code>&lt;=</code>, and text fields
-additionally support matching on part of a value. Which of these the builder offers depends on the type of
-the field you picked.</p>
-<p>Criteria are combined with <strong>and</strong> or <strong>or</strong>, but not both within one group. To express a mixture, nest a
-group inside another - the inner group's combination is independent of the outer one's.</p>
+<p>The <strong>Conditions</strong> command on a node opens the Condition Builder. A condition compares one field with a
+value - for example <em>Output Codec Equals AV1</em>. Conditions are collected in groups, and groups can be nested
+inside each other, so there is no limit to how many conditions a node can have or how they are combined.</p>
+<p>The builder starts out with a single, empty group.</p>
+<h3 id="adding-and-removing-conditions">Adding and Removing Conditions</h3>
+<ol>
+<li>Click <strong>+</strong> next to a group and choose <strong>Add Condition</strong>.</li>
+<li>Click the field name of the new condition and pick the field to match on - see
+<a href="#available-fields">Available Fields</a>.</li>
+<li>Click the operation and pick how the field is compared - see <a href="#operations">Operations</a>.</li>
+<li>Click the value and enter what the field is compared with. Fields with a fixed set of values - the
+operation kinds, codecs, processing steps, users and libraries - offer them in a list.</li>
+</ol>
+<p>To remove a condition, or a group with everything in it, click the <strong>×</strong> button in front of it.</p>
+<p><img src="images/expert-conditions.jpg" alt="An And group matching HEVC output that requires tone mapping"></p>
+<h3 id="operations">Operations</h3>
+<p>Which operations the builder offers depends on the type of the field:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Operations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Operation, Source Codec, Output Codec, Processing, User, Library</td>
+<td>Equals, Does not equal, Is any of, Is none of</td>
+</tr>
+<tr>
+<td>Error Count</td>
+<td>Equals, Does not equal, Is greater than, Is greater than or equal to, Is less than, Is less than or equal to, Is between</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Is any of</strong> and <strong>Is none of</strong> take several values at once: <em>Output Codec Is any of H.264, HEVC</em> means the
+same as two Equals conditions in an Or group. <strong>Is between</strong> takes two values and includes both of them.</p>
+<h3 id="groups">Groups</h3>
+<p>A group combines its conditions with one logical operator, shown at the top of the group. Click it to
+choose another:</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>The group matches when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>And</td>
+<td>all of its conditions match</td>
+</tr>
+<tr>
+<td>Or</td>
+<td>at least one of its conditions matches</td>
+</tr>
+<tr>
+<td>Not And</td>
+<td>not all of its conditions match</td>
+</tr>
+<tr>
+<td>Not Or</td>
+<td>none of its conditions match</td>
+</tr>
+</tbody>
+</table>
+<p><img src="images/expert-condition-groups.jpg" alt="Choosing And, Or, Not And, or Not Or for a condition group"></p>
+<p>Conditions are combined with <strong>and</strong> or <strong>or</strong>, but not both within one group. To express a mixture, nest
+a group inside another with <strong>+</strong> and <strong>Add Group</strong>: the inner group counts as a single condition of the
+outer one, and its own operator is independent of the outer one's.</p>
+<p>For example, to have a node handle AV1 output for one library, and anything a particular user plays:</p>
+<pre><code>Or
+├── And
+│   ├── Output Codec   Equals   AV1
+│   └── Library        Equals   Movies
+└── User   Equals   Alice
+</code></pre>
+<p>Written out, that is <em>(Output Codec Equals AV1 And Library Equals Movies) Or User Equals Alice</em>.</p>
+<p>Save the dialog to update the node in the graph, then save the configuration to make the conditions take
+effect - see <a href="Transcoding-Configuration.html#saving">Saving</a>.</p>
 <h2 id="conditions-on-fallback-and-failure-points">Conditions on Fallback and Failure Points</h2>
 <p>Conditions on nodes that take part in fallback calculation are evaluated in the second pass just as they
 are in the first - see <a href="Expert-Fallback-Paths.html#fallback-paths-in-expert-mode">Fallback Paths</a>.</p>
-<!-- REVIEW: ErrorCount is documented here as an available condition field. Confirm the field name and the
-     values it takes once it is implemented. -->
 <p>What makes the two passes distinguishable from inside a condition is <strong>Error Count</strong>: the number of failed
 attempts that precede this node being used.</p>
 <ul>
@@ -204,8 +301,8 @@ added to the list - so the first fallback is evaluated with 1, the second with 2
 evaluation outright. Giving it <code>Error Count &gt; 0</code> leaves the first attempt alone while stopping any further
 ones - &quot;try this, but do not keep trying if it fails&quot; - see
 <a href="Expert-Node-Types.html#failure-point">Failure Point</a>.</p>
-<p>The same applies to a device entry marked as a fallback point: a condition on Error Count decides whether
-that entry is used as a fallback at all, and whether only as the first one.</p>
+<p>The same applies to a device node marked as a fallback point: a condition on Error Count decides whether
+that node is used as a fallback at all, and whether only as the first one.</p>
 
 
             </article>

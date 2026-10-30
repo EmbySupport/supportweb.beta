@@ -1,34 +1,40 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
-<html>
+<html lang="en">
   
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Graph Evaluation | Emby Documentation </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Graph Evaluation | Emby Documentation ">
-    <meta name="generator" content="docfx 2.59.2.0">
-    <meta name="theme-color" content="#090d0f">
-    
-    <link rel="shortcut icon" href="../../../../favicon.ico">
-    <script type="text/javascript" src="../../../../styles/theme-config.js"></script>
-    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../../../styles/docfx.css">
-    <link rel="stylesheet" href="../../../../styles/main.css">
-    <link rel="stylesheet" href="../../../../styles/header.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
-    <link rel="stylesheet" href="../../../../styles/theme.css">
-    <meta property="docfx:navrel" content="../../../../toc.html">
-    <meta property="docfx:tocrel" content="../../../toc.html">
-    <meta property="docfx:uid" content="Server-Transcoding-Expert-Graph">
-    
-    <meta property="docfx:rel" content="../../../../">
-    
-    <script type="text/javascript" src="../../../../nav.js"></script>
-    <script type="text/javascript" src="../../../toc.js"></script>
+<head>
+  <meta charset="utf-8">
+  <title>Graph Evaluation | Emby Documentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="docfx 2.59.2.0">
+  <meta name="theme-color" content="#f7f8f9">
   
-  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  <link rel="canonical" href="https://emby.media/support/articles/server/transcoding/configuration/Expert-Graph-Evaluation.html">
+  <meta property="og:title" content="Graph Evaluation | Emby Documentation">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://emby.media/support/articles/server/transcoding/configuration/Expert-Graph-Evaluation.html">
+  <meta property="og:site_name" content="Emby Documentation">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://emby.media/support/articles/server/transcoding/configuration/Expert-Graph-Evaluation.html","url":"https://emby.media/support/articles/server/transcoding/configuration/Expert-Graph-Evaluation.html","name":"Graph Evaluation","inLanguage":"en","headline":"Graph Evaluation","articleSection":"Emby Server","author":{"@type":"Organization","name":"Emby LLC","url":"https://emby.media/"},"copyrightHolder":{"@type":"Organization","name":"Emby LLC","url":"https://emby.media/"},"isAccessibleForFree":true,"isFamilyFriendly":true},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Support Home","item":"https://emby.media/support/index.html"},{"@type":"ListItem","position":2,"name":"Emby Server","item":"https://emby.media/support/articles/Quick-Start.html"},{"@type":"ListItem","position":3,"name":"Transcoding","item":"https://emby.media/support/articles/server/transcoding/Transcoding.html"},{"@type":"ListItem","position":4,"name":"Configuration","item":"https://emby.media/support/articles/server/transcoding/configuration/Transcoding-Configuration.html"},{"@type":"ListItem","position":5,"name":"Graph Evaluation","item":"https://emby.media/support/articles/server/transcoding/configuration/Expert-Graph-Evaluation.html"}]}]}</script>
+  <link rel="shortcut icon" href="../../../../favicon.ico">
+  <script type="text/javascript" src="../../../../styles/theme-config.js"></script>
+  <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+  <link rel="stylesheet" href="../../../../styles/docfx.css">
+  <link rel="stylesheet" href="../../../../styles/main.css">
+  <link rel="stylesheet" href="../../../../styles/header.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
+  <link rel="stylesheet" href="../../../../styles/theme.css">
+  <meta property="docfx:navrel" content="../../../../toc.html">
+  <meta property="docfx:tocrel" content="../../../toc.html">
+  <meta property="docfx:uid" content="Server-Transcoding-Expert-Graph">
+  
+  <meta property="docfx:rel" content="../../../../">
+  
+  <script type="text/javascript" src="../../../../nav.js"></script>
+  <script type="text/javascript" src="../../../toc.js"></script>
+
+</head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       
       <header class="site-header">
@@ -38,15 +44,26 @@
             <img class="logo-on-dark" src="../../../../images/logo.png" alt="Emby">
             <img class="logo-on-light" src="../../../../images/logo-dark-text.png" alt="Emby">
           </a>
+          <a class="site-title-link" href="../../../../index.html"><span class="site-title">Emby <strong>Docs</strong></span></a>
           <button class="menu-button" type="button" aria-expanded="false" aria-controls="navbar" aria-label="Open menu">&#9776;</button>
           <div class="nav-links" id="navbar">
-            <ul class="nav-links-list">
+            <ul class="nav-links-list navbar-nav">
                 
-                    <li><a href="https://emby.media/about.html" title="How it Works">How it Works</a></li>
-                    <li><a href="https://emby.media/download.html" title="Download">Download</a></li>
-                    <li><a href="https://emby.media/premiere.html" title="Premiere">Premiere</a></li>
-                    <li><a href="../../../../index.html" title="Support" class="is-current" aria-current="page">Support</a></li>
-                    <li><a href="https://emby.media/connect.html" title="Emby Connect">Emby Connect</a></li>
+                    <li>
+                      <a href="https://emby.media/" title="Emby Home">Emby Home</a>
+                    </li>
+                    <li>
+                      <a href="../../../../index.html" title="Support Home">Support Home</a>
+                    </li>
+                    <li>
+                      <a href="../../../../articles/Quick-Start.html" title="Server Docs" class="is-current" aria-current="page">Server Docs</a>
+                    </li>
+                    <li>
+                      <a href="../../../../articles/Apps.html" title="Client Docs">Client Docs</a>
+                    </li>
+                    <li>
+                      <a href="../../../../articles/Emby-Premiere.html" title="Premiere Docs">Premiere Docs</a>
+                    </li>
             </ul>
           </div>
         </nav>
@@ -66,16 +83,22 @@
       
       <div class="subnav navbar navbar-default">
         <div class="container">
-          <div class="hide-when-search" id="breadcrumb">
-      	  <ul class="breadcrumb">
-      		<li></li>
-      	  </ul>
-      	</div>
+          <nav class="hide-when-search" id="breadcrumb" aria-label="Breadcrumb">
+            <ol class="breadcrumb">
+              <li><a href="../../../../index.html">Support Home</a></li>
+              <li><a href="../../../Quick-Start.html">Emby Server</a></li>
+              <li><a href="../../../server/transcoding/Transcoding.html">Transcoding</a></li>
+              <li><a href="../../../server/transcoding/configuration/Transcoding-Configuration.html">Configuration</a></li>
+              <li><span aria-current="page">Graph Evaluation</span></li>
+              
+            </ol>
+          </nav>
       
       	<div class="breadcrumpsearch">
       	  <form class="navbar-form navbar-right" role="search" id="search">
       		<div class="form-group">
       		  <i class="fa fa-search" aria-hidden="true"></i>
+      		  <label class="sr-only" for="search-query">Search support topics</label>
       		  <input type="text" class="form-control" id="search-query" placeholder="Search support topics" autocomplete="off">
       		</div>
       	  </form>
@@ -97,13 +120,14 @@
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
+            <nav id="sidetoc" aria-label="Documentation table of contents"></nav>
           </div>
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="Server-Transcoding-Expert-Graph">
 <h1>Graph Evaluation</h1>
+
 
 
 <h2 id="two-passes-of-evaluation">Two Passes of Evaluation</h2>
@@ -133,6 +157,192 @@ would result in an error.</p>
 =&gt; These are nodes which have a green or red border and are preceded by a green or red arrow</li>
 </ul>
 <p>How the second pass uses this is described in <a href="Expert-Fallback-Paths.html">Fallback Paths</a>.</p>
+<p><img src="images/expert-mode.jpg" alt="An example graph with a load-balancing group, ordinary device, software fallback, and Failure Point"></p>
+<h2 id="when-the-graph-is-evaluated">When the Graph Is Evaluated</h2>
+<p>The graph is evaluated once for each transcoding operation, before FFmpeg is started - when a playback
+starts transcoding, and for each conversion. Both passes run at that time, so the fallbacks are known before
+the first attempt is made.</p>
+<p>The same evaluation applies in all three modes. Basic Mode and Advanced Mode build the graph for you: the
+devices in order, with the software node last as the fallback point.</p>
+<p>Nothing is evaluated when there is no video to transcode - for audio-only operations, and when the video is
+copied unchanged. Image extraction does not use the graph either; it has its own
+<a href="../Settings.html#image-extraction">settings</a>.</p>
+<h2 id="what-takes-part">What Takes Part</h2>
+<p>Before evaluation starts, everything that cannot be used is taken out of the graph:</p>
+<ul>
+<li>nodes that are switched off, including everything inside a group that is switched off</li>
+<li>device nodes whose device is not present - including the devices of a remote host that is switched off</li>
+<li>groups that are left without nodes</li>
+</ul>
+<p>The FFmpeg log shows both the graph as configured and the graph that was actually evaluated - see
+<a href="#reading-the-result-in-the-log">Reading the Result in the Log</a>.</p>
+<h2 id="how-a-node-is-judged">How a Node Is Judged</h2>
+<p>In the first pass, nodes are looked at in <a href="#evaluation-order">evaluation order</a>, and the first one that
+applies to the operation is selected. Whether a node applies is decided as follows.</p>
+<h3 id="conditions">Conditions</h3>
+<p>A node whose <a href="Expert-Conditions.html">conditions</a> do not match is passed over - for a group, together with
+everything inside it. Live TV is never transcoded on a remote device.</p>
+<h3 id="device-nodes">Device Nodes</h3>
+<p>A device node - GPU Config or Software Config - applies when its device can perform the operation the way
+the node is configured:</p>
+<ul>
+<li><strong>Load</strong> - only for a node directly inside a load balancing group: the node is passed over when it, or
+its device across the whole graph, has reached its <a href="Expert-Load-Balancing.html#limits">limit</a>.</li>
+<li><strong>Subtitles</strong> - when the operation burns in subtitles and the node is set to <em>Skip this configuration</em>
+for that kind of subtitles, the node is passed over - see <a href="Subtitle-Burn-In.html">Subtitle Burn-In</a>.</li>
+<li><strong>Encoder</strong> - the node needs an encoder for the output codec, and that encoder has to accept the output:
+its resolution, bitrate, profile and level. An encoder selection of <em>Skip</em> passes the node over.
+Hardware encoders also require an active Emby Premiere subscription.</li>
+<li><strong>Decoder</strong> - the node's decoder for the source codec has to be able to read the source: its resolution,
+bitrate, color format, profile, level and bit depth.
+<ul>
+<li>A decoder selection of <em>Skip</em> passes the node over.</li>
+<li>When the selected hardware decoder cannot read the source, <strong>When a selected hardware decoder is not
+suitable</strong> decides: <em>Use software decoding</em> keeps the node, decoding in software and still encoding on
+the device; <em>Skip this configuration</em> passes the node over.</li>
+<li>For source codecs the device cannot decode at all - the ones offered no decoder selection -
+<strong>Allow software decoding for other codecs</strong> decides whether the node is used with software decoding or
+passed over.</li>
+</ul>
+</li>
+</ul>
+<p>Filters - deinterlacing, scaling, tone mapping - do not decide whether a node applies. When the selected
+node offers no suitable filter for a processing step, a software filter is used for that step where there
+is one.</p>
+<h3 id="condition-groups">Condition Groups</h3>
+<p>A condition group is entered when its conditions match, and its nodes are judged in order, from left to
+right. When none of them applies, evaluation continues after the group. A group is never selected itself, and
+load limits play no part inside a condition group.</p>
+<h3 id="load-balancing-groups">Load Balancing Groups</h3>
+<p>When its conditions match, a load balancing group selects one of its nodes according to its
+distribution - the first one below its limits for overflow, the one with the least load for balance; see
+<a href="Expert-Load-Balancing.html">Load Balancing</a>. When none of its nodes applies, evaluation continues after the
+group.</p>
+<h3 id="failure-points">Failure Points</h3>
+<p>A failure point whose conditions match stops evaluation. When no node has been selected before it, the
+operation fails.</p>
+<h3 id="when-nothing-applies">When Nothing Applies</h3>
+<p>When evaluation reaches the end of the graph without having selected a node, the operation fails. The log
+says <em>No entry of the configuration applies to this operation</em>.</p>
+<h2 id="when-an-attempt-fails">When an Attempt Fails</h2>
+<p>The selected node is tried first. When FFmpeg fails to start - it exits with an error, or the expected
+output does not appear, for a playback within 15 seconds - the next node from the list of fallbacks is
+tried, up to three of them. The log notes each change:
+<em>Previous transcoding attempt failed. Falling back to configuration 'S1'.</em></p>
+<p>The list is not calculated again for a retry. A transcode that has started successfully and fails later does
+not move on to a fallback, nor does one that was stopped. Live TV only uses the selected node.</p>
+<h2 id="example-try-another-context-before-software">Example: Try Another Context Before Software</h2>
+<p>Suppose you want to try <strong>Vulkan (Nvidia)</strong> for HEVC output, retry on the same GPU with <strong>Nvidia CUDA</strong> if
+that attempt fails to start, and use software as the last resort. The GPU must offer both contexts and a
+suitable HEVC encoder in each. This example assumes playback already requires HEVC output; a condition on
+the output codec does not change the codec that Emby has chosen.</p>
+<p>In Expert Mode, arrange three nodes in this order, outside any container:</p>
+<pre><code>N1  Same GPU, Vulkan (Nvidia)
+ |
+N2  Same GPU, Nvidia CUDA     [Fallback point]
+ |
+S1  Software                 [Fallback point]
+</code></pre>
+<p>The IDs are examples; use the IDs assigned to your own nodes when reading the log.</p>
+<ol>
+<li>Configure the first GPU node to use <strong>Vulkan (Nvidia)</strong>. Set its condition to
+<strong>Output Codec Equals HEVC</strong>, and leave <strong>Fallback point</strong> off.</li>
+<li>Add a second node for the same GPU and configure it to use <strong>Nvidia CUDA</strong>. Leave its conditions empty
+and turn <strong>Fallback point</strong> on. It can then be selected either initially or as a fallback.</li>
+<li>Place the Software node last, leave its conditions empty and turn <strong>Fallback point</strong> on.</li>
+<li>Save the dialogs, then <a href="Transcoding-Configuration.html#saving">save the configuration</a>.</li>
+</ol>
+<p>For an HEVC playback operation that all three nodes can handle, the first pass selects N1. The second pass
+adds N2 and S1 to the fallback list, in that order. Both passes finish before FFmpeg starts. If the Vulkan
+attempt fails to start, Emby retries with Nvidia CUDA; if that also fails to start, it tries software.</p>
+<p>The following is an <strong>illustrative, abbreviated log</strong>, with the GPU name shown as a placeholder and the
+detailed capability checks omitted:</p>
+<pre><code>Transcoding configuration (Expert)
+Configured: N1 🠊⬩ N2 🠊⬩ S1
+Effective:  N1 🠊⬩ N2 🠊⬩ S1
+N1 =&gt; Match
+
+Selected: N1 &lt;GPU name&gt; - Vulkan (Nvidia)
+
+Fallback configuration (Expert)
+N2 =&gt; Match
+S1 =&gt; Match
+</code></pre>
+<p>If the first attempt subsequently fails to start, the log records:</p>
+<pre><code>Previous transcoding attempt failed. Falling back to configuration 'N2'.
+</code></pre>
+<p>If the operation instead requires H.264 output, N1 reports <code>UnmetNodeConditions</code>. N2 can then be selected
+in the first pass, with S1 as its fallback. Likewise, if N1 matches the condition but fails a capability
+check, evaluation continues to N2 immediately, without starting an FFmpeg attempt on N1.</p>
+<h2 id="reading-the-result-in-the-log">Reading the Result in the Log</h2>
+<p>The FFmpeg log of every transcode - see <a href="../operations/Logs.html#ffmpeg-logs">FFmpeg Logs</a> - records the
+evaluation, between the information about the media and the FFmpeg command line. For example:</p>
+<pre><code>Transcoding configuration (Advanced)
+Configured: N1 🠊 I1 🠊⬩ S1
+Effective:  N1 🠊⬩ S1
+N1 =&gt; DecoderBitDepthNotSupported
+    …
+
+S1 =&gt; Match
+    …
+
+Selected: S1 Software - Software
+
+Fallback configuration (Advanced)
+</code></pre>
+<ul>
+<li><strong>Configured</strong> is the graph as saved, <strong>Effective</strong> the graph that was evaluated, after taking out what
+cannot be used - here I1, which is switched off.</li>
+<li><code>🠊</code> leads to the node that is tried next, <code>━━</code> joins the nodes of a load balancing group, braces
+enclose the nodes of a group - for example <code>CG1{N2 🠊 S2}</code> - and <code>⬩</code> marks a fallback point or a failure
+point.</li>
+<li>Each node that was judged gets a line with its <a href="Graph-Editing.html#reading-the-graph">ID</a> and the result,
+followed by the details of the checks.</li>
+<li><strong>Selected</strong> names the node, its device and its context type. The section after it lists the fallback
+candidates in the same way.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Result</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Match</code></td>
+<td>The node applies</td>
+</tr>
+<tr>
+<td><code>UnmetNodeConditions</code></td>
+<td>The node's conditions do not match</td>
+</tr>
+<tr>
+<td><code>GpuLoadAtLocalMaximum</code>, <code>GpuLoadAtGlobalMaximum</code></td>
+<td>The node, or its device across the graph, is at its limit</td>
+</tr>
+<tr>
+<td><code>OtherGpuHasLessLoad</code></td>
+<td>In a balancing group, another node has less load</td>
+</tr>
+<tr>
+<td><code>SubtitlesSkipped</code></td>
+<td>The node is set to skip this kind of subtitle burn-in</td>
+</tr>
+<tr>
+<td><code>NoEncoder</code>, <code>NoDecoder</code></td>
+<td>No encoder for the output codec, or no decoder for the source codec</td>
+</tr>
+<tr>
+<td><code>EncoderHardwareNotAllowed</code></td>
+<td>Hardware encoding requires Emby Premiere</td>
+</tr>
+<tr>
+<td><code>Encoder…</code>, <code>Decoder…</code></td>
+<td>The encoder or decoder cannot handle the operation - the name says which limit, for example <code>EncoderMaxWidthExceeded</code> or <code>DecoderBitDepthNotSupported</code></td>
+</tr>
+</tbody>
+</table>
 
 
             </article>

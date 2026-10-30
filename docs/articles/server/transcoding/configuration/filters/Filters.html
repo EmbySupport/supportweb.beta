@@ -1,0 +1,325 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="utf-8">
+  <title>Filters | Emby Documentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="docfx 2.59.2.0">
+  <meta name="theme-color" content="#f7f8f9">
+  
+  <link rel="canonical" href="https://emby.media/support/articles/server/transcoding/configuration/filters/Filters.html">
+  <meta property="og:title" content="Filters | Emby Documentation">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://emby.media/support/articles/server/transcoding/configuration/filters/Filters.html">
+  <meta property="og:site_name" content="Emby Documentation">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://emby.media/support/articles/server/transcoding/configuration/filters/Filters.html","url":"https://emby.media/support/articles/server/transcoding/configuration/filters/Filters.html","name":"Filters","inLanguage":"en","headline":"Filters","articleSection":"Emby Server","author":{"@type":"Organization","name":"Emby LLC","url":"https://emby.media/"},"copyrightHolder":{"@type":"Organization","name":"Emby LLC","url":"https://emby.media/"},"isAccessibleForFree":true,"isFamilyFriendly":true},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Support Home","item":"https://emby.media/support/index.html"},{"@type":"ListItem","position":2,"name":"Emby Server","item":"https://emby.media/support/articles/Quick-Start.html"},{"@type":"ListItem","position":3,"name":"Transcoding","item":"https://emby.media/support/articles/server/transcoding/Transcoding.html"},{"@type":"ListItem","position":4,"name":"Configuration","item":"https://emby.media/support/articles/server/transcoding/configuration/Transcoding-Configuration.html"},{"@type":"ListItem","position":5,"name":"Filters","item":"https://emby.media/support/articles/server/transcoding/configuration/filters/Filters.html"},{"@type":"ListItem","position":6,"name":"Filters","item":"https://emby.media/support/articles/server/transcoding/configuration/filters/Filters.html"}]}]}</script>
+  <link rel="shortcut icon" href="../../../../../favicon.ico">
+  <script type="text/javascript" src="../../../../../styles/theme-config.js"></script>
+  <link rel="stylesheet" href="../../../../../styles/docfx.vendor.css">
+  <link rel="stylesheet" href="../../../../../styles/docfx.css">
+  <link rel="stylesheet" href="../../../../../styles/main.css">
+  <link rel="stylesheet" href="../../../../../styles/header.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
+  <link rel="stylesheet" href="../../../../../styles/theme.css">
+  <meta property="docfx:navrel" content="../../../../../toc.html">
+  <meta property="docfx:tocrel" content="../../../../toc.html">
+  <meta property="docfx:uid" content="Server-Transcoding-Filters">
+  
+  <meta property="docfx:rel" content="../../../../../">
+  
+  <script type="text/javascript" src="../../../../../nav.js"></script>
+  <script type="text/javascript" src="../../../../toc.js"></script>
+
+</head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      
+      <header class="site-header">
+        <nav class="nav container" aria-label="Primary navigation">
+          <a class="brand" href="https://emby.media/" aria-label="Emby home">
+            
+            <img class="logo-on-dark" src="../../../../../images/logo.png" alt="Emby">
+            <img class="logo-on-light" src="../../../../../images/logo-dark-text.png" alt="Emby">
+          </a>
+          <a class="site-title-link" href="../../../../../index.html"><span class="site-title">Emby <strong>Docs</strong></span></a>
+          <button class="menu-button" type="button" aria-expanded="false" aria-controls="navbar" aria-label="Open menu">&#9776;</button>
+          <div class="nav-links" id="navbar">
+            <ul class="nav-links-list navbar-nav">
+                
+                    <li>
+                      <a href="https://emby.media/" title="Emby Home">Emby Home</a>
+                    </li>
+                    <li>
+                      <a href="../../../../../index.html" title="Support Home">Support Home</a>
+                    </li>
+                    <li>
+                      <a href="../../../../../articles/Quick-Start.html" title="Server Docs" class="is-current" aria-current="page">Server Docs</a>
+                    </li>
+                    <li>
+                      <a href="../../../../../articles/Apps.html" title="Client Docs">Client Docs</a>
+                    </li>
+                    <li>
+                      <a href="../../../../../articles/Emby-Premiere.html" title="Premiere Docs">Premiere Docs</a>
+                    </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <script>
+        (function () {
+          var button = document.querySelector('.site-header .menu-button');
+          var links = document.querySelector('.site-header .nav-links');
+          if (!button || !links) { return; }
+          button.addEventListener('click', function () {
+            var isOpen = links.classList.toggle('open');
+            button.setAttribute('aria-expanded', String(isOpen));
+            button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+          });
+        }());
+      </script>
+      
+      <div class="subnav navbar navbar-default">
+        <div class="container">
+          <nav class="hide-when-search" id="breadcrumb" aria-label="Breadcrumb">
+            <ol class="breadcrumb">
+              <li><a href="../../../../../index.html">Support Home</a></li>
+              <li><a href="../../../../Quick-Start.html">Emby Server</a></li>
+              <li><a href="../../../../server/transcoding/Transcoding.html">Transcoding</a></li>
+              <li><a href="../../../../server/transcoding/configuration/Transcoding-Configuration.html">Configuration</a></li>
+              <li><a href="../../../../server/transcoding/configuration/filters/Filters.html">Filters</a></li>
+              <li><span aria-current="page">Filters</span></li>
+              
+            </ol>
+          </nav>
+      
+      	<div class="breadcrumpsearch">
+      	  <form class="navbar-form navbar-right" role="search" id="search">
+      		<div class="form-group">
+      		  <i class="fa fa-search" aria-hidden="true"></i>
+      		  <label class="sr-only" for="search-query">Search support topics</label>
+      		  <input type="text" class="form-control" id="search-query" placeholder="Search support topics" autocomplete="off">
+      		</div>
+      	  </form>
+      	</div>
+        </div>
+      </div>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <nav id="sidetoc" aria-label="Documentation table of contents"></nav>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Server-Transcoding-Filters">
+<h1>Filters</h1>
+
+<h4 class="long-title">Filter Parameters</h4>
+
+<p>When HDR video has to be transcoded for a display that cannot show HDR, Emby
+<a class="xref" href="https://emby.media/learn/articles/video/tone-mapping/fundamentals/Tone-Mapping-HDR-to-SDR.html">tone maps</a> it to SDR. Which filter does that, and with which
+settings, is configured per device in the <strong>Tone Mapping</strong> section of the device's configuration dialog.
+In Advanced Mode that dialog is opened with <strong>Configure</strong> on a node - see
+<a href="../Advanced-Mode.html#device-configuration">Device Configuration</a>. In Expert Mode it is the configuration
+of a GPU Config or Software Config node - see <a href="../Expert-Node-Types.html#gpu-config">GPU Config</a>. Basic Mode
+chooses the filters automatically.</p>
+<p>The individual filters and their parameters are described in <a href="Tone-Mapping.html">Tone Mapping Filters</a>.</p>
+<h2 id="tone-mapping-selections">Tone Mapping Selections</h2>
+<p>There is one selection per kind of HDR:</p>
+<ul>
+<li><strong>HDR10 Tone Mapping</strong> - <a class="xref" href="https://emby.media/learn/articles/video/hdr/formats/HDR10.html">HDR10</a></li>
+<li><strong>Dynamic Tone Mapping (HDR10+)</strong> - <a class="xref" href="https://emby.media/learn/articles/video/hdr/formats/HDR10-Plus.html">HDR10+</a>, using its per-scene metadata. The
+list offers the filters that use this metadata first, followed by every filter of the HDR10 list. An
+HDR10 filter chosen here tone maps HDR10+ video as HDR10 and ignores the per-scene metadata</li>
+<li><strong>Dynamic Tone Mapping (DV 5/8)</strong> - <a class="xref" href="https://emby.media/learn/articles/video/hdr/formats/dolby-vision/Dolby-Vision.html">Dolby Vision</a> profiles
+<a class="xref" href="https://emby.media/learn/articles/video/hdr/formats/dolby-vision/profiles-and-compatibility/Dolby-Vision-Profile-5.html">5</a> and <a class="xref" href="https://emby.media/learn/articles/video/hdr/formats/dolby-vision/profiles-and-compatibility/Dolby-Vision-Profile-8.html">8</a>. Every filter in this
+list applies the Dolby Vision metadata</li>
+<li><strong>HLG Tone Mapping</strong> - <a class="xref" href="https://emby.media/learn/articles/video/hdr/formats/HLG.html">HLG</a></li>
+</ul>
+<p>Each entry names the filter and the kind of HDR it is set up for, such as <em>Emby Tonemap CUDA (HDR10)</em>. In
+the Software configuration, every entry additionally ends in <em>(software)</em>.</p>
+<p>The first entry of every list is <strong>No tone mapping</strong>. With it selected, video of that kind is transcoded on
+this device without tone mapping, and on an SDR display it then looks
+<a class="xref" href="https://emby.media/learn/articles/video/tone-mapping/fundamentals/Tone-Mapping-Why.html">pale and washed out</a>.</p>
+<p>A selection is only shown when the device's context type offers at least one filter for it, and the
+section is only shown when there is at least one selection.</p>
+<p>Below each selection, a line states whether the selected filter is <em>Using default settings</em> or has a
+<em>Custom configuration:</em>, followed by the values that differ from the defaults. Filters without parameters
+show no such line.</p>
+<p><img src="images/tone-mapping-selection.jpg" alt="The four HDR-specific tone mapping selections in a software device configuration"></p>
+<h2 id="filters-per-context-type">Filters per Context Type</h2>
+<p>Which filters are offered depends on the device's
+<a href="../../hardware/Overview.html#devices-and-context-types">context type</a>. Filters with <em>OpenCL</em> in their name
+are only offered when <a class="xref" href="https://emby.media/learn/articles/hardware-acceleration/interfaces/portable/Hardware-OpenCL.html">OpenCL</a> was detected on the device, and Emby Tonemap
+Vulkan and libplacebo only when <a class="xref" href="https://emby.media/learn/articles/hardware-acceleration/interfaces/portable/Hardware-Vulkan.html">Vulkan</a> was detected.</p>
+<table>
+<thead>
+<tr>
+<th>Context type</th>
+<th>HDR10</th>
+<th>HDR10+</th>
+<th>DV 5/8</th>
+<th>HLG</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Software</td>
+<td>Emby Tonemap, Super Tonemap</td>
+<td>Emby Tonemap, then the HDR10 list</td>
+<td>Emby Tonemap</td>
+<td>Emby Tonemap</td>
+</tr>
+<tr>
+<td>Nvidia CUDA</td>
+<td>Emby Tonemap CUDA, Tunemap CUDA</td>
+<td>Emby Tonemap CUDA, then the HDR10 list</td>
+<td>Emby Tonemap CUDA, Tunemap CUDA</td>
+<td>Emby Tonemap CUDA, Tunemap CUDA</td>
+</tr>
+<tr>
+<td>QSV on D3D11</td>
+<td>Emby Tonemap OpenCL, Tonemap QSV, Extra Tonemap OpenCL, Super Tonemap OpenCL, Tunemap OpenCL</td>
+<td>Emby Tonemap OpenCL, then the HDR10 list</td>
+<td>Emby Tonemap OpenCL, Tunemap OpenCL</td>
+<td>Emby Tonemap OpenCL, Tonemap QSV, Tunemap OpenCL</td>
+</tr>
+<tr>
+<td>QSV on VAAPI</td>
+<td>Emby Tonemap OpenCL, Tonemap QSV, Extra Tonemap OpenCL, Tunemap OpenCL</td>
+<td>Emby Tonemap OpenCL, then the HDR10 list</td>
+<td>Emby Tonemap OpenCL, Tunemap OpenCL</td>
+<td>Emby Tonemap OpenCL, Tonemap QSV, Tunemap OpenCL</td>
+</tr>
+<tr>
+<td>VAAPI (Intel)</td>
+<td>Emby Tonemap OpenCL, Tonemap VAAPI, Extra Tonemap OpenCL, Tunemap OpenCL</td>
+<td>Emby Tonemap OpenCL, then the HDR10 list</td>
+<td>Emby Tonemap OpenCL, Tunemap OpenCL</td>
+<td>Emby Tonemap OpenCL, Tonemap VAAPI, Tunemap OpenCL</td>
+</tr>
+<tr>
+<td>AMF on D3D11</td>
+<td>Emby Tonemap OpenCL, Tonemap AMF, Tunemap OpenCL</td>
+<td>Emby Tonemap OpenCL, then the HDR10 list</td>
+<td>Emby Tonemap OpenCL, Tunemap OpenCL</td>
+<td>Emby Tonemap OpenCL, Tonemap AMF, Tunemap OpenCL</td>
+</tr>
+<tr>
+<td>AMF on Vulkan</td>
+<td>Emby Tonemap Vulkan, Tonemap AMF, libplacebo</td>
+<td>Emby Tonemap Vulkan, libplacebo, then the HDR10 list</td>
+<td>Emby Tonemap Vulkan, libplacebo</td>
+<td>Emby Tonemap Vulkan, Tonemap AMF, libplacebo</td>
+</tr>
+<tr>
+<td>Vulkan (Nvidia), Vulkan (Intel), Vulkan (AMD)</td>
+<td>Emby Tonemap Vulkan, libplacebo</td>
+<td>Emby Tonemap Vulkan, libplacebo, then the HDR10 list</td>
+<td>Emby Tonemap Vulkan, libplacebo</td>
+<td>Emby Tonemap Vulkan, libplacebo</td>
+</tr>
+<tr>
+<td>Rockchip</td>
+<td>Emby Tonemap OpenCL, Extra Tonemap OpenCL, Tunemap OpenCL</td>
+<td>Emby Tonemap OpenCL, then the HDR10 list</td>
+<td>Emby Tonemap OpenCL, Tunemap OpenCL</td>
+<td>Emby Tonemap OpenCL, Tunemap OpenCL</td>
+</tr>
+</tbody>
+</table>
+<p>VideoToolbox and MediaCodec offer no tone mapping filters, so their configuration has no Tone Mapping
+section.</p>
+<p>Tone mapping on the CPU is demanding, and the effort grows with the output resolution. The Software
+configuration therefore has a <strong>Video Resolution Limit</strong> under <strong>Software Specific Options</strong>, which caps the
+output resolution whenever software tone mapping is used.</p>
+<h2 id="filter-parameters">Filter Parameters</h2>
+<p>The gear button beside a selection opens the parameters of the selected filter. It is disabled for
+<em>No tone mapping</em> and for filters that have no parameters - see
+<a href="Tone-Mapping.html#filters-without-parameters">Filters Without Parameters</a>.</p>
+<p>The dialog is titled with the filter's name and lists its parameters:</p>
+<ul>
+<li>Dropdown choices show the option's value in square brackets, such as <em>BT.2390 - [bt2390]</em>.
+The help button beside a dropdown lists every choice with its description</li>
+<li>Number fields may be left empty, which leaves the value to the filter's built-in default. The dialog does
+not check whether a number is within the range ffmpeg accepts</li>
+<li>Some parameters are only shown for certain choices - <strong>Tonemap Parameter</strong>, for example, only for the
+Reinhard and Mobius algorithms</li>
+<li><strong>Reset to Default</strong> sets every parameter back to the filter's defaults. These can depend on the kind of
+HDR - Emby Tonemap, for example, starts with a different algorithm for HDR10+ than for HDR10</li>
+<li><strong>Save</strong> keeps the changes; closing the dialog discards them</li>
+</ul>
+<p><img src="images/emby-tonemap-cuda.jpg" alt="The Emby Tonemap CUDA HDR10 parameters dialog"></p>
+<p>Only the values that differ from the filter's defaults are stored - see
+<a href="../Transcoding-Configuration.html#delta-storage">Delta Storage</a>. Every value you have not changed keeps
+following the default, and setting a value back to its default removes it from what is stored.</p>
+<p>Parameters are kept per selection: a filter chosen for HDR10 and the same filter chosen for HDR10+ each
+have their own settings.</p>
+<p>Changed parameters are part of the device configuration: they are only kept when the device dialog is
+saved as well, and cancelling it discards them together with its other changes. Like every other change,
+they take effect when the transcoding configuration is saved - see
+<a href="../Transcoding-Configuration.html#saving">Saving</a>. <strong>Reset to Default</strong> in the device configuration dialog
+itself also discards the stored parameters of all encoders and filters of that device.</p>
+<h2 id="image-extraction">Image Extraction</h2>
+<p>The tone mapping for <a href="../../Settings.html#image-extraction">image extraction</a> uses the same four selections,
+the same <em>No tone mapping</em> entry and the same parameters dialogs. Its lists always offer the Software
+filters - Emby Tonemap and Super Tonemap - whatever hardware the server has, and the entries do not end in
+<em>(software)</em>. These selections and parameters are stored separately from those of every device, and are
+saved together with the image extraction settings.</p>
+<h2 id="further-reading">Further Reading</h2>
+<p><a class="xref" href="https://emby.media/learn/articles/video/tone-mapping/execution/Tone-Mapping-Playback-Path.html">Where Tone Mapping Happens in an Emby Playback Session</a><br>
+<a class="xref" href="https://emby.media/learn/articles/video/hdr/HDR-Video.html">What HDR Video Adds to SDR</a></p>
+
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix sdkversion" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="footer">
+          <div class="container footer-inner">
+            <div class="footer-copy">2026 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.</div>
+            <div class="footer-actions">
+              <span class="contribution">
+                  <a href="https://github.com/EmbySupport/Emby.Docs/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Article%20Details%0A%0A**Do%20not%20remove%20this%20section**%0A%0A*%20uid%3A%20Server-Transcoding-Filters%0A*%20Title%3A%20Filters%0A*%20Article%3A%20https%3A%2F%2Fgithub.com%2FEmbySupport%2FEmby.Docs%2Fblob%2Fmaster%2Fserver%2Ftranscoding%2Fconfiguration%2Ffilters%2FFilters.md%0A*%20LegacyUrl%3A%20https%3A%2F%2Fsupport.emby.mediaundefined%0A" class="contribution-link" title="Feedback on this article"><div class="far fa-comment-alt fa-sm"></div></a>
+                  <a href="https://github.com/EmbySupport/Emby.Docs/blob/master/server/transcoding/configuration/filters/Filters.md/#L1" class="contribution-link" title="View article source"><div class="far fa-edit fa-sm"></div></a>
+              </span>
+              <a href="#top" class="back-to-top">Back to Top</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../../../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../../styles/main.js"></script>
+  </body>
+</html>

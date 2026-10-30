@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="utf-8">
+  <title>VideoToolbox | Emby Documentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="docfx 2.59.2.0">
+  <meta name="theme-color" content="#f7f8f9">
+  
+  <link rel="canonical" href="https://emby.media/support/articles/server/transcoding/configuration/encoders/VideoToolbox.html">
+  <meta property="og:title" content="VideoToolbox | Emby Documentation">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://emby.media/support/articles/server/transcoding/configuration/encoders/VideoToolbox.html">
+  <meta property="og:site_name" content="Emby Documentation">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://emby.media/support/articles/server/transcoding/configuration/encoders/VideoToolbox.html","url":"https://emby.media/support/articles/server/transcoding/configuration/encoders/VideoToolbox.html","name":"VideoToolbox","inLanguage":"en","headline":"VideoToolbox","articleSection":"Emby Server","author":{"@type":"Organization","name":"Emby LLC","url":"https://emby.media/"},"copyrightHolder":{"@type":"Organization","name":"Emby LLC","url":"https://emby.media/"},"isAccessibleForFree":true,"isFamilyFriendly":true},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Support Home","item":"https://emby.media/support/index.html"},{"@type":"ListItem","position":2,"name":"Emby Server","item":"https://emby.media/support/articles/Quick-Start.html"},{"@type":"ListItem","position":3,"name":"Transcoding","item":"https://emby.media/support/articles/server/transcoding/Transcoding.html"},{"@type":"ListItem","position":4,"name":"Configuration","item":"https://emby.media/support/articles/server/transcoding/configuration/Transcoding-Configuration.html"},{"@type":"ListItem","position":5,"name":"Encoders","item":"https://emby.media/support/articles/server/transcoding/configuration/encoders/Encoders.html"},{"@type":"ListItem","position":6,"name":"VideoToolbox","item":"https://emby.media/support/articles/server/transcoding/configuration/encoders/VideoToolbox.html"}]}]}</script>
+  <link rel="shortcut icon" href="../../../../../favicon.ico">
+  <script type="text/javascript" src="../../../../../styles/theme-config.js"></script>
+  <link rel="stylesheet" href="../../../../../styles/docfx.vendor.css">
+  <link rel="stylesheet" href="../../../../../styles/docfx.css">
+  <link rel="stylesheet" href="../../../../../styles/main.css">
+  <link rel="stylesheet" href="../../../../../styles/header.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
+  <link rel="stylesheet" href="../../../../../styles/theme.css">
+  <meta property="docfx:navrel" content="../../../../../toc.html">
+  <meta property="docfx:tocrel" content="../../../../toc.html">
+  <meta property="docfx:uid" content="Server-Transcoding-Encoders-VideoToolbox">
+  
+  <meta property="docfx:rel" content="../../../../../">
+  
+  <script type="text/javascript" src="../../../../../nav.js"></script>
+  <script type="text/javascript" src="../../../../toc.js"></script>
+
+</head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      
+      <header class="site-header">
+        <nav class="nav container" aria-label="Primary navigation">
+          <a class="brand" href="https://emby.media/" aria-label="Emby home">
+            
+            <img class="logo-on-dark" src="../../../../../images/logo.png" alt="Emby">
+            <img class="logo-on-light" src="../../../../../images/logo-dark-text.png" alt="Emby">
+          </a>
+          <a class="site-title-link" href="../../../../../index.html"><span class="site-title">Emby <strong>Docs</strong></span></a>
+          <button class="menu-button" type="button" aria-expanded="false" aria-controls="navbar" aria-label="Open menu">&#9776;</button>
+          <div class="nav-links" id="navbar">
+            <ul class="nav-links-list navbar-nav">
+                
+                    <li>
+                      <a href="https://emby.media/" title="Emby Home">Emby Home</a>
+                    </li>
+                    <li>
+                      <a href="../../../../../index.html" title="Support Home">Support Home</a>
+                    </li>
+                    <li>
+                      <a href="../../../../../articles/Quick-Start.html" title="Server Docs" class="is-current" aria-current="page">Server Docs</a>
+                    </li>
+                    <li>
+                      <a href="../../../../../articles/Apps.html" title="Client Docs">Client Docs</a>
+                    </li>
+                    <li>
+                      <a href="../../../../../articles/Emby-Premiere.html" title="Premiere Docs">Premiere Docs</a>
+                    </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <script>
+        (function () {
+          var button = document.querySelector('.site-header .menu-button');
+          var links = document.querySelector('.site-header .nav-links');
+          if (!button || !links) { return; }
+          button.addEventListener('click', function () {
+            var isOpen = links.classList.toggle('open');
+            button.setAttribute('aria-expanded', String(isOpen));
+            button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+          });
+        }());
+      </script>
+      
+      <div class="subnav navbar navbar-default">
+        <div class="container">
+          <nav class="hide-when-search" id="breadcrumb" aria-label="Breadcrumb">
+            <ol class="breadcrumb">
+              <li><a href="../../../../../index.html">Support Home</a></li>
+              <li><a href="../../../../Quick-Start.html">Emby Server</a></li>
+              <li><a href="../../../../server/transcoding/Transcoding.html">Transcoding</a></li>
+              <li><a href="../../../../server/transcoding/configuration/Transcoding-Configuration.html">Configuration</a></li>
+              <li><a href="../../../../server/transcoding/configuration/encoders/Encoders.html">Encoders</a></li>
+              <li><span aria-current="page">VideoToolbox</span></li>
+              
+            </ol>
+          </nav>
+      
+      	<div class="breadcrumpsearch">
+      	  <form class="navbar-form navbar-right" role="search" id="search">
+      		<div class="form-group">
+      		  <i class="fa fa-search" aria-hidden="true"></i>
+      		  <label class="sr-only" for="search-query">Search support topics</label>
+      		  <input type="text" class="form-control" id="search-query" placeholder="Search support topics" autocomplete="off">
+      		</div>
+      	  </form>
+      	</div>
+        </div>
+      </div>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <nav id="sidetoc" aria-label="Documentation table of contents"></nav>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Server-Transcoding-Encoders-VideoToolbox">
+<h1>VideoToolbox</h1>
+
+<h4 class="long-title">VideoToolbox Encoder Parameters</h4>
+
+<p>On macOS, Emby encodes through <a class="xref" href="https://emby.media/learn/articles/hardware-acceleration/interfaces/apple/Hardware-Apple-VideoToolbox.html">VideoToolbox</a>, the system's video
+framework. These parameters apply to the encoders of the VideoToolbox context type - see
+<a href="../../hardware/vendors/Apple.html">Apple</a> for the context type, and <a href="Encoders.html">Encoders</a> for how the
+dialog works. In both encoders, the bitrate Emby requests is passed as the target and maximum rate, with a
+buffer of twice the bitrate.</p>
+<h2 id="h264">H.264</h2>
+<p>The <code>h264_videotoolbox</code> encoder for <a class="xref" href="https://emby.media/learn/articles/video/codecs/mpeg-itu/Video-Codec-H264.html">H.264</a>, offered by the VideoToolbox
+context type.</p>
+<p><strong>Entropy Coder</strong> - the entropy coding method used to pack the compressed bitstream (ffmpeg <code>coder</code>).
+Default: <strong>Auto (driver default)</strong>.</p>
+<ul>
+<li><strong>Auto (driver default)</strong> - sets no method, so VideoToolbox chooses. The recommended starting point</li>
+<li><strong>CABAC</strong> - better compression than CAVLC, at a higher decoding cost. The usual choice for most content
+and devices</li>
+<li><strong>CAVLC</strong> - cheaper to decode than CABAC, at a cost in compression efficiency. Mainly useful for very old
+or low-power playback devices that struggle with CABAC</li>
+</ul>
+<p><strong>Prioritize Encoding Speed</strong> - asks VideoToolbox to favour encoding speed over quality (ffmpeg
+<code>prio_speed</code>). Leave it off to let VideoToolbox decide. Default: off.</p>
+<p><strong>Constant Bit Rate</strong> - requests a truly constant bitrate instead of the usual variation around the target
+(<a class="xref" href="https://emby.media/learn/articles/video/encoding-quality/rate-control/Video-Encoding-CBR.html">CBR</a>, ffmpeg <code>constant_bit_rate</code>). Requires macOS 13 or newer. Default:
+off.</p>
+<p><strong>Hardware Encoding</strong> - whether VideoToolbox may use, or must use, its software encoder instead of the
+hardware encoder (ffmpeg <code>allow_sw</code>, <code>require_sw</code>). This is Apple's software encoder inside VideoToolbox,
+not one of Emby's <a href="Software.html">software encoders</a>. Default: <strong>Hardware Only</strong>.</p>
+<ul>
+<li><strong>Hardware Only</strong> - uses hardware encoding only; encoding fails if it is not available</li>
+<li><strong>Prefer Hardware, Allow Software Fallback</strong> - uses hardware encoding when available, and falls back to
+software encoding instead of failing when it is not</li>
+<li><strong>Force Software Encoding</strong> - uses software encoding even when hardware encoding is available. Mainly
+useful for troubleshooting hardware-specific problems</li>
+</ul>
+<p><strong>Power-Efficient Encoding</strong> - requests a more power-efficient encoding mode where the hardware offers one
+(ffmpeg <code>power_efficient</code>). Mainly relevant on battery-powered Macs. Default: off.</p>
+<p><strong>Spatial Adaptive Quantization</strong> - redistributes bits within each frame from complex areas to flat,
+low-detail areas, where blocking is most visible (ffmpeg <code>spatial_aq</code>). Takes effect only where the
+hardware supports it. Default: off.</p>
+<p><strong>Encoding Profile Limit</strong> - the highest H.264 profile the encoder may use; empty (the default) means no
+limit - see <a href="Encoders.html#encoding-profile-limit">Encoding Profile Limit</a>. Offers those of
+<strong>Baseline Profile</strong>, <strong>Main Profile</strong> and <strong>High Profile</strong> that VideoToolbox reports.</p>
+<h2 id="hevc">HEVC</h2>
+<p>The <code>hevc_videotoolbox</code> encoder for <a class="xref" href="https://emby.media/learn/articles/video/codecs/mpeg-itu/Video-Codec-HEVC.html">HEVC</a>, offered by the VideoToolbox
+context type.</p>
+<p><strong>Prioritize Encoding Speed</strong> - asks VideoToolbox to favour encoding speed over quality (ffmpeg
+<code>prio_speed</code>). Leave it off to let VideoToolbox decide. Default: off.</p>
+<p><strong>Constant Bit Rate</strong> - requests a truly constant bitrate instead of the usual variation around the target
+(ffmpeg <code>constant_bit_rate</code>). Requires macOS 13 or newer. Default: off.</p>
+<p><strong>Hardware Encoding</strong> - whether VideoToolbox may use, or must use, its software encoder instead of the
+hardware encoder (ffmpeg <code>allow_sw</code>, <code>require_sw</code>). This is Apple's software encoder inside VideoToolbox,
+not one of Emby's software encoders. Default: <strong>Hardware Only</strong>.</p>
+<ul>
+<li><strong>Hardware Only</strong> - uses hardware encoding only; encoding fails if it is not available</li>
+<li><strong>Prefer Hardware, Allow Software Fallback</strong> - uses hardware encoding when available, and falls back to
+software encoding instead of failing when it is not</li>
+<li><strong>Force Software Encoding</strong> - uses software encoding even when hardware encoding is available. Mainly
+useful for troubleshooting hardware-specific problems</li>
+</ul>
+<p><strong>Power-Efficient Encoding</strong> - requests a more power-efficient encoding mode where the hardware offers one
+(ffmpeg <code>power_efficient</code>). Mainly relevant on battery-powered Macs. Default: off.</p>
+<p><strong>Spatial Adaptive Quantization</strong> - redistributes bits within each frame from complex areas to flat,
+low-detail areas, where blocking is most visible (ffmpeg <code>spatial_aq</code>). Takes effect only where the
+hardware supports it. Default: off.</p>
+<p><strong>Encoding Profile Limit</strong> - the highest HEVC profile that may be used; empty (the default) means no
+limit - see <a href="Encoders.html#encoding-profile-limit">Encoding Profile Limit</a>. Offers those of
+<strong>Main Profile</strong> and <strong>Main 10 Profile</strong> that VideoToolbox reports. Emby does not pass a profile to this
+encoder, so the limit only decides whether this device entry is used for a transcode.</p>
+<h2 id="further-reading">Further Reading</h2>
+<p><a class="xref" href="https://emby.media/learn/articles/hardware-acceleration/interfaces/apple/Hardware-Apple-Silicon.html">Apple silicon media engines</a><br>
+<a class="xref" href="https://emby.media/learn/articles/hardware-acceleration/Hardware-Encoding.html">Hardware encoding and software encoding</a></p>
+
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix sdkversion" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="footer">
+          <div class="container footer-inner">
+            <div class="footer-copy">2026 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.</div>
+            <div class="footer-actions">
+              <span class="contribution">
+                  <a href="https://github.com/EmbySupport/Emby.Docs/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Article%20Details%0A%0A**Do%20not%20remove%20this%20section**%0A%0A*%20uid%3A%20Server-Transcoding-Encoders-VideoToolbox%0A*%20Title%3A%20VideoToolbox%0A*%20Article%3A%20https%3A%2F%2Fgithub.com%2FEmbySupport%2FEmby.Docs%2Fblob%2Fmaster%2Fserver%2Ftranscoding%2Fconfiguration%2Fencoders%2FVideoToolbox.md%0A*%20LegacyUrl%3A%20https%3A%2F%2Fsupport.emby.mediaundefined%0A" class="contribution-link" title="Feedback on this article"><div class="far fa-comment-alt fa-sm"></div></a>
+                  <a href="https://github.com/EmbySupport/Emby.Docs/blob/master/server/transcoding/configuration/encoders/VideoToolbox.md/#L1" class="contribution-link" title="View article source"><div class="far fa-edit fa-sm"></div></a>
+              </span>
+              <a href="#top" class="back-to-top">Back to Top</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../../../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,34 +1,40 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
-<html>
+<html lang="en">
   
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Load Balancing | Emby Documentation </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Load Balancing | Emby Documentation ">
-    <meta name="generator" content="docfx 2.59.2.0">
-    <meta name="theme-color" content="#090d0f">
-    
-    <link rel="shortcut icon" href="../../../../favicon.ico">
-    <script type="text/javascript" src="../../../../styles/theme-config.js"></script>
-    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../../../styles/docfx.css">
-    <link rel="stylesheet" href="../../../../styles/main.css">
-    <link rel="stylesheet" href="../../../../styles/header.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
-    <link rel="stylesheet" href="../../../../styles/theme.css">
-    <meta property="docfx:navrel" content="../../../../toc.html">
-    <meta property="docfx:tocrel" content="../../../toc.html">
-    <meta property="docfx:uid" content="Server-Transcoding-Expert-LoadBalancing">
-    
-    <meta property="docfx:rel" content="../../../../">
-    
-    <script type="text/javascript" src="../../../../nav.js"></script>
-    <script type="text/javascript" src="../../../toc.js"></script>
+<head>
+  <meta charset="utf-8">
+  <title>Load Balancing | Emby Documentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="docfx 2.59.2.0">
+  <meta name="theme-color" content="#f7f8f9">
   
-  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  <link rel="canonical" href="https://emby.media/support/articles/server/transcoding/configuration/Expert-Load-Balancing.html">
+  <meta property="og:title" content="Load Balancing | Emby Documentation">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://emby.media/support/articles/server/transcoding/configuration/Expert-Load-Balancing.html">
+  <meta property="og:site_name" content="Emby Documentation">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://emby.media/support/articles/server/transcoding/configuration/Expert-Load-Balancing.html","url":"https://emby.media/support/articles/server/transcoding/configuration/Expert-Load-Balancing.html","name":"Load Balancing","inLanguage":"en","headline":"Load Balancing","articleSection":"Emby Server","author":{"@type":"Organization","name":"Emby LLC","url":"https://emby.media/"},"copyrightHolder":{"@type":"Organization","name":"Emby LLC","url":"https://emby.media/"},"isAccessibleForFree":true,"isFamilyFriendly":true},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Support Home","item":"https://emby.media/support/index.html"},{"@type":"ListItem","position":2,"name":"Emby Server","item":"https://emby.media/support/articles/Quick-Start.html"},{"@type":"ListItem","position":3,"name":"Transcoding","item":"https://emby.media/support/articles/server/transcoding/Transcoding.html"},{"@type":"ListItem","position":4,"name":"Configuration","item":"https://emby.media/support/articles/server/transcoding/configuration/Transcoding-Configuration.html"},{"@type":"ListItem","position":5,"name":"Expert Mode","item":"https://emby.media/support/articles/server/transcoding/configuration/Expert-Mode.html"},{"@type":"ListItem","position":6,"name":"Load Balancing","item":"https://emby.media/support/articles/server/transcoding/configuration/Expert-Load-Balancing.html"}]}]}</script>
+  <link rel="shortcut icon" href="../../../../favicon.ico">
+  <script type="text/javascript" src="../../../../styles/theme-config.js"></script>
+  <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+  <link rel="stylesheet" href="../../../../styles/docfx.css">
+  <link rel="stylesheet" href="../../../../styles/main.css">
+  <link rel="stylesheet" href="../../../../styles/header.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
+  <link rel="stylesheet" href="../../../../styles/theme.css">
+  <meta property="docfx:navrel" content="../../../../toc.html">
+  <meta property="docfx:tocrel" content="../../../toc.html">
+  <meta property="docfx:uid" content="Server-Transcoding-Expert-LoadBalancing">
+  
+  <meta property="docfx:rel" content="../../../../">
+  
+  <script type="text/javascript" src="../../../../nav.js"></script>
+  <script type="text/javascript" src="../../../toc.js"></script>
+
+</head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       
       <header class="site-header">
@@ -38,15 +44,26 @@
             <img class="logo-on-dark" src="../../../../images/logo.png" alt="Emby">
             <img class="logo-on-light" src="../../../../images/logo-dark-text.png" alt="Emby">
           </a>
+          <a class="site-title-link" href="../../../../index.html"><span class="site-title">Emby <strong>Docs</strong></span></a>
           <button class="menu-button" type="button" aria-expanded="false" aria-controls="navbar" aria-label="Open menu">&#9776;</button>
           <div class="nav-links" id="navbar">
-            <ul class="nav-links-list">
+            <ul class="nav-links-list navbar-nav">
                 
-                    <li><a href="https://emby.media/about.html" title="How it Works">How it Works</a></li>
-                    <li><a href="https://emby.media/download.html" title="Download">Download</a></li>
-                    <li><a href="https://emby.media/premiere.html" title="Premiere">Premiere</a></li>
-                    <li><a href="../../../../index.html" title="Support" class="is-current" aria-current="page">Support</a></li>
-                    <li><a href="https://emby.media/connect.html" title="Emby Connect">Emby Connect</a></li>
+                    <li>
+                      <a href="https://emby.media/" title="Emby Home">Emby Home</a>
+                    </li>
+                    <li>
+                      <a href="../../../../index.html" title="Support Home">Support Home</a>
+                    </li>
+                    <li>
+                      <a href="../../../../articles/Quick-Start.html" title="Server Docs" class="is-current" aria-current="page">Server Docs</a>
+                    </li>
+                    <li>
+                      <a href="../../../../articles/Apps.html" title="Client Docs">Client Docs</a>
+                    </li>
+                    <li>
+                      <a href="../../../../articles/Emby-Premiere.html" title="Premiere Docs">Premiere Docs</a>
+                    </li>
             </ul>
           </div>
         </nav>
@@ -66,16 +83,23 @@
       
       <div class="subnav navbar navbar-default">
         <div class="container">
-          <div class="hide-when-search" id="breadcrumb">
-      	  <ul class="breadcrumb">
-      		<li></li>
-      	  </ul>
-      	</div>
+          <nav class="hide-when-search" id="breadcrumb" aria-label="Breadcrumb">
+            <ol class="breadcrumb">
+              <li><a href="../../../../index.html">Support Home</a></li>
+              <li><a href="../../../Quick-Start.html">Emby Server</a></li>
+              <li><a href="../../../server/transcoding/Transcoding.html">Transcoding</a></li>
+              <li><a href="../../../server/transcoding/configuration/Transcoding-Configuration.html">Configuration</a></li>
+              <li><a href="../../../server/transcoding/configuration/Expert-Mode.html">Expert Mode</a></li>
+              <li><span aria-current="page">Load Balancing</span></li>
+              
+            </ol>
+          </nav>
       
       	<div class="breadcrumpsearch">
       	  <form class="navbar-form navbar-right" role="search" id="search">
       		<div class="form-group">
       		  <i class="fa fa-search" aria-hidden="true"></i>
+      		  <label class="sr-only" for="search-query">Search support topics</label>
       		  <input type="text" class="form-control" id="search-query" placeholder="Search support topics" autocomplete="off">
       		</div>
       	  </form>
@@ -97,13 +121,14 @@
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
+            <nav id="sidetoc" aria-label="Documentation table of contents"></nav>
           </div>
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="Server-Transcoding-Expert-LoadBalancing">
 <h1>Load Balancing</h1>
+
 
 
 <p>A Load Balancing Group distributes transcoding work across the nodes it contains, rather than trying them
@@ -117,6 +142,8 @@ draws these as an ordered, left-to-right row, because the order is what determin
 first.</p>
 <p><strong>Balance</strong> uses whichever node is currently least loaded. The graph draws these as an unordered row,
 since position carries no meaning here.</p>
+<p>In the dialog, <strong>Fill one, then the next</strong> selects Overflow, and <strong>Spread across all</strong> selects Balance.</p>
+<p><img src="images/load-balancing.jpg" alt="Load-balancing settings with Spread across all selected"></p>
 <div class="IMPORTANT">
 <h5>Important</h5>
 <p>Overflow only does something if the nodes have limits. Without a limit a node never becomes full, so
@@ -126,14 +153,15 @@ nothing ever overflows to the next one - see <a href="#limits">Limits</a>.</p>
 <p>These two only apply to <strong>Balance</strong>, since Overflow never compares one node against another.</p>
 <p><strong>Compare load by</strong> decides what makes one node busier than another:</p>
 <ul>
-<li><strong>Absolute</strong> compares the raw number of operations</li>
-<li><strong>Relative</strong> compares each node's share of its own limit, so a node with a smaller limit is not simply
-favoured for having a smaller number of operations on it</li>
+<li><strong>Absolute</strong> (<strong>Number of operations</strong> in the dialog) compares the raw number of operations</li>
+<li><strong>Relative</strong> (<strong>Proportion of its limit</strong>) compares each node's share of its own limit, so a node with a
+smaller limit is not simply favoured for having a smaller number of operations on it</li>
 </ul>
 <p><strong>Count load per</strong> decides what a node's load is counted over:</p>
 <ul>
-<li><strong>Local</strong> counts the operations running through that node</li>
-<li><strong>Global</strong> counts the operations running through the device behind it, across the whole graph</li>
+<li><strong>Local</strong> (<strong>This entry</strong> in the dialog) counts the operations running through that node</li>
+<li><strong>Global</strong> (<strong>The device behind it</strong>) counts the operations running through the device behind it,
+across the whole graph</li>
 </ul>
 <p>The difference between the two only matters when the same device appears more than once in the graph -
 which Expert Mode allows, and which is one of the reasons this setting exists.</p>
@@ -147,10 +175,40 @@ Overflow possible at all.</p>
 in total, counted across every node in the graph that refers to it. Leave it empty for no limit.</p>
 <p>Only operations routed through a load-balancing container are counted, since nothing elsewhere in the graph
 would cause a device to be passed over for being busy.</p>
+<p><img src="images/load-balancing-limits.jpg" alt="Example limits of two parallel operations for this entry and four for the device across the graph"></p>
 <h2 id="evaluation-inside-a-load-balancing-group">Evaluation Inside a Load Balancing Group</h2>
 <p>The ordinary top-to-bottom, left-to-right reading order does not apply inside these containers - which
 node is used is a matter of load rather than of position. This is one of the exceptions noted in
 <a href="Expert-Graph-Evaluation.html#exceptions">Graph Evaluation</a>.</p>
+<h2 id="fallback-points-in-a-load-balancing-group">Fallback Points in a Load Balancing Group</h2>
+<p>Only one node of a load balancing group can be a <a href="Expert-Fallback-Paths.html">fallback point</a>, and it has to
+be the last one. A configuration that breaks this rule cannot be saved - the message names the node to
+move or to clear.</p>
+<h2 id="example-overflow-from-one-gpu-to-another">Example: Overflow from One GPU to Another</h2>
+<p>Suppose the first GPU should handle up to two simultaneous operations, the second up to three, and
+additional operations should use software. In Expert Mode:</p>
+<ol>
+<li>Insert a Load Balancing Group and choose <strong>Fill one, then the next</strong> (Overflow).</li>
+<li>Put the first GPU node on the left and the second on the right. Use two different GPUs, each appearing
+only once in this example, and leave their conditions empty.</li>
+<li>Open <strong>Limits</strong> on the first GPU node. Set both <strong>This node</strong> and <strong>This device, everywhere in the
+graph</strong> to <strong>2</strong>. Set both limits on the second GPU node to <strong>3</strong>.</li>
+<li>Place a Software node after the group, with <strong>Fallback point</strong> on. Leave the GPU nodes' fallback
+switches off, then save the configuration.</li>
+</ol>
+<pre><code>Overflow group:  GPU A (limit 2) -&gt; GPU B (limit 3)
+                                      |
+                                 Software
+</code></pre>
+<p>Assume both GPUs can handle every operation in this example. Starting with no jobs running, start each
+new job after the previous one is running, and keep the earlier jobs active: jobs 1 and 2 select GPU A;
+jobs 3, 4 and 5 select GPU B; job 6 passes over both full GPU nodes and selects Software. Once a job on GPU A
+finishes, the next new job can select GPU A again. Existing jobs stay where they are running.</p>
+<p>In this example, a full GPU node reports <code>GpuLoadAtLocalMaximum</code> in the evaluation log. This is selection
+based on current load, before an attempt starts. If a selected GPU attempt fails to start, this example
+falls back to Software; Overflow alone does not make the other GPU a retry candidate.</p>
+<h2 id="further-reading">Further Reading</h2>
+<p><a class="xref" href="https://emby.media/learn/articles/hardware-acceleration/pipelines/Hardware-Encoder-Sessions.html">Concurrent encoder sessions, policy and capacity</a></p>
 
 
             </article>

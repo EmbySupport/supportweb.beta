@@ -1,34 +1,40 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
-<html>
+<html lang="en">
   
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Playback Methods | Emby Documentation </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Playback Methods | Emby Documentation ">
-    <meta name="generator" content="docfx 2.59.2.0">
-    <meta name="theme-color" content="#090d0f">
-    
-    <link rel="shortcut icon" href="../../../favicon.ico">
-    <script type="text/javascript" src="../../../styles/theme-config.js"></script>
-    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../../styles/docfx.css">
-    <link rel="stylesheet" href="../../../styles/main.css">
-    <link rel="stylesheet" href="../../../styles/header.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
-    <link rel="stylesheet" href="../../../styles/theme.css">
-    <meta property="docfx:navrel" content="../../../toc.html">
-    <meta property="docfx:tocrel" content="../../toc.html">
-    <meta property="docfx:uid" content="DirectPlay-Stream-Transcoding">
-    
-    <meta property="docfx:rel" content="../../../">
-    
-    <script type="text/javascript" src="../../../nav.js"></script>
-    <script type="text/javascript" src="../../toc.js"></script>
+<head>
+  <meta charset="utf-8">
+  <title>Playback Methods | Emby Documentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="docfx 2.59.2.0">
+  <meta name="theme-color" content="#f7f8f9">
   
-  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  <link rel="canonical" href="https://emby.media/support/articles/server/transcoding/Playback-Methods.html">
+  <meta property="og:title" content="Playback Methods | Emby Documentation">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://emby.media/support/articles/server/transcoding/Playback-Methods.html">
+  <meta property="og:site_name" content="Emby Documentation">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://emby.media/support/articles/server/transcoding/Playback-Methods.html","url":"https://emby.media/support/articles/server/transcoding/Playback-Methods.html","name":"Playback Methods","inLanguage":"en","headline":"Playback Methods","articleSection":"Emby Server","author":{"@type":"Organization","name":"Emby LLC","url":"https://emby.media/"},"copyrightHolder":{"@type":"Organization","name":"Emby LLC","url":"https://emby.media/"},"isAccessibleForFree":true,"isFamilyFriendly":true},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Support Home","item":"https://emby.media/support/index.html"},{"@type":"ListItem","position":2,"name":"Emby Server","item":"https://emby.media/support/articles/Quick-Start.html"},{"@type":"ListItem","position":3,"name":"Transcoding","item":"https://emby.media/support/articles/server/transcoding/Transcoding.html"},{"@type":"ListItem","position":4,"name":"Playback Methods","item":"https://emby.media/support/articles/server/transcoding/Playback-Methods.html"}]}]}</script>
+  <link rel="shortcut icon" href="../../../favicon.ico">
+  <script type="text/javascript" src="../../../styles/theme-config.js"></script>
+  <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+  <link rel="stylesheet" href="../../../styles/docfx.css">
+  <link rel="stylesheet" href="../../../styles/main.css">
+  <link rel="stylesheet" href="../../../styles/header.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
+  <link rel="stylesheet" href="../../../styles/theme.css">
+  <meta property="docfx:navrel" content="../../../toc.html">
+  <meta property="docfx:tocrel" content="../../toc.html">
+  <meta property="docfx:uid" content="DirectPlay-Stream-Transcoding">
+  
+  <meta property="docfx:rel" content="../../../">
+  
+  <script type="text/javascript" src="../../../nav.js"></script>
+  <script type="text/javascript" src="../../toc.js"></script>
+
+</head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       
       <header class="site-header">
@@ -38,15 +44,26 @@
             <img class="logo-on-dark" src="../../../images/logo.png" alt="Emby">
             <img class="logo-on-light" src="../../../images/logo-dark-text.png" alt="Emby">
           </a>
+          <a class="site-title-link" href="../../../index.html"><span class="site-title">Emby <strong>Docs</strong></span></a>
           <button class="menu-button" type="button" aria-expanded="false" aria-controls="navbar" aria-label="Open menu">&#9776;</button>
           <div class="nav-links" id="navbar">
-            <ul class="nav-links-list">
+            <ul class="nav-links-list navbar-nav">
                 
-                    <li><a href="https://emby.media/about.html" title="How it Works">How it Works</a></li>
-                    <li><a href="https://emby.media/download.html" title="Download">Download</a></li>
-                    <li><a href="https://emby.media/premiere.html" title="Premiere">Premiere</a></li>
-                    <li><a href="../../../index.html" title="Support" class="is-current" aria-current="page">Support</a></li>
-                    <li><a href="https://emby.media/connect.html" title="Emby Connect">Emby Connect</a></li>
+                    <li>
+                      <a href="https://emby.media/" title="Emby Home">Emby Home</a>
+                    </li>
+                    <li>
+                      <a href="../../../index.html" title="Support Home">Support Home</a>
+                    </li>
+                    <li>
+                      <a href="../../../articles/Quick-Start.html" title="Server Docs" class="is-current" aria-current="page">Server Docs</a>
+                    </li>
+                    <li>
+                      <a href="../../../articles/Apps.html" title="Client Docs">Client Docs</a>
+                    </li>
+                    <li>
+                      <a href="../../../articles/Emby-Premiere.html" title="Premiere Docs">Premiere Docs</a>
+                    </li>
             </ul>
           </div>
         </nav>
@@ -66,16 +83,21 @@
       
       <div class="subnav navbar navbar-default">
         <div class="container">
-          <div class="hide-when-search" id="breadcrumb">
-      	  <ul class="breadcrumb">
-      		<li></li>
-      	  </ul>
-      	</div>
+          <nav class="hide-when-search" id="breadcrumb" aria-label="Breadcrumb">
+            <ol class="breadcrumb">
+              <li><a href="../../../index.html">Support Home</a></li>
+              <li><a href="../../Quick-Start.html">Emby Server</a></li>
+              <li><a href="../../server/transcoding/Transcoding.html">Transcoding</a></li>
+              <li><span aria-current="page">Playback Methods</span></li>
+              
+            </ol>
+          </nav>
       
       	<div class="breadcrumpsearch">
       	  <form class="navbar-form navbar-right" role="search" id="search">
       		<div class="form-group">
       		  <i class="fa fa-search" aria-hidden="true"></i>
+      		  <label class="sr-only" for="search-query">Search support topics</label>
       		  <input type="text" class="form-control" id="search-query" placeholder="Search support topics" autocomplete="off">
       		</div>
       	  </form>
@@ -97,33 +119,44 @@
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
+            <nav id="sidetoc" aria-label="Documentation table of contents"></nav>
           </div>
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="DirectPlay-Stream-Transcoding">
 <h1>Playback Methods</h1>
+
 <h4 class="long-title">Direct Play vs Direct Streaming vs Transcoding</h4>
 
 <p>Emby can presently deliver your media in one of three ways:</p>
 <h2 id="direct-play">Direct Play</h2>
-<p>Media file is used AS IS without any modification.  It can be sent from the Emby server or (some clients) allowed to be played directly from the file system. The media fits all the criteria needed by the client including:</p>
+<p>The media file is used as it is, without modification. It can be sent from Emby Server or, with some clients,
+played directly from the file system. The media fits all the criteria needed by the client, including:</p>
 <ul>
-<li>Stored in a compatible file container playable by the client</li>
+<li>Stored in a compatible <a class="xref" href="https://emby.media/learn/articles/media-files/fundamentals/Containers-and-Codecs.html">file container</a> playable by the client</li>
 <li>Encoded with compatible codecs for the client</li>
-<li>Encoded with a compatible bit rate for the client</li>
+<li>Encoded with a compatible bitrate for the client</li>
 <li>Has a resolution compatible with the client</li>
 </ul>
 <h2 id="direct-stream">Direct Stream</h2>
-<p>Also known as transmuxing. The Media file is altered in real-time while being delivered to the client. This happens when the video codec is correct but something else needs converting like the streaming type (package), audio or subtitle track.</p>
+<p>Also known as <a class="xref" href="https://emby.media/learn/articles/playback-streaming/from-server/Playback-Remuxing.html">transmuxing</a>. The media file is altered in real time while being
+delivered to the client. This happens when the video is compatible but something else needs converting,
+such as the container, audio or subtitle track.</p>
 <p>In this case the server extracts the video track from the file as well as other tracks it can use. Emby may convert the audio or subtitle tracks on the fly during a Direct Stream.</p>
-<p>Direct Streaming does not touch the video tracks in anyway so there is no loss of video quality. Direct Streaming is not very CPU intensive.</p>
+<p><a class="xref" href="https://emby.media/learn/articles/playback-streaming/from-server/modes/Playback-Direct-Stream.html">Direct Streaming</a> does not alter the video tracks in any way, so there is
+no loss of video quality. Direct Streaming is not very CPU intensive.</p>
 <h2 id="transcoding">Transcoding</h2>
-<p>Transcoding takes place when the video needs to be converted.  This could be because the video codec isn't support, the bitrate of the video is higher than the client can use, a subtitle needs to be &quot;burnt&quot; into the video.</p>
-<p>Transcoding at a high level, is taking already encoded content; decoding it; and then altering it. After altering, it is then reassembled/encoded back into a format compatible with the client app using the proper bitrate and a format the client app can use.</p>
-<p>Transcoding is more CPU intensive then Direct Streaming due to having to decode/alter/recode the video.   There will be some loss of video quality when transcoding takes place.</p>
-<p>Emby supports offloading the transcoding process to a GPU</p>
+<p><a class="xref" href="https://emby.media/learn/articles/playback-streaming/from-server/modes/Playback-Transcoding.html">Transcoding</a> takes place when the video needs to be converted. This could
+be because the video codec isn't supported, the bitrate is higher than the client can use, or subtitles
+need to be <a class="xref" href="https://emby.media/learn/articles/subtitles/emby-processing/overlay-filters/Subtitle-Burn-In.html">burned into the video</a>.</p>
+<p>Transcoding decodes the video, processes it as needed, and encodes it again in a format and at a bitrate
+the client app can use.</p>
+<p>Transcoding is more CPU intensive than Direct Streaming because it has to decode, process and re-encode
+the video. There will be some <a class="xref" href="https://emby.media/learn/articles/video/encoding-quality/quality-changes-artifacts/Video-Generation-Loss.html">loss of video quality</a> when transcoding takes place.</p>
+<p>Emby supports offloading the transcoding process to a GPU.</p>
+<h2 id="further-reading">Further Reading</h2>
+<p><a class="xref" href="https://emby.media/learn/articles/playback-streaming/from-server/modes/Playback-Direct-Play.html">Direct Play in Emby</a></p>
 
 
             </article>

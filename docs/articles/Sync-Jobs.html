@@ -1,34 +1,40 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
-<html>
+<html lang="en">
   
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Download Jobs | Emby Documentation </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Download Jobs | Emby Documentation ">
-    <meta name="generator" content="docfx 2.59.2.0">
-    <meta name="theme-color" content="#090d0f">
-    
-    <link rel="shortcut icon" href="../favicon.ico">
-    <script type="text/javascript" src="../styles/theme-config.js"></script>
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <link rel="stylesheet" href="../styles/header.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
-    <link rel="stylesheet" href="../styles/theme.css">
-    <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
-    <meta property="docfx:uid" content="Sync-Jobs">
-    
-    <meta property="docfx:rel" content="../">
-    
-    <script type="text/javascript" src="../nav.js"></script>
-    <script type="text/javascript" src="toc.js"></script>
+<head>
+  <meta charset="utf-8">
+  <title>Download Jobs | Emby Documentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="docfx 2.59.2.0">
+  <meta name="theme-color" content="#f7f8f9">
   
-  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  <link rel="canonical" href="https://emby.media/support/articles/Sync-Jobs.html">
+  <meta property="og:title" content="Download Jobs | Emby Documentation">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://emby.media/support/articles/Sync-Jobs.html">
+  <meta property="og:site_name" content="Emby Documentation">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://emby.media/support/articles/Sync-Jobs.html","url":"https://emby.media/support/articles/Sync-Jobs.html","name":"Download Jobs","inLanguage":"en","headline":"Download Jobs","articleSection":"Emby Server","author":{"@type":"Organization","name":"Emby LLC","url":"https://emby.media/"},"copyrightHolder":{"@type":"Organization","name":"Emby LLC","url":"https://emby.media/"},"isAccessibleForFree":true,"isFamilyFriendly":true}]}</script>
+  <link rel="shortcut icon" href="../favicon.ico">
+  <script type="text/javascript" src="../styles/theme-config.js"></script>
+  <link rel="stylesheet" href="../styles/docfx.vendor.css">
+  <link rel="stylesheet" href="../styles/docfx.css">
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/header.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
+  <link rel="stylesheet" href="../styles/theme.css">
+  <meta property="docfx:navrel" content="../toc.html">
+  <meta property="docfx:tocrel" content="toc.html">
+  <meta property="docfx:uid" content="Sync-Jobs">
+  
+  <meta property="docfx:rel" content="../">
+  
+  <script type="text/javascript" src="../nav.js"></script>
+  <script type="text/javascript" src="toc.js"></script>
+
+</head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       
       <header class="site-header">
@@ -38,15 +44,26 @@
             <img class="logo-on-dark" src="../images/logo.png" alt="Emby">
             <img class="logo-on-light" src="../images/logo-dark-text.png" alt="Emby">
           </a>
+          <a class="site-title-link" href="../index.html"><span class="site-title">Emby <strong>Docs</strong></span></a>
           <button class="menu-button" type="button" aria-expanded="false" aria-controls="navbar" aria-label="Open menu">&#9776;</button>
           <div class="nav-links" id="navbar">
-            <ul class="nav-links-list">
+            <ul class="nav-links-list navbar-nav">
                 
-                    <li><a href="https://emby.media/about.html" title="How it Works">How it Works</a></li>
-                    <li><a href="https://emby.media/download.html" title="Download">Download</a></li>
-                    <li><a href="https://emby.media/premiere.html" title="Premiere">Premiere</a></li>
-                    <li><a href="../index.html" title="Support" class="is-current" aria-current="page">Support</a></li>
-                    <li><a href="https://emby.media/connect.html" title="Emby Connect">Emby Connect</a></li>
+                    <li>
+                      <a href="https://emby.media/" title="Emby Home">Emby Home</a>
+                    </li>
+                    <li>
+                      <a href="../index.html" title="Support Home">Support Home</a>
+                    </li>
+                    <li>
+                      <a href="../articles/Quick-Start.html" title="Server Docs" class="is-current" aria-current="page">Server Docs</a>
+                    </li>
+                    <li>
+                      <a href="../articles/Apps.html" title="Client Docs">Client Docs</a>
+                    </li>
+                    <li>
+                      <a href="../articles/Emby-Premiere.html" title="Premiere Docs">Premiere Docs</a>
+                    </li>
             </ul>
           </div>
         </nav>
@@ -66,16 +83,22 @@
       
       <div class="subnav navbar navbar-default">
         <div class="container">
-          <div class="hide-when-search" id="breadcrumb">
-      	  <ul class="breadcrumb">
-      		<li></li>
-      	  </ul>
-      	</div>
+          <nav class="hide-when-search" id="breadcrumb" aria-label="Breadcrumb">
+            <ol class="breadcrumb">
+              <li><a href="../index.html">Support Home</a></li>
+              <li><a href="Quick-Start.html">Emby Server</a></li>
+              <li><span>Features &amp; Plugins</span></li>
+              <li><a href="Sync-Introduction.html">Downloads &amp; Sync</a></li>
+              <li><span aria-current="page">Download Jobs</span></li>
+              
+            </ol>
+          </nav>
       
       	<div class="breadcrumpsearch">
       	  <form class="navbar-form navbar-right" role="search" id="search">
       		<div class="form-group">
       		  <i class="fa fa-search" aria-hidden="true"></i>
+      		  <label class="sr-only" for="search-query">Search support topics</label>
       		  <input type="text" class="form-control" id="search-query" placeholder="Search support topics" autocomplete="off">
       		</div>
       	  </form>
@@ -97,7 +120,7 @@
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
+            <nav id="sidetoc" aria-label="Documentation table of contents"></nav>
           </div>
         </div>
         <div class="article row grid-right">
@@ -106,13 +129,14 @@
 <h1>Download Jobs</h1>
 
 
+
 <p>Download jobs can be for an individual media file download or a whole TV season or show and also possible to download a complete library. Download jobs also include those created for the <a href="Folder-Sync.html">Folder Sync</a> feature.</p>
 <p>Download jobs are created through the <strong>Download</strong> button within the Emby Apps that support downloads and also within context menu <strong>Download to...</strong> button which is available for media libraries contents. The <strong>Download to...</strong> button is also available in the <a href="Web-Client.html">Emby Web client</a> app to initiate downloads to other apps and devices for the user account. For the various options available, see the <a href="Sync.html">Download Options</a> article.</p>
 <h2 id="downloads-job-settings">Downloads Job Settings</h2>
 <p>When creating sync jobs, you'll be able to configure various settings for the job. The settings that are available will differ depending on the content being synced. See <a href="Sync.html">Download Options</a> for details. The following lists the various options available.</p>
 <p>Available settings are:</p>
 <p><strong>Quality</strong></p>
-<p>The desired quality level of the synced content. Higher produces better video quality but will require more storage space on the mobile device. The &quot;Original&quot; option can be used to force the process to utilize the original file, but this may result in the file not being playable on the device.</p>
+<p>The desired quality level of the synced content. Higher produces better video quality but will require more <a class="xref" href="https://emby.media/learn/articles/media-files/fundamentals/bitrate-and-file-size/Media-File-Size-Duration.html">storage space</a> on the mobile device. The &quot;Original&quot; option can be used to force the process to utilize the original file, but this may result in the file not being playable on the device.</p>
 <p><strong>Profile</strong></p>
 <p>On some Emby client apps, an option is provided to select a pre-set download profile, as well as the option of having a custom profile.</p>
 <p><strong>Unwatched Videos Only</strong></p>
@@ -122,7 +146,7 @@
 <p><strong>Item Limit</strong></p>
 <p>The maximum number of items that will be downloaded to the device at any given time.</p>
 <h2 id="subtitles">Subtitles</h2>
-<p>All available text-based subtitles are included with download jobs, allowing you to enjoy subtitle selection even when offline.</p>
+<p>All available <a class="xref" href="https://emby.media/learn/articles/subtitles/formats/text/Subtitle-Text.html">text-based subtitles</a> are included with download jobs, allowing you to enjoy subtitle selection even when offline.</p>
 <h2 id="managing-download-jobs">Managing Download Jobs</h2>
 <p>Individual users can manage their own download jobs on each device. First select Downloads within the App Settings.</p>
 <p><img src="images/server/downloadjobs1.png" alt=""></p>
